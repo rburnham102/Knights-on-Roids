@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cvrbtgxomjhf0"]
 
+[ext_resource type="Script" uid="uid://doqrw877j2gm3" path="res://game.gd" id="1_7jktm"]
 [ext_resource type="PackedScene" uid="uid://20jsqtt6c87o" path="res://Knight.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://ccjcv5vgk2xyp" path="res://TileSet/Tiles/Tileset.png" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://rhqvloqqufb8" path="res://orc.tscn" id="3_feb5d"]
@@ -146,6 +147,7 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_feb5d")
 
 [node name="Game" type="Node2D" unique_id=679805331]
+script = ExtResource("1_7jktm")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=771726561]
 tile_set = SubResource("TileSet_ernif")
