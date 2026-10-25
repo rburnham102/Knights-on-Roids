@@ -409,9 +409,6 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_feb5d"]
-radius = 4.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_tuctl"]
 radius = 12.0
 
@@ -419,12 +416,17 @@ radius = 12.0
 radius = 4.0
 height = 14.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_feb5d"]
+radius = 4.0
+
 [node name="Knight" type="CharacterBody2D" unique_id=524925401]
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_2f8du")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1727151330]
+[node name="Pivot" type="Node2D" parent="." unique_id=259231334]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pivot" unique_id=1727151330]
 texture_filter = 1
 position = Vector2(-1, -7)
 sprite_frames = SubResource("SpriteFrames_ernif")
@@ -432,36 +434,36 @@ animation = &"attack_heavy"
 frame = 5
 frame_progress = 1.0
 
+[node name="Hitbox" type="Area2D" parent="Pivot" unique_id=1714173508]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Hitbox" unique_id=682978837]
+position = Vector2(5, -5)
+shape = SubResource("CircleShape2D_tuctl")
+disabled = true
+
+[node name="HurtBox" type="Area2D" parent="Pivot" unique_id=1456496202]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/HurtBox" unique_id=1732207430]
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_ernif")
+
+[node name="ShootingPoint" type="Marker2D" parent="Pivot" unique_id=1519558528]
+unique_name_in_owner = true
+position = Vector2(0, -4)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1403377057]
 position = Vector2(0, -1)
 rotation = 1.5707964
 shape = SubResource("CircleShape2D_feb5d")
 
-[node name="Hitbox" type="Area2D" parent="." unique_id=1714173508]
-collision_layer = 0
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=682978837]
-position = Vector2(5, -5)
-shape = SubResource("CircleShape2D_tuctl")
-disabled = true
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=183538323]
 zoom = Vector2(4, 4)
 
-[node name="ShootingPoint" type="Marker2D" parent="." unique_id=1519558528]
-unique_name_in_owner = true
-position = Vector2(0, -4)
-
-[node name="HurtBox" type="Area2D" parent="." unique_id=1456496202]
-collision_layer = 0
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1732207430]
-position = Vector2(0, -7)
-shape = SubResource("CapsuleShape2D_ernif")
-
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_finished"]
-[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_frame_changed"]
-[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="on_frame_changed"]
-[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="animation_finished" from="Pivot/AnimatedSprite2D" to="." method="_on_animated_finished"]
+[connection signal="frame_changed" from="Pivot/AnimatedSprite2D" to="." method="_on_frame_changed"]
+[connection signal="frame_changed" from="Pivot/AnimatedSprite2D" to="." method="on_frame_changed"]
+[connection signal="body_entered" from="Pivot/Hitbox" to="." method="_on_hitbox_body_entered"]

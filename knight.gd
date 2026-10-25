@@ -12,10 +12,10 @@ const GUARD_RECOVER_AT := 20.0         # after a break, block is unusable until 
 const BLOCK_KNOCKBACK_PER_DAMAGE := 8.0
 const LUNGE_DECAY := 500.0   # how fast the lunge slows down (pixels/sec per second)
 
-
-@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-@onready var hitbox: Area2D = $Hitbox
-@onready var hitbox_shape: CollisionShape2D = $Hitbox/CollisionShape2D
+@onready var pivot: Node2D = $Pivot
+@onready var anim: AnimatedSprite2D = $Pivot/AnimatedSprite2D
+@onready var hitbox: Area2D = $Pivot/Hitbox
+@onready var hitbox_shape: CollisionShape2D = $Pivot/Hitbox/CollisionShape2D
 @onready var camera: Camera2D = $Camera2D
 
 const BLOCK_EFFECT := preload("res://block_effect.tscn")
@@ -148,7 +148,7 @@ func start_attack(attack: Dictionary, from_combo := false) -> void:
 
 	if attack["type"] == "ranged":
 		aim_direction = (get_global_mouse_position() - global_position).normalized()
-		anim.flip_h = aim_direction.x < 0
+		face(aim_direction.x)
 
 	anim.play(attack["anim"])
 	var lunge: float = attack.get("lunge", 0.0)
@@ -249,7 +249,8 @@ func update_guard_bar() -> void:
 	guard_fill.bg_color = Color(0.9, 0.25, 0.2) if guard_broken else Color(0.3, 0.7, 1.0)
 
 func enable_hitbox() -> void:
-	hitbox.position = DIRECTIONS[last_direction] * HITBOX_DISTANCE
+	var d: Vector2 = DIRECTIONS[last_direction]
+	hitbox.position = Vector2(absf(d.x), d.y) * HITBOX_DISTANCE
 	hitbox_shape.set_deferred("disabled", false)
 
 func disable_hitbox() -> void:
@@ -328,7 +329,11 @@ func die() -> void:
 	velocity = Vector2.ZERO
 	anim.play("death")
 	is_blocking = false
-	
+
+func face(dir_x: float) -> void:
+	if dir_x != 0.0:
+		pivot.scale.x = -1.0 if dir_x < 0.0 else 1.0
+
 func _on_animated_finished() -> void:
 	match anim.animation:
 		"hurt":
@@ -354,11 +359,9 @@ func update_animation(direction: Vector2) -> void:
 		last_direction = "down" if direction.y > 0 else "up"
 
 	# Only change facing when moving horizontally, so up/down keeps the last side
-	if direction.x < 0:
-		#anim.flip_h = direction.x < 0
-		scale.x = -1
-	elif direction.x > 0:
-		scale.x = 1
+	
+	face(direction.x)
+
 
 	anim.play("walk")
 
