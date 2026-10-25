@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bpv5g1t55xj7"]
+
+[ext_resource type="Script" uid="uid://fy2gxojuywf5" path="res://hud.gd" id="1_hud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 0.9)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_health"]
+bg_color = Color(0.8, 0.15, 0.15, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guard"]
+bg_color = Color(0.3, 0.7, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchors_preset = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Rows" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="HealthBar" type="ProgressBar" parent="Margin/Rows"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 18)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_health")
+value = 100.0
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="Margin/Rows/HealthBar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "100 / 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GuardBar" type="ProgressBar" parent="Margin/Rows"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 8)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_guard")
+value = 100.0
+show_percentage = false
+
+[node name="VersionLabel" type="Label" parent="Margin/Rows"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 11
+
+[node name="RoomLabel" type="Label" parent="Margin/Rows"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 14

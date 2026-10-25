@@ -1,0 +1,97 @@
+{
+ "attacks/attack_light.tres": {
+  "uid": "uid://cgc457cgmvhj1",
+  "anim": "attack_light",
+  "damage": 10,
+  "hit_frame": 2,
+  "knockback": 120.0,
+  "poise_damage": 10.0
+ },
+ "attacks/attack_light2.tres": {
+  "uid": "uid://bgfeqrjbq1gyh",
+  "anim": "attack_light2",
+  "damage": 12,
+  "hit_frame": 2,
+  "knockback": 150.0,
+  "shake": 1.0,
+  "lunge": 140.0,
+  "poise_damage": 15.0,
+  "hit_stop": 0.04
+ },
+ "attacks/attack_heavy.tres": {
+  "uid": "uid://hu31bh4y3uv4",
+  "anim": "attack_heavy",
+  "damage": 25,
+  "hit_frame": 4,
+  "knockback": 250.0,
+  "shake": 3.0,
+  "lunge": 140.0,
+  "poise_damage": 30.0,
+  "hit_stop": 0.07
+ },
+ "attacks/attack_bow.tres": {
+  "uid": "uid://cbeeevhxcbmni",
+  "anim": "attack_bow",
+  "type": 1,
+  "damage": 15,
+  "hit_frame": 5,
+  "knockback": 100.0,
+  "poise_damage": 8.0
+ },
+ "attacks/enemy/orc_light.tres": {
+  "uid": "uid://coau77qkc56en",
+  "anim": "attack_light",
+  "damage": 10,
+  "hit_frame": 3,
+  "knockback": 120.0,
+  "windup_time": 0.22,
+  "active_frames": 2,
+  "color": [
+   1.0,
+   0.85,
+   0.3
+  ]
+ },
+ "attacks/enemy/orc_heavy.tres": {
+  "uid": "uid://2lrplqf6tvpd",
+  "anim": "attack_heavy",
+  "damage": 24,
+  "hit_frame": 3,
+  "knockback": 250.0,
+  "windup_time": 0.4,
+  "active_frames": 2,
+  "color": [
+   1.0,
+   0.35,
+   0.2
+  ]
+ },
+ "attacks/enemy/armored_light.tres": {
+  "uid": "uid://c4edp8uapnx5g",
+  "anim": "attack_light",
+  "damage": 12,
+  "hit_frame": 4,
+  "knockback": 120.0,
+  "windup_time": 0.22,
+  "active_frames": 2,
+  "color": [
+   1.0,
+   0.85,
+   0.3
+  ]
+ },
+ "attacks/enemy/armored_heavy.tres": {
+  "uid": "uid://b8w5erdo7whg5",
+  "anim": "attack_heavy",
+  "damage": 28,
+  "hit_frame": 5,
+  "knockback": 250.0,
+  "windup_time": 0.4,
+  "active_frames": 2,
+  "color": [
+   1.0,
+   0.35,
+   0.2
+  ]
+ }
+}

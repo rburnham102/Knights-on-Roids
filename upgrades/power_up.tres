@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3]
+
+[ext_resource type="Script" path="res://upgrade.gd" id="1_ihkxu"]
+
+[resource]
+script = ExtResource("1_ihkxu")
+title = "Brute Strength"
+description = "+2 Power
+Hit harder, knock enemies back farther, and break poise faster."
+power = 2

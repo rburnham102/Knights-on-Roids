@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3]
+
+[ext_resource type="Script" path="res://upgrade.gd" id="1_m1p1q"]
+
+[resource]
+script = ExtResource("1_m1p1q")
+title = "Brutal Riposte"
+description = "Your riposte hits 60% harder."
+perk = &"riposte_power"

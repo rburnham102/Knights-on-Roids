@@ -1,39 +1,47 @@
 [gd_scene format=3 uid="uid://d3rd5n5xn843a"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_l2lw7"]
+[ext_resource type="Script" uid="uid://846dgft5ju4c" path="res://enemy.gd" id="1_enemy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_body"]
 radius = 4.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6e8rh"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_hitbox"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uqc13"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hurtbox"]
 radius = 4.0
 height = 14.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=544430257]
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_enemy")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1961432318]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visibility_layer = 3
+texture_filter = 1
+position = Vector2(-1, -7)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=963344132]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
 position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_l2lw7")
+shape = SubResource("CircleShape2D_body")
 
-[node name="Hitbox" type="Area2D" parent="." unique_id=73350052]
+[node name="Hitbox" type="Area2D" parent="."]
 position = Vector2(0, -8)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1130881627]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 light_mask = 3
 visibility_layer = 3
 position = Vector2(0, 6)
-shape = SubResource("CircleShape2D_6e8rh")
+shape = SubResource("CircleShape2D_hitbox")
 disabled = true
 
-[node name="hurtbox" type="Area2D" parent="." unique_id=1687474979]
-collision_layer = 0
-collision_mask = 2
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=5815901]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, -7)
-shape = SubResource("CapsuleShape2D_uqc13")
+shape = SubResource("CapsuleShape2D_hurtbox")

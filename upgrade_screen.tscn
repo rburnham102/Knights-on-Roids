@@ -1,0 +1,56 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://upgrade_screen.gd" id="1_adbc8"]
+
+[node name="UpgradeScreen" type="CanvasLayer" unique_id=1499110795]
+layer = 5
+script = ExtResource("1_adbc8")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=934946376]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1153462224]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Box" type="VBoxContainer" parent="Center" unique_id=2001453682]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Header" type="Label" parent="Center/Box" unique_id=1948917755]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "Choose an upgrade"
+horizontal_alignment = 1
+
+[node name="Row" type="HBoxContainer" parent="Center/Box" unique_id=1974337604]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Choice1" type="Button" parent="Center/Box/Row" unique_id=114170240]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 170)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 3
+
+[node name="Choice2" type="Button" parent="Center/Box/Row" unique_id=1563845239]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 170)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 3
+
+[node name="Choice3" type="Button" parent="Center/Box/Row" unique_id=2017841130]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 170)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 3

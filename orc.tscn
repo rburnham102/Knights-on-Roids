@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://rhqvloqqufb8"]
 
-[ext_resource type="Script" uid="uid://846dgft5ju4c" path="res://orc.gd" id="1_31h1d"]
+[ext_resource type="PackedScene" uid="uid://d3rd5n5xn843a" path="res://entity.tscn" id="1_entity"]
+[ext_resource type="Resource" uid="uid://coau77qkc56en" path="res://attacks/enemy/orc_light.tres" id="2_light_attack"]
+[ext_resource type="Resource" uid="uid://2lrplqf6tvpd" path="res://attacks/enemy/orc_heavy.tres" id="3_heavy_attack"]
 [ext_resource type="Texture2D" uid="uid://7wpywopitqcy" path="res://Asset/Characters(100x100 split)/Orc/Orc with shadows/Orc_Attack01.png" id="1_vumo0"]
 [ext_resource type="Texture2D" uid="uid://dhodba0sdr5k5" path="res://Asset/Characters(100x100 split)/Orc/Orc with shadows/Orc_Death.png" id="2_31h1d"]
 [ext_resource type="Texture2D" uid="uid://cy031uaq6b80k" path="res://Asset/Characters(100x100 split)/Orc/Orc with shadows/Orc_Attack02.png" id="2_dfwqp"]
@@ -279,48 +281,11 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ernif"]
-radius = 4.0
+[node name="Orc" instance=ExtResource("1_entity")]
+light_attack = ExtResource("2_light_attack")
+heavy_attack = ExtResource("3_heavy_attack")
+max_poise = 50.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_txryp"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ernif"]
-radius = 4.0
-height = 14.0
-
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1483953857]
-collision_layer = 4
-collision_mask = 7
-script = ExtResource("1_31h1d")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1917306896]
-visibility_layer = 3
-texture_filter = 1
-position = Vector2(-1, -7)
+[node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_ernif")
-animation = &"attack_light"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=183624607]
-light_mask = 3
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_ernif")
-
-[node name="Hitbox" type="Area2D" parent="." unique_id=1531215698]
-position = Vector2(0, -8)
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=324831213]
-light_mask = 3
-visibility_layer = 3
-position = Vector2(0, 6)
-shape = SubResource("CircleShape2D_txryp")
-disabled = true
-
-[node name="hurtbox" type="Area2D" parent="." unique_id=1102759067]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=1920408488]
-position = Vector2(0, -7)
-shape = SubResource("CapsuleShape2D_ernif")
+animation = &"idle"

@@ -4,12 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://dpqhnuji0vkqs" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Attack01.png" id="1_6vdas"]
 [ext_resource type="Texture2D" uid="uid://bhlqpvnl6opv" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Attack02.png" id="2_cwk8c"]
 [ext_resource type="Texture2D" uid="uid://bxwetj02x6sxa" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Attack03.png" id="2_jjefk"]
+[ext_resource type="Script" uid="uid://bldkvj7r805mi" path="res://stats.gd" id="2_stats"]
 [ext_resource type="Texture2D" uid="uid://bwhq7stubdxic" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Death.png" id="3_2f8du"]
+[ext_resource type="Script" uid="uid://cvjetm7d5h76u" path="res://attack_data.gd" id="3_attack_data"]
 [ext_resource type="Texture2D" uid="uid://b1bfc7wddiywl" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Hurt.png" id="4_jjefk"]
+[ext_resource type="Resource" uid="uid://cgc457cgmvhj1" path="res://attacks/attack_light.tres" id="4_light"]
 [ext_resource type="Texture2D" uid="uid://butui3xd6vwhi" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Idle.png" id="5_fpytc"]
 [ext_resource type="Texture2D" uid="uid://dwecwfbmp5v2v" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier-combo.png" id="5_jjefk"]
+[ext_resource type="Resource" uid="uid://bgfeqrjbq1gyh" path="res://attacks/attack_light2.tres" id="5_light2"]
 [ext_resource type="Texture2D" uid="uid://b30fu4v30ovbl" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Walk.png" id="6_1cc6w"]
 [ext_resource type="Texture2D" uid="uid://dbi1t2xrsmtub" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier-block.png" id="6_fpytc"]
+[ext_resource type="Resource" uid="uid://hu31bh4y3uv4" path="res://attacks/attack_heavy.tres" id="6_heavy"]
+[ext_resource type="Resource" uid="uid://cbeeevhxcbmni" path="res://attacks/attack_bow.tres" id="7_bow"]
+[ext_resource type="Texture2D" uid="uid://da7kan5dn0vfq" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier-dodge.png" id="14_cicbl"]
+
+[sub_resource type="Resource" id="Resource_stats"]
+script = ExtResource("2_stats")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fpytc"]
 atlas = ExtResource("2_jjefk")
@@ -138,6 +148,10 @@ region = Rect2(200, 0, 100, 100)
 [sub_resource type="AtlasTexture" id="AtlasTexture_2wt6t"]
 atlas = ExtResource("3_2f8du")
 region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5irp"]
+atlas = ExtResource("14_cicbl")
+region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0p06q"]
 atlas = ExtResource("4_jjefk")
@@ -341,6 +355,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_r5irp")
+}],
+"loop": 0,
+"name": &"dodge",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_0p06q")
 }, {
 "duration": 1.0,
@@ -410,7 +432,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tuctl"]
-radius = 12.0
+radius = 13.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ernif"]
 radius = 4.0
@@ -423,6 +445,11 @@ radius = 4.0
 collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_2f8du")
+stats = SubResource("Resource_stats")
+light_combo = Array[ExtResource("3_attack_data")]([ExtResource("4_light"), ExtResource("5_light2"), ExtResource("6_heavy")])
+heavy_attack = ExtResource("6_heavy")
+ranged_attack = ExtResource("7_bow")
+riposte_attack = ExtResource("5_light2")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=259231334]
 
@@ -430,13 +457,12 @@ script = ExtResource("1_2f8du")
 texture_filter = 1
 position = Vector2(-1, -7)
 sprite_frames = SubResource("SpriteFrames_ernif")
-animation = &"attack_heavy"
-frame = 5
+animation = &"dodge"
 frame_progress = 1.0
 
 [node name="Hitbox" type="Area2D" parent="Pivot" unique_id=1714173508]
 collision_layer = 0
-collision_mask = 4
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Hitbox" unique_id=682978837]
 position = Vector2(5, -5)
@@ -444,8 +470,8 @@ shape = SubResource("CircleShape2D_tuctl")
 disabled = true
 
 [node name="HurtBox" type="Area2D" parent="Pivot" unique_id=1456496202]
-collision_layer = 0
-collision_mask = 4
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/HurtBox" unique_id=1732207430]
 position = Vector2(0, -7)
@@ -465,5 +491,4 @@ zoom = Vector2(4, 4)
 
 [connection signal="animation_finished" from="Pivot/AnimatedSprite2D" to="." method="_on_animated_finished"]
 [connection signal="frame_changed" from="Pivot/AnimatedSprite2D" to="." method="_on_frame_changed"]
-[connection signal="frame_changed" from="Pivot/AnimatedSprite2D" to="." method="on_frame_changed"]
-[connection signal="body_entered" from="Pivot/Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="area_entered" from="Pivot/Hitbox" to="." method="_on_hitbox_area_entered"]

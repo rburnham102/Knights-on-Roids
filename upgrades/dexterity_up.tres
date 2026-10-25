@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3]
+
+[ext_resource type="Script" path="res://upgrade.gd" id="1_bia8c"]
+
+[resource]
+script = ExtResource("1_bia8c")
+title = "Quick Feet"
+description = "+2 Dexterity
+Move faster, dodge farther, and get a wider parry window."
+dexterity = 2

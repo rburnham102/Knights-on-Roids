@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cn24p6ns8vamc"]
 
-[ext_resource type="Script" uid="uid://cpyh14c86kyft" path="res://armored_orc.gd" id="1_reyb1"]
+[ext_resource type="PackedScene" uid="uid://d3rd5n5xn843a" path="res://entity.tscn" id="1_entity"]
+[ext_resource type="Resource" uid="uid://c4edp8uapnx5g" path="res://attacks/enemy/armored_light.tres" id="2_light_attack"]
+[ext_resource type="Resource" uid="uid://b8w5erdo7whg5" path="res://attacks/enemy/armored_heavy.tres" id="3_heavy_attack"]
+[ext_resource type="Resource" uid="uid://ca47pqoj1uty0" path="res://attacks/enemy/armored_smash.tres" id="4_smash"]
 [ext_resource type="Texture2D" uid="uid://clt3euyyapljy" path="res://Asset/Characters(100x100 split)/Armored Orc/Armored Orc with shadows/Armored Orc.png" id="2_7orxc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwnm5"]
@@ -410,34 +413,17 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ernif"]
-radius = 4.0
+[node name="ArmoredOrc" instance=ExtResource("1_entity")]
+light_attack = ExtResource("2_light_attack")
+heavy_attack = ExtResource("3_heavy_attack")
+special_attack = ExtResource("4_smash")
+can_guard = true
+special_chance = 0.3
+special_cooldown = 3.0
+max_poise = 130.0
+max_health = 100
+speed = 50.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_txryp"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1483953857]
-script = ExtResource("1_reyb1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1917306896]
-visibility_layer = 3
-texture_filter = 1
-position = Vector2(-1, -7)
+[node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_ernif")
-animation = &"shield_smash"
-frame = 9
-frame_progress = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=183624607]
-light_mask = 3
-position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_ernif")
-
-[node name="Hitbox" type="Area2D" parent="." unique_id=1531215698]
-position = Vector2(0, -8)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=324831213]
-light_mask = 3
-visibility_layer = 3
-position = Vector2(0, 4)
-shape = SubResource("CircleShape2D_txryp")
-disabled = true
+animation = &"idle"

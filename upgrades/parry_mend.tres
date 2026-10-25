@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3]
+
+[ext_resource type="Script" path="res://upgrade.gd" id="1_8o0b1"]
+
+[resource]
+script = ExtResource("1_8o0b1")
+title = "Parry & Mend"
+description = "Every perfect parry heals you for 5."
+perk = &"parry_heal"

@@ -1,0 +1,70 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://game.gd" id="1_7yh18"]
+[ext_resource type="PackedScene" path="res://Knight.tscn" id="2_85c57"]
+[ext_resource type="Script" path="res://knight.gd" id="3_03mh2"]
+[ext_resource type="Script" path="res://stats.gd" id="4_yv4ql"]
+[ext_resource type="Script" path="res://attack_data.gd" id="5_qefl5"]
+[ext_resource type="Resource" path="res://attacks/attack_light.tres" id="6_wu21t"]
+[ext_resource type="Resource" path="res://attacks/attack_light2.tres" id="7_fe5hf"]
+[ext_resource type="Resource" path="res://attacks/attack_heavy.tres" id="8_rrdsu"]
+[ext_resource type="Resource" path="res://attacks/attack_bow.tres" id="9_lvhsj"]
+[ext_resource type="PackedScene" path="res://hud.tscn" id="10_bcohd"]
+[ext_resource type="Script" path="res://hud.gd" id="11_7b2xq"]
+[ext_resource type="PackedScene" path="res://upgrade_screen.tscn" id="12_pllgl"]
+[ext_resource type="Script" path="res://upgrade_screen.gd" id="13_tmxwj"]
+[ext_resource type="PackedScene" path="res://run_over_screen.tscn" id="14_in13e"]
+[ext_resource type="Script" path="res://run_over_screen.gd" id="15_77fbt"]
+[ext_resource type="Script" path="res://run_manager.gd" id="16_uaer5"]
+
+[sub_resource type="Resource" id="Resource_stats"]
+script = ExtResource("4_yv4ql")
+
+[node name="Run" type="Node2D" unique_id=985809285]
+script = ExtResource("1_7yh18")
+
+[node name="RoomHolder" type="Node2D" parent="." unique_id=371783723]
+
+[node name="Actors" type="Node2D" parent="." unique_id=1955185764]
+y_sort_enabled = true
+
+[node name="Knight" type="CharacterBody2D" parent="Actors" unique_id=524925401 instance=ExtResource("2_85c57")]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("3_03mh2")
+stats = SubResource("Resource_stats")
+light_combo = Array[ExtResource("5_qefl5")]([ExtResource("6_wu21t"), ExtResource("7_fe5hf"), ExtResource("8_rrdsu")])
+heavy_attack = ExtResource("8_rrdsu")
+ranged_attack = ExtResource("9_lvhsj")
+riposte_attack = ExtResource("7_fe5hf")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=294508394 instance=ExtResource("10_bcohd")]
+script = ExtResource("11_7b2xq")
+
+[node name="UpgradeScreen" type="CanvasLayer" parent="." unique_id=1499110795 instance=ExtResource("12_pllgl")]
+layer = 5
+script = ExtResource("13_tmxwj")
+
+[node name="RunOverScreen" type="CanvasLayer" parent="." unique_id=367023939 instance=ExtResource("14_in13e")]
+layer = 6
+script = ExtResource("15_77fbt")
+
+[node name="FadeLayer" type="CanvasLayer" parent="." unique_id=676377866]
+layer = 10
+
+[node name="Rect" type="ColorRect" parent="FadeLayer" unique_id=429817259]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RunManager" type="Node" parent="." unique_id=1338843670 node_paths=PackedStringArray("knight", "actors", "room_holder", "hud", "upgrade_screen", "end_screen", "fade_rect")]
+script = ExtResource("16_uaer5")
+knight = NodePath("../Actors/Knight")
+actors = NodePath("../Actors")
+room_holder = NodePath("../RoomHolder")
+hud = NodePath("../HUD")
+upgrade_screen = NodePath("../UpgradeScreen")
+end_screen = NodePath("../RunOverScreen")
+fade_rect = NodePath("../FadeLayer/Rect")

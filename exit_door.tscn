@@ -1,0 +1,32 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://exit_door.gd" id="1_7sac5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti4c3"]
+size = Vector2(16, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pix1l"]
+size = Vector2(28, 40)
+
+[node name="ExitDoor" type="Node2D" unique_id=2065186094]
+script = ExtResource("1_7sac5")
+
+[node name="Blocker" type="StaticBody2D" parent="." unique_id=556374825]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" unique_id=499763268]
+shape = SubResource("RectangleShape2D_ti4c3")
+
+[node name="Visual" type="ColorRect" parent="." unique_id=670159474]
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+offset_bottom = 16.0
+mouse_filter = 2
+
+[node name="Trigger" type="Area2D" parent="." unique_id=1702740255]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=1146586568]
+shape = SubResource("RectangleShape2D_pix1l")

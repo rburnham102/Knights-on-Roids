@@ -1,0 +1,295 @@
+[gd_scene format=3 uid="uid://cgmj01vgur432"]
+
+[ext_resource type="PackedScene" uid="uid://d3rd5n5xn843a" path="res://entity.tscn" id="1_entity"]
+[ext_resource type="Script" path="res://skeleton_archer.gd" id="2_script"]
+[ext_resource type="Resource" uid="uid://p1yhc5pxtk2m" path="res://attacks/enemy/archer_shot.tres" id="3_shot"]
+[ext_resource type="Texture2D" uid="uid://caw8v4jk0tucp" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Idle.png" id="4_idle"]
+[ext_resource type="Texture2D" uid="uid://p28igvupp76v" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Walk.png" id="5_walk"]
+[ext_resource type="Texture2D" uid="uid://chlkxf1jgi5iu" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Attack.png" id="6_attack_light"]
+[ext_resource type="Texture2D" uid="uid://k722kf053lmh" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Hurt.png" id="7_hurt"]
+[ext_resource type="Texture2D" uid="uid://v7kqinq5q8u3" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Death.png" id="8_death"]
+
+[sub_resource type="AtlasTexture" id="AT_idle_0"]
+atlas = ExtResource("4_idle")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_idle_1"]
+atlas = ExtResource("4_idle")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_idle_2"]
+atlas = ExtResource("4_idle")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_idle_3"]
+atlas = ExtResource("4_idle")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_idle_4"]
+atlas = ExtResource("4_idle")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_idle_5"]
+atlas = ExtResource("4_idle")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_walk_0"]
+atlas = ExtResource("5_walk")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_walk_1"]
+atlas = ExtResource("5_walk")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_walk_2"]
+atlas = ExtResource("5_walk")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_walk_3"]
+atlas = ExtResource("5_walk")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_walk_4"]
+atlas = ExtResource("5_walk")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_walk_5"]
+atlas = ExtResource("5_walk")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_walk_6"]
+atlas = ExtResource("5_walk")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_walk_7"]
+atlas = ExtResource("5_walk")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_attack_light_0"]
+atlas = ExtResource("6_attack_light")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_attack_light_1"]
+atlas = ExtResource("6_attack_light")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_attack_light_2"]
+atlas = ExtResource("6_attack_light")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_attack_light_3"]
+atlas = ExtResource("6_attack_light")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_attack_light_4"]
+atlas = ExtResource("6_attack_light")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_attack_light_5"]
+atlas = ExtResource("6_attack_light")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_attack_light_6"]
+atlas = ExtResource("6_attack_light")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_attack_light_7"]
+atlas = ExtResource("6_attack_light")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_attack_light_8"]
+atlas = ExtResource("6_attack_light")
+region = Rect2(800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_hurt_0"]
+atlas = ExtResource("7_hurt")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_hurt_1"]
+atlas = ExtResource("7_hurt")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_hurt_2"]
+atlas = ExtResource("7_hurt")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_hurt_3"]
+atlas = ExtResource("7_hurt")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_death_0"]
+atlas = ExtResource("8_death")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_death_1"]
+atlas = ExtResource("8_death")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_death_2"]
+atlas = ExtResource("8_death")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AT_death_3"]
+atlas = ExtResource("8_death")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_archer"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_idle_0")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_idle_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_idle_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_idle_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_idle_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_idle_5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_walk_0")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_walk_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_walk_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_walk_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_walk_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_walk_5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_walk_6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_walk_7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_attack_light_0")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_attack_light_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_attack_light_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_attack_light_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_attack_light_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_attack_light_5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_attack_light_6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_attack_light_7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_attack_light_8")
+}],
+"loop": false,
+"name": &"attack_light",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_hurt_0")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_hurt_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_hurt_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_hurt_3")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_death_0")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_death_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_death_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AT_death_3")
+}],
+"loop": false,
+"name": &"death",
+"speed": 8.0
+}]
+
+[node name="SkeletonArcher" instance=ExtResource("1_entity")]
+script = ExtResource("2_script")
+max_health = 30
+speed = 55.0
+detect_range = 280.0
+attack_cooldown = 1.2
+heavy_chance = 0.0
+light_attack = ExtResource("3_shot")
+max_poise = 15.0
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_archer")
+animation = &"idle"
