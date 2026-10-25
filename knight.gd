@@ -216,7 +216,7 @@ func block_flash(from_position: Vector2, heavy: bool) -> void:
 	get_parent().add_child(fx)   # in the level, so it doesn't move with the knight
 	fx.global_position = global_position + dir * 10.0 + Vector2(0, -7)
 	#fx.rotation = dir.angle()                 # orient toward the attacker
-	#fx.scale = Vector2(1.5, 1.5) if heavy else Vector2.ONE
+	fx.scale = Vector2(1.5, 1.5) if heavy else Vector2.ONE
 
 
 func stop_block() -> void:
