@@ -1,18 +1,15 @@
 [gd_resource type="Resource" script_class="AttackData" format=3 uid="uid://hu31bh4y3uv4"]
 
-[ext_resource type="Script" uid="uid://wryq5wvptlok" path="res://attack_data.gd" id="1_attack_data"]
+[ext_resource type="Script" uid="uid://cvjetm7d5h76u" path="res://attack_data.gd" id="1_attack_data"]
 
 [resource]
 script = ExtResource("1_attack_data")
 anim = &"attack_heavy"
-type = 0
 damage = 25
 hit_frame = 4
 knockback = 250.0
 shake = 3.0
 lunge = 140.0
-windup_time = 0.0
-active_frames = 0
 poise_damage = 30.0
 hit_stop = 0.07
 guard_break = true

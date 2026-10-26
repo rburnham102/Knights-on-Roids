@@ -320,6 +320,7 @@ func fire_projectile() -> void:
 	arrow.direction = dir
 	arrow.damage = current_attack.damage
 	arrow.speed = current_attack.projectile_speed
+	arrow.max_range = current_attack.projectile_range
 	arrow.knockback_force = current_attack.knockback
 	get_parent().add_child(arrow)
 	arrow.global_position = origin + dir * 10.0

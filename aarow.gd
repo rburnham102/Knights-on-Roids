@@ -9,8 +9,11 @@ var direction := Vector2.RIGHT
 var knockback_force := 0.0
 var poise_damage := 0.0
 var from_enemy := false   # set by the shooter before it is added to the scene
+## How far the arrow flies before it's gone. The shooter can change it before
+## adding the arrow to the scene (the archer's shots are short-ranged).
+var max_range := 1200.0
 
-const RANGE := 1200.0
+const FADE_DISTANCE := 40.0   # fades out over its last few pixels instead of popping
 
 func _ready() -> void:
 	rotation = direction.angle()
@@ -32,8 +35,11 @@ func _physics_process(delta: float) -> void:
 	var step := direction * speed * delta
 	position += step
 	travel_distance += step.length()
-	if travel_distance > RANGE:
+	if travel_distance >= max_range:
 		queue_free()
+		return
+	# Only touch the alpha, so the reddish enemy tint from apply_team() stays.
+	modulate.a = clampf((max_range - travel_distance) / FADE_DISTANCE, 0.0, 1.0)
 
 func _on_body_entered(_body: Node2D) -> void:
 	# The mask only includes the world layer for bodies, so this is a wall.

@@ -41,3 +41,5 @@ enum Type { MELEE, RANGED }
 @export var anim_speed := 1.0
 ## Ranged attacks: how fast the projectile flies (pixels per second).
 @export var projectile_speed := 400.0
+## Ranged attacks (enemies): how far the projectile flies before vanishing (pixels).
+@export var projectile_range := 1200.0

@@ -17,7 +17,7 @@ for rel, a in tuning.items():
     ]
     for k in ("parryable", "guard_break"):
         if k in a: lines.append(f'{k} = {"true" if a[k] else "false"}')
-    for k in ("hitbox_radius", "hitbox_offset", "anim_speed", "projectile_speed"):
+    for k in ("hitbox_radius", "hitbox_offset", "anim_speed", "projectile_speed", "projectile_range"):
         if k in a: lines.append(f'{k} = {float(a[k])}')
     if "color" in a: lines.append(f'telegraph_color = {col(a["color"])}')
     open(os.path.join(proj, rel), "w").write("\n".join(lines) + "\n")

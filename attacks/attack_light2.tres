@@ -1,17 +1,13 @@
 [gd_resource type="Resource" script_class="AttackData" format=3 uid="uid://bgfeqrjbq1gyh"]
 
-[ext_resource type="Script" uid="uid://wryq5wvptlok" path="res://attack_data.gd" id="1_attack_data"]
+[ext_resource type="Script" uid="uid://cvjetm7d5h76u" path="res://attack_data.gd" id="1_attack_data"]
 
 [resource]
 script = ExtResource("1_attack_data")
 anim = &"attack_light2"
-type = 0
 damage = 12
-hit_frame = 2
 knockback = 150.0
 shake = 1.0
 lunge = 140.0
-windup_time = 0.0
-active_frames = 0
 poise_damage = 15.0
 hit_stop = 0.04

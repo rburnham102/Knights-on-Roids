@@ -26,6 +26,9 @@ const GUARD_RECOVER_AT := 20.0         # after a break, block is unusable until 
 const BLOCK_KNOCKBACK_PER_DAMAGE := 8.0
 const LUNGE_DECAY := 500.0   # how fast the lunge slows down (pixels/sec per second)
 const COMBO_WINDOW := 0.35   # seconds after a swing ends to still continue the chain
+# After a riposte, the heavy finisher gets a more generous window: the riposte
+# swings by itself, so the player has to react to it ending.
+const RIPOSTE_FOLLOWUP_WINDOW := 0.5
 const BLOCK_EFFECT := preload("res://block_effect.tscn")
 
 # Parry: a block raised this shortly before impact is a perfect block.
@@ -314,11 +317,7 @@ func start_dodge_motion() -> void:
 		anim.play("walk")
 
 func set_dodge_direction(dir: Vector2) -> void:
-	if abs(dir.x) > abs(dir.y):
-		last_direction = "right" if dir.x > 0 else "left"
-	else:
-		last_direction = "down" if dir.y > 0 else "up"
-	face(dir.x)
+	set_facing(dir)
 	dodge_velocity = dir.normalized() * DODGE_DISTANCE * stats.dodge_distance_mult() / DODGE_DURATION
 
 func process_dodge(delta: float) -> void:
@@ -335,9 +334,10 @@ func process_dodge(delta: float) -> void:
 		change_state(State.FREE)
 
 func process_attack(delta: float) -> void:
-	# Light button during a swing buffers the next combo hit,
-	# but only after the hit frame.
-	if Input.is_action_just_pressed("attack_light") and anim.frame >= current_attack.hit_frame:
+	# Light button during a swing buffers the next combo hit, but only after
+	# the hit frame (so mashing doesn't chain by itself). A riposte is the
+	# exception: it starts on its own, so a press any time during it counts.
+	if Input.is_action_just_pressed("attack_light") and (is_riposte or anim.frame >= current_attack.hit_frame):
 		combo_queued = true
 	apply_lunge(delta)
 
@@ -380,6 +380,13 @@ func start_attack(attack: AttackData, from_combo := false) -> void:
 	if attack.type == AttackData.Type.RANGED:
 		aim_direction = (get_global_mouse_position() - global_position).normalized()
 		face(aim_direction.x)
+	elif not is_riposte:
+		# Swing the way the player is pressing right now. Without this, a combo
+		# keeps the direction of its first swing, because last_direction is
+		# otherwise only updated while walking. (A riposte aims at the attacker.)
+		var held := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		if held != Vector2.ZERO:
+			set_facing(held)
 
 	anim.play(attack.anim)
 	if attack.lunge > 0.0:
@@ -389,9 +396,11 @@ func start_attack(attack: AttackData, from_combo := false) -> void:
 
 func finish_attack() -> void:
 	var continue_combo := attack_from_combo and combo_index != 0
+	var was_riposte := is_riposte   # read it now: the exit hook below clears it
 	change_state(State.FREE)   # the ATTACK exit hook clears the attack
 	if continue_combo:
-		combo_window = COMBO_WINDOW * stats.combo_window_mult()
+		var window := RIPOSTE_FOLLOWUP_WINDOW if was_riposte else COMBO_WINDOW
+		combo_window = window * stats.combo_window_mult()
 		if combo_queued:
 			combo_queued = false
 			start_combo_attack()   # chains straight into the next swing
@@ -418,12 +427,7 @@ func parry_window() -> float:
 
 # Called on a perfect block: turn to face the attacker and counter-attack.
 func start_riposte(attacker_position: Vector2) -> void:
-	var to := attacker_position - global_position
-	if abs(to.x) > abs(to.y):
-		last_direction = "right" if to.x > 0 else "left"
-	else:
-		last_direction = "down" if to.y > 0 else "up"
-	face(to.x)
+	set_facing(attacker_position - global_position)
 	# Pretend we're on the last link before the finisher, so pressing light
 	# right after the riposte continues the chain into the heavy.
 	combo_index = light_combo.size() - 1
@@ -610,6 +614,16 @@ func die() -> void:
 
 # -------------------------------------------------------------------- animation
 
+# Turn toward a direction: picks the main axis for last_direction (which way
+# swings and lunges go) and flips the sprite. Only horizontal input flips the
+# sprite, so moving straight up/down keeps the side you were facing.
+func set_facing(dir: Vector2) -> void:
+	if abs(dir.x) > abs(dir.y):
+		last_direction = "right" if dir.x > 0 else "left"
+	else:
+		last_direction = "down" if dir.y > 0 else "up"
+	face(dir.x)
+
 func face(dir_x: float) -> void:
 	if dir_x != 0.0:
 		pivot.scale.x = -1.0 if dir_x < 0.0 else 1.0
@@ -635,14 +649,7 @@ func update_animation(direction: Vector2) -> void:
 	if direction == Vector2.ZERO:
 		anim.play("idle")
 		return
-	if abs(direction.x) > abs(direction.y):
-		last_direction = "right" if direction.x > 0 else "left"
-	else:
-		last_direction = "down" if direction.y > 0 else "up"
-
-	# Only change facing when moving horizontally, so up/down keeps the last side
-	face(direction.x)
-
+	set_facing(direction)
 	anim.play("walk")
 
 func shake(strength: float, duration: float = 0.2) -> void:

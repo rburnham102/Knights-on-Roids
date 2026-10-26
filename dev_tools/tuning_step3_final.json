@@ -122,7 +122,7 @@
   "hit_frame": 6,
   "knockback": 120.0,
   "windup_time": 0.35,
-  "projectile_speed": 240.0,
+  "projectile_speed": 240.0, "projectile_range": 220.0,
   "color": [
    0.6,
    0.8,
