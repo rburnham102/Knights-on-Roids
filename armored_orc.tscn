@@ -421,6 +421,7 @@ can_guard = true
 special_chance = 0.3
 special_cooldown = 3.0
 max_poise = 130.0
+chip_knockback_mult = 0.35
 max_health = 100
 speed = 50.0
 

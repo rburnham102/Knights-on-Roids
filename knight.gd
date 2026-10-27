@@ -43,7 +43,7 @@ const BLOCK_RERAISE_DELAY := 0.3
 const DODGE_ANIM := &"dodge"          # add an animation with this name to the Knight's SpriteFrames
 const DODGE_DURATION := 0.25          # seconds the whole dash lasts
 const DODGE_IFRAMES := 0.18           # first part of the dash you can't be hit
-const DODGE_DISTANCE := 60.0          # pixels (Dexterity scales it)
+const DODGE_DISTANCE := 30.0          # pixels (Dexterity scales it). Was 60.
 const DODGE_COOLDOWN := 0.7           # seconds from the start of one dodge to the next
 const DODGE_DIRECTION_GRACE := 0.12   # let go of the keys this recently? dash the way you were going
 const DODGE_STEER_WINDOW := 0.05      # a direction pressed this soon after Shift still steers the dash
@@ -296,9 +296,11 @@ func start_dodge_motion() -> void:
 	if dir == Vector2.ZERO and since_move <= DODGE_DIRECTION_GRACE:
 		dir = last_move_input
 	if dir == Vector2.ZERO:
-		dir = DIRECTIONS[last_direction]
+		# No direction: hop backwards, still facing the same way.
+		set_dodge_direction(-DIRECTIONS[last_direction], false)
 		dodge_direction_pending = true
-	set_dodge_direction(dir)
+	else:
+		set_dodge_direction(dir)
 	# Slip through enemies but not walls. Both lines are needed: the mask stops
 	# US seeing them, the layer stops THEM seeing us (otherwise they'd get
 	# shoved along by the dash).
@@ -316,8 +318,9 @@ func start_dodge_motion() -> void:
 		anim.speed_scale = 2.0
 		anim.play("walk")
 
-func set_dodge_direction(dir: Vector2) -> void:
-	set_facing(dir)
+func set_dodge_direction(dir: Vector2, turn := true) -> void:
+	if turn:
+		set_facing(dir)
 	dodge_velocity = dir.normalized() * DODGE_DISTANCE * stats.dodge_distance_mult() / DODGE_DURATION
 
 func process_dodge(delta: float) -> void:
@@ -618,10 +621,8 @@ func die() -> void:
 # swings and lunges go) and flips the sprite. Only horizontal input flips the
 # sprite, so moving straight up/down keeps the side you were facing.
 func set_facing(dir: Vector2) -> void:
-	if abs(dir.x) > abs(dir.y):
+	if dir.x != 0.0:
 		last_direction = "right" if dir.x > 0 else "left"
-	else:
-		last_direction = "down" if dir.y > 0 else "up"
 	face(dir.x)
 
 func face(dir_x: float) -> void:

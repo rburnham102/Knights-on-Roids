@@ -64,6 +64,10 @@ const GUARD_BREAK_STAGGER := 1.2       # seconds helpless after its guard is bro
 const GUARD_TRIGGER_RANGE := 45.0      # raises the shield if the knight swings this close
 const GUARD_MIN_TIME := 0.35           # keeps the shield up at least this long
 const GUARD_TINT := Color(1.8, 1.6, 0.7)
+# Lining up: enemies stand beside the knight (in front of or behind him) on
+# the same horizontal line, this share of attack_range away from him.
+const LANE_SPOT_DISTANCE := 0.75
+const LANE_ARRIVE := 2.0   # pixels: close enough to the spot to stop walking
 
 var state := State.FREE
 # Read-only conveniences so other scripts (and tests) can ask simple questions.
@@ -263,11 +267,25 @@ func process_free(delta: float) -> void:
 		return
 	player_was_swinging = swinging
 
-	if distance <= attack_range and cooldown_left <= 0.0:
+	# Only attack from in front of or behind the knight: within 45 degrees of
+	# horizontal on either side. (The knight only faces left/right, so his
+	# front cone plus his back cone is exactly "more sideways than vertical".)
+	var in_lane := absf(to_player.y) <= absf(to_player.x)
+
+	if distance <= attack_range and in_lane and cooldown_left <= 0.0:
 		start_attack()
-	elif distance <= detect_range and distance > attack_range:
-		move_toward_target(to_player.normalized(), speed, delta)
-		anim.play("walk")
+	elif distance <= detect_range:
+		# Walk to a spot beside the knight on whichever side we're already on,
+		# instead of straight at him. Keeps lining up during the cooldown too.
+		var side := -1.0 if to_player.x > 0.0 else 1.0
+		var spot := player.global_position + Vector2(side * attack_range * LANE_SPOT_DISTANCE, 0.0)
+		var to_spot := spot - global_position
+		if to_spot.length() > LANE_ARRIVE:
+			move_toward_target(to_spot.normalized(), speed, delta)
+			anim.play("walk")
+		else:
+			stand_still()
+			anim.play("idle")
 	else:
 		stand_still()
 		anim.play("idle")
