@@ -1,12 +1,14 @@
 extends Node
-## Runs one whole run: builds each room, fills it with enemies, locks the door
+## Runs one whole run: builds each level (a village street made of random
+## chunks), fills it with enemies, locks the door
 ## until they're dead, offers an upgrade, and handles death and victory.
 ## The knight, HUD and screens live in run.tscn and are assigned below.
 
-const ROOMS: Array[PackedScene] = [
-	preload("res://rooms/room_arena.tscn"),
-	preload("res://rooms/room_pillars.tscn"),
-	preload("res://rooms/room_hall.tscn"),
+const LEVEL := preload("res://rooms/level.tscn")
+const CHUNKS: Array[PackedScene] = [
+	preload("res://rooms/chunks/chunk_template.tscn"),
+	preload("res://rooms/chunks/chunk_template2.tscn"),
+	preload("res://rooms/chunks/chunk_template3.tscn"),
 ]
 const UPGRADES := [
 	preload("res://upgrades/power_up.tres"),
@@ -33,13 +35,12 @@ const FADE_TIME := 0.25
 @export var fade_rect: ColorRect
 
 var run: RunState
-var room: Room
+var room: Level   # the current level (still called "room" so the dev tools keep working)
 var pool: Array[Upgrade] = []
 var enemies_left := 0
 var awaiting_upgrade := false
 var finished := false
 var changing_room := false
-var last_room_index := -1
 
 func _ready() -> void:
 	run = RunState.new(start_seed)
@@ -79,12 +80,9 @@ func _clear_level() -> void:
 	Engine.time_scale = 1.0
 
 func _build_room() -> void:
-	var index: int = run.rng.randi() % ROOMS.size()
-	if index == last_room_index:
-		index = (index + 1) % ROOMS.size()   # never the same room twice in a row
-	last_room_index = index
-	room = ROOMS[index].instantiate()
+	room = LEVEL.instantiate()
 	room_holder.add_child(room)
+	room.build(CHUNKS, run.rng)
 
 	knight.global_position = room.player_start.global_position
 	knight.reset_for_new_room()
@@ -98,22 +96,26 @@ func _build_room() -> void:
 	room.exit_door.entered.connect(_on_exit_entered)
 	_spawn_enemies()
 
+# Every chunk gets its own enemy budget, so enemies are spread along the street.
 func _spawn_enemies() -> void:
-	var points := room.spawn_positions()
-	var scenes := EnemyDirector.plan(run.depth, points.size(), run.rng)
-	# Shuffle the spawn points with the run's generator so a seed replays the same.
-	for i in range(points.size() - 1, 0, -1):
-		var j: int = run.rng.randi() % (i + 1)
-		var swap := points[i]
-		points[i] = points[j]
-		points[j] = swap
-	enemies_left = scenes.size()
-	for i in scenes.size():
-		var enemy: Node2D = scenes[i].instantiate()
-		enemy.position = points[i]
-		actors.add_child(enemy)
-		enemy.died.connect(_on_enemy_died)
-		_spawn_in(enemy)
+	enemies_left = 0
+	for points: Array[Vector2] in room.spawn_groups():
+		if points.is_empty():
+			continue
+		var scenes := EnemyDirector.plan(run.depth, points.size(), run.rng)
+		# Shuffle the spawn points with the run's generator so a seed replays the same.
+		for i in range(points.size() - 1, 0, -1):
+			var j: int = run.rng.randi() % (i + 1)
+			var swap := points[i]
+			points[i] = points[j]
+			points[j] = swap
+		enemies_left += scenes.size()
+		for i in scenes.size():
+			var enemy: Node2D = scenes[i].instantiate()
+			enemy.position = points[i]
+			actors.add_child(enemy)
+			enemy.died.connect(_on_enemy_died)
+			_spawn_in(enemy)
 
 # Enemies fade in and do nothing for a moment, so a room never opens with a hit.
 func _spawn_in(enemy: Node2D) -> void:

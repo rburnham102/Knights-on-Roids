@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bpv5g1t55xj7"]
 
-[ext_resource type="Script" uid="uid://fy2gxojuywf5" path="res://hud.gd" id="1_hud"]
+[ext_resource type="Script" uid="uid://bw8e26lrmqdjj" path="res://hud.gd" id="1_hud"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
 bg_color = Color(0, 0, 0, 0.6)
@@ -28,21 +28,20 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" unique_id=641780015]
 script = ExtResource("1_hud")
 
-[node name="Margin" type="MarginContainer" parent="."]
-anchors_preset = 0
+[node name="Margin" type="MarginContainer" parent="." unique_id=452646080]
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="Rows" type="VBoxContainer" parent="Margin"]
+[node name="Rows" type="VBoxContainer" parent="Margin" unique_id=302510588]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="HealthBar" type="ProgressBar" parent="Margin/Rows"]
+[node name="HealthBar" type="ProgressBar" parent="Margin/Rows" unique_id=1055233907]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(220, 18)
 layout_mode = 2
@@ -51,7 +50,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_health")
 value = 100.0
 show_percentage = false
 
-[node name="HealthLabel" type="Label" parent="Margin/Rows/HealthBar"]
+[node name="HealthLabel" type="Label" parent="Margin/Rows/HealthBar" unique_id=1892272816]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -66,7 +65,7 @@ text = "100 / 100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GuardBar" type="ProgressBar" parent="Margin/Rows"]
+[node name="GuardBar" type="ProgressBar" parent="Margin/Rows" unique_id=871040378]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(220, 8)
 layout_mode = 2
@@ -75,7 +74,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_guard")
 value = 100.0
 show_percentage = false
 
-[node name="VersionLabel" type="Label" parent="Margin/Rows"]
+[node name="VersionLabel" type="Label" parent="Margin/Rows" unique_id=753816641]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.6)
 layout_mode = 2
@@ -83,7 +82,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 11
 
-[node name="RoomLabel" type="Label" parent="Margin/Rows"]
+[node name="RoomLabel" type="Label" parent="Margin/Rows" unique_id=1459510238]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)

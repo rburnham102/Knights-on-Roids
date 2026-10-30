@@ -326,4 +326,7 @@ tile_set = SubResource("TileSet_ernif")
 [node name="EnemySpawn" type="Node2D" parent="." unique_id=960275488]
 
 [node name="Marker2D" type="Marker2D" parent="EnemySpawn" unique_id=633053515]
-position = Vector2(339, 81)
+position = Vector2(310, 69)
+
+[node name="Marker2D2" type="Marker2D" parent="EnemySpawn" unique_id=803532619]
+position = Vector2(243, 120)

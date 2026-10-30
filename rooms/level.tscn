@@ -1,0 +1,36 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://level.gd" id="1_level"]
+[ext_resource type="PackedScene" path="res://exit_door.tscn" id="2_door"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_side"]
+size = Vector2(16, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_top"]
+size = Vector2(8000, 16)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_level")
+
+[node name="Chunks" type="Node2D" parent="."]
+
+[node name="PlayerStart" type="Marker2D" parent="."]
+position = Vector2(24, 96)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="Left" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-8, 64)
+shape = SubResource("RectangleShape2D_side")
+
+[node name="Right" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1608, 64)
+shape = SubResource("RectangleShape2D_side")
+
+[node name="Top" type="CollisionShape2D" parent="Walls"]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_top")
+
+[node name="ExitDoor" parent="." instance=ExtResource("2_door")]
+position = Vector2(1592, 96)
