@@ -1,0 +1,11 @@
+animated objects sprite sheet block size:
+
+FL_Houses_Candle1		- 32x32
+FL_Houses_Candle2		- 32x32
+FL_Houses_Candle3		- 32x32
+FL_Houses_Candle4		- 32x32
+FL_Houses_Candle5		- 32x32
+FL_Houses_fireplaceA 	- 64x96
+FL_Houses_fireplaceB 	- 64x160
+FL_Houses_torch		- 32x64
+
