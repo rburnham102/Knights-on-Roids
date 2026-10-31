@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b2dtp5x5athv7"]
+
+[ext_resource type="Texture2D" uid="uid://cfqyeq6w813fv" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/Trees/Tree_B_v2.png" id="2_s337v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvav3"]
+atlas = ExtResource("2_s337v")
+region = Rect2(0, 0, 160, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcwsi"]
+atlas = ExtResource("2_s337v")
+region = Rect2(160, 0, 160, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfju7"]
+atlas = ExtResource("2_s337v")
+region = Rect2(320, 0, 160, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv0f3"]
+atlas = ExtResource("2_s337v")
+region = Rect2(480, 0, 160, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwrye"]
+atlas = ExtResource("2_s337v")
+region = Rect2(640, 0, 160, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lenrx"]
+atlas = ExtResource("2_s337v")
+region = Rect2(800, 0, 160, 176)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ernif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvav3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcwsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfju7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv0f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwrye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lenrx")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ernif"]
+radius = 13.341664
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=922279893]
+sprite_frames = SubResource("SpriteFrames_ernif")
+animation = &"new_animation"
+frame_progress = 0.11769177
+
+[node name="Area2D" type="Area2D" parent="." unique_id=597617629]
+position = Vector2(1, 41)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=494120]
+process_mode = 3
+light_mask = 0
+position = Vector2(3, 17)
+shape = SubResource("CircleShape2D_ernif")

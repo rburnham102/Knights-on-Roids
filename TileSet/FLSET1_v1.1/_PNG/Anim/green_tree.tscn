@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bxua3vflohk4y"]
+
+[ext_resource type="Texture2D" uid="uid://dexs3cxgj0qjd" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/Trees/Tree_A_v1.png" id="1_1nl71"]
+[ext_resource type="Texture2D" uid="uid://c4c5g23om2jk1" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/Trees/Tree_A_v2.png" id="2_rkfhq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkfhq"]
+atlas = ExtResource("1_1nl71")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuc4s"]
+atlas = ExtResource("1_1nl71")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgqcb"]
+atlas = ExtResource("1_1nl71")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ff82b"]
+atlas = ExtResource("1_1nl71")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0qux"]
+atlas = ExtResource("2_rkfhq")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0l1h"]
+atlas = ExtResource("2_rkfhq")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jxns"]
+atlas = ExtResource("2_rkfhq")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kskr3"]
+atlas = ExtResource("2_rkfhq")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ernif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkfhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuc4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgqcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ff82b")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0qux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0l1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jxns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kskr3")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ernif"]
+radius = 13.341664
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=922279893]
+process_mode = 3
+sprite_frames = SubResource("SpriteFrames_ernif")
+frame_progress = 0.8374517
+
+[node name="Area2D" type="Area2D" parent="." unique_id=597617629]
+position = Vector2(1, 41)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=494120]
+light_mask = 0
+shape = SubResource("CircleShape2D_ernif")

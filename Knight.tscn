@@ -399,7 +399,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 6.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -428,7 +428,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk",
-"speed": 6.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tuctl"]
@@ -457,7 +457,7 @@ riposte_attack = ExtResource("5_light2")
 texture_filter = 1
 position = Vector2(-1, -7)
 sprite_frames = SubResource("SpriteFrames_ernif")
-animation = &"attack_light"
+animation = &"attack_heavy"
 frame = 5
 frame_progress = 1.0
 
