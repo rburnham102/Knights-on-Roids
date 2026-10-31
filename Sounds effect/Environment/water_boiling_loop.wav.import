@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bu5dnv6hd2cua"
+path="res://.godot/imported/water_boiling_loop.wav-57ac975d7ece1ad5fc8307c147303b3e.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Environment/water_boiling_loop.wav"
+dest_files=["res://.godot/imported/water_boiling_loop.wav-57ac975d7ece1ad5fc8307c147303b3e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

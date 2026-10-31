@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0n2h7okpobsp"
+path="res://.godot/imported/sword_clash_2.wav-3e07e6fa24276e04cd47b98a2b001494.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Weapons/sword_clash_2.wav"
+dest_files=["res://.godot/imported/sword_clash_2.wav-3e07e6fa24276e04cd47b98a2b001494.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

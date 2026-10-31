@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ndii0cx8a2qu"
+path="res://.godot/imported/brass_inn.wav-894be9c7a769db84f616530a34e774d6.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Musical Effects/brass_inn.wav"
+dest_files=["res://.godot/imported/brass_inn.wav-894be9c7a769db84f616530a34e774d6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

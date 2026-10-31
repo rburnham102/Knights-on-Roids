@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bai5dqwe6s8pj"
+path="res://.godot/imported/music_box_mystery.wav-a821803643c65d643ff55bcc8145b2e0.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Musical Effects/music_box_mystery.wav"
+dest_files=["res://.godot/imported/music_box_mystery.wav-a821803643c65d643ff55bcc8145b2e0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ok4h07j7ukmf"
+path="res://.godot/imported/synth_bass_negative.wav-85501c8de437b3a7376baf4016afa42d.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Musical Effects/synth_bass_negative.wav"
+dest_files=["res://.godot/imported/synth_bass_negative.wav-85501c8de437b3a7376baf4016afa42d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

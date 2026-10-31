@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbqde0w6fagp2"
+path="res://.godot/imported/ghost.wav-8dc8fc7e7391e1ff228d0e7377492e91.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Retro/ghost.wav"
+dest_files=["res://.godot/imported/ghost.wav-8dc8fc7e7391e1ff228d0e7377492e91.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

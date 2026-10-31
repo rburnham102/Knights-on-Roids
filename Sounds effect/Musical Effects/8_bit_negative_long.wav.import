@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clnascx8tbtaj"
+path="res://.godot/imported/8_bit_negative_long.wav-5c6c3b62532e6353c39ea21bf7244adc.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Musical Effects/8_bit_negative_long.wav"
+dest_files=["res://.godot/imported/8_bit_negative_long.wav-5c6c3b62532e6353c39ea21bf7244adc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://va42vc7flfdq"
+path="res://.godot/imported/vibraphone_mystery.wav-fe284b9f0b441a803cf31e13a583ee55.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Musical Effects/vibraphone_mystery.wav"
+dest_files=["res://.godot/imported/vibraphone_mystery.wav-fe284b9f0b441a803cf31e13a583ee55.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bu7futvnunka5"
+path="res://.godot/imported/light_match.wav-0d5646bacf0827bad8a850c7693a7df4.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Other/light_match.wav"
+dest_files=["res://.godot/imported/light_match.wav-0d5646bacf0827bad8a850c7693a7df4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

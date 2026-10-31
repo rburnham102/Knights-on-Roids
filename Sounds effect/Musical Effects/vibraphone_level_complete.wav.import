@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxdtlb5k0x45i"
+path="res://.godot/imported/vibraphone_level_complete.wav-f7b377a74d7b4870dedd6a40c17d7e5e.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Musical Effects/vibraphone_level_complete.wav"
+dest_files=["res://.godot/imported/vibraphone_level_complete.wav-f7b377a74d7b4870dedd6a40c17d7e5e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

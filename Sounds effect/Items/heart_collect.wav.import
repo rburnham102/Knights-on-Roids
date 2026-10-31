@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bil4817y7beuf"
+path="res://.godot/imported/heart_collect.wav-81faa0148bf12641f7512612fb69530c.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Items/heart_collect.wav"
+dest_files=["res://.godot/imported/heart_collect.wav-81faa0148bf12641f7512612fb69530c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

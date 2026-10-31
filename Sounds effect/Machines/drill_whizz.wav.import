@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwtapa3oo75a6"
+path="res://.godot/imported/drill_whizz.wav-bd7cc6120a6d3ac679c30806160bb386.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Machines/drill_whizz.wav"
+dest_files=["res://.godot/imported/drill_whizz.wav-bd7cc6120a6d3ac679c30806160bb386.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

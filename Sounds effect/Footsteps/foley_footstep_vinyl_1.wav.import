@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0g60h4270c1e"
+path="res://.godot/imported/foley_footstep_vinyl_1.wav-22c6b75765d753162f207e680cf35f68.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Footsteps/foley_footstep_vinyl_1.wav"
+dest_files=["res://.godot/imported/foley_footstep_vinyl_1.wav-22c6b75765d753162f207e680cf35f68.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

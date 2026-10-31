@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1k02b12g2eqm"
+path="res://.godot/imported/creaky_door_long.wav-d4fd3cbe631e854ebf41e8f661e2e52c.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Environment/creaky_door_long.wav"
+dest_files=["res://.godot/imported/creaky_door_long.wav-d4fd3cbe631e854ebf41e8f661e2e52c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

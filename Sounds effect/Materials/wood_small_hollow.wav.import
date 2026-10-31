@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dity07oce4kvw"
+path="res://.godot/imported/wood_small_hollow.wav-494627f2e00b502f49e90f92615607a0.sample"
+
+[deps]
+
+source_file="res://Sounds effect/Materials/wood_small_hollow.wav"
+dest_files=["res://.godot/imported/wood_small_hollow.wav-494627f2e00b502f49e90f92615607a0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
