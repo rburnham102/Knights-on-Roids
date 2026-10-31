@@ -78,9 +78,10 @@ radius = 13.341664
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=922279893]
 process_mode = 3
 sprite_frames = SubResource("SpriteFrames_ernif")
-frame_progress = 0.8374517
+autoplay = "default"
+frame_progress = 0.8616885
 
-[node name="Area2D" type="Area2D" parent="." unique_id=597617629]
+[node name="Area2D" type="StaticBody2D" parent="." unique_id=566217963]
 position = Vector2(1, 41)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=494120]

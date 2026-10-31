@@ -58,13 +58,13 @@ radius = 13.341664
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=922279893]
 sprite_frames = SubResource("SpriteFrames_ernif")
 animation = &"new_animation"
-frame_progress = 0.11769177
+autoplay = "new_animation"
+frame_progress = 0.68633306
 
-[node name="Area2D" type="Area2D" parent="." unique_id=597617629]
+[node name="Area2D" type="StaticBody2D" parent="." unique_id=2069830048]
 position = Vector2(1, 41)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=494120]
-process_mode = 3
 light_mask = 0
 position = Vector2(3, 17)
 shape = SubResource("CircleShape2D_ernif")
