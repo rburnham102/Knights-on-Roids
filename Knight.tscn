@@ -488,7 +488,7 @@ rotation = 1.5707964
 shape = SubResource("CircleShape2D_feb5d")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=183538323]
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
 
 [connection signal="animation_finished" from="Pivot/AnimatedSprite2D" to="." method="_on_animated_finished"]
 [connection signal="frame_changed" from="Pivot/AnimatedSprite2D" to="." method="_on_frame_changed"]
