@@ -11,8 +11,10 @@
 script = ExtResource("4_yv4ql")
 
 [node name="Run" type="Node2D" unique_id=985809285]
+y_sort_enabled = true
 
 [node name="RoomHolder" type="Node2D" parent="." unique_id=371783723]
+y_sort_enabled = true
 
 [node name="Actors" type="Node2D" parent="." unique_id=1955185764]
 y_sort_enabled = true

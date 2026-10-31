@@ -10,9 +10,11 @@ size = Vector2(16, 256)
 size = Vector2(8000, 16)
 
 [node name="Level" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_level")
 
 [node name="Chunks" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="PlayerStart" type="Marker2D" parent="."]
 position = Vector2(24, 96)

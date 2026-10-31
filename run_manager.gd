@@ -9,6 +9,7 @@ const CHUNKS: Array[PackedScene] = [
 	preload("res://rooms/chunks/chunk_template.tscn"),
 	preload("res://rooms/chunks/chunk_template2.tscn"),
 	preload("res://rooms/chunks/chunk_template3.tscn"),
+	preload("res://rooms/chunks/chunk_template4.tscn"),
 ]
 const UPGRADES := [
 	preload("res://upgrades/power_up.tres"),
