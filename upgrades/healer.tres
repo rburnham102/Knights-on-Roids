@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3]
+
+[ext_resource type="Script" path="res://upgrade.gd" id="1_upgrade"]
+
+[resource]
+script = ExtResource("1_upgrade")
+title = "Hire a Healer"
+description = "A priestess follows you. Every 30s she heals you for 20, and she blasts away enemies that crowd her. She is fragile: if she falls, she's gone."
+perk = &"healer"

@@ -7,6 +7,8 @@ extends Node
 
 const LEVEL := preload("res://rooms/level.tscn")
 const PICKUP := preload("res://pickup.tscn")
+const HEALER := preload("res://healer.tscn")
+const HEALER_UPGRADE := preload("res://upgrades/healer.tres")
 const CHUNKS: Array[PackedScene] = [
 	preload("res://rooms/chunks/chunk_template.tscn"),
 	preload("res://rooms/chunks/chunk_template2.tscn"),
@@ -25,9 +27,12 @@ const UPGRADES := [
 	preload("res://upgrades/ghost_step.tres"),
 	preload("res://upgrades/light_footed.tres"),
 	preload("res://upgrades/iron_guard.tres"),
+	HEALER_UPGRADE,
 ]
 const SPAWN_IN_TIME := 0.5     # enemies fade in and stay idle this long
 const FADE_TIME := 0.25
+## Share of enemies that go after the healer instead of the knight.
+const PEEL_CHANCE := 0.2
 
 @export var start_seed := 0    # 0 = a random run
 @export var heal_after_room := 0.25   # share of max health restored when a room is cleared
@@ -46,6 +51,7 @@ var enemies_left := 0
 var awaiting_upgrade := false
 var finished := false
 var changing_room := false
+var healer: Healer   # null until hired (and again after she dies)
 
 func _ready() -> void:
 	run = RunState.new(start_seed)
@@ -80,7 +86,7 @@ func _clear_level() -> void:
 		room.queue_free()
 		room = null
 	for child in actors.get_children():
-		if child != knight:
+		if child != knight and child != healer:
 			child.queue_free()   # enemies, arrows, effects left over
 	Engine.time_scale = 1.0
 
@@ -91,6 +97,8 @@ func _build_room() -> void:
 
 	knight.global_position = room.player_start.global_position
 	knight.reset_for_new_room()
+	if healer:
+		healer.place_beside_knight()
 	var area := room.bounds()
 	knight.camera.limit_left = floori(area.position.x)
 	knight.camera.limit_top = floori(area.position.y)
@@ -123,6 +131,10 @@ func _spawn_enemies() -> void:
 			enemy.position = points[i]
 			actors.add_child(enemy)
 			enemy.died.connect(_on_enemy_died.bind(enemy))   # bind() adds the enemy as an argument
+			# A few enemies go after the healer. loot_rng, not rng: this
+			# depends on your upgrades, so it mustn't change the next rooms.
+			if healer and run.loot_rng.randf() < PEEL_CHANCE:
+				enemy.player = healer
 			_spawn_in(enemy)
 
 # Enemies fade in and do nothing for a moment, so a room never opens with a hit.
@@ -146,6 +158,8 @@ func _on_enemy_died(enemy: Node2D) -> void:
 func _room_cleared() -> void:
 	run.rooms_cleared += 1
 	knight.heal(roundi(knight.max_health() * heal_after_room))
+	if healer:
+		healer.heal(roundi(healer.max_health * heal_after_room))
 	if run.depth >= RunState.RUN_LENGTH:
 		_finish(true)
 		return
@@ -158,6 +172,8 @@ func _room_cleared() -> void:
 func _on_upgrade_chosen(upgrade: Upgrade) -> void:
 	awaiting_upgrade = false
 	run.apply(upgrade, knight)
+	if upgrade == HEALER_UPGRADE:
+		_hire_healer()
 	room.exit_door.open()
 
 func _on_exit_entered() -> void:
@@ -166,6 +182,27 @@ func _on_exit_entered() -> void:
 	changing_room = true
 	await _fade_to(1.0)
 	await _enter_room()
+
+# ----------------------------------------------------------------- healer
+
+func _hire_healer() -> void:
+	pool.erase(HEALER_UPGRADE)   # only one at a time
+	healer = HEALER.instantiate()
+	healer.knight = knight
+	healer.died.connect(_on_healer_died)
+	actors.add_child(healer)
+	healer.place_beside_knight()
+	healer.modulate.a = 0.0
+	create_tween().tween_property(healer, "modulate:a", 1.0, SPAWN_IN_TIME)
+
+func _on_healer_died() -> void:
+	# Enemies that were after her turn back to the knight.
+	for enemy in get_tree().get_nodes_in_group("enemies"):
+		if enemy.player == healer:
+			enemy.player = knight
+	healer = null                # she plays her death animation, then frees herself
+	run.perks.erase(&"healer")
+	pool.append(HEALER_UPGRADE)  # she can be hired again later
 
 # ------------------------------------------------------------------- loot
 

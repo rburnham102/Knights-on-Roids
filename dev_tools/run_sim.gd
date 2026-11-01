@@ -36,6 +36,7 @@ var detour_dir := Vector2.ZERO
 var last_steer := Vector2.RIGHT
 var stuck_ref_pos := Vector2.ZERO
 var stuck_ref_frame := 0
+var healer_alive := 0   # runs that ended with the healer still alive
 
 func _initialize() -> void:
 	var runs := 8
@@ -75,6 +76,9 @@ func run(runs: int) -> void:
 		var parts: PackedStringArray = []
 		for k in keys:
 			parts.append("%d:%d" % [k, hist[k]])
+		if ov.get("healer", 0.0) > 0.0:
+			print("             healer alive at the end of %d/%d runs" % [healer_alive, runs])
+			healer_alive = 0
 		print("%-12s %2d/%-2d %9.1f %-26s %7.0f %7.1f" % [label, won, runs, float(cleared_sum) / runs, " ".join(parts), float(hp_sum) / runs, float(frames_sum) / runs / 3600.0])
 
 func living() -> Array:
@@ -126,6 +130,8 @@ func play_run(bot_kind: String, bot_jitter: float, run_seed: int) -> Dictionary:
 	var up_screen: Node = scene.get_node("UpgradeScreen")
 	await physics_frame
 	await physics_frame
+	if ov.get("healer", 0.0) > 0.0:
+		mgr._hire_healer()   # start the run with her, to measure what she's worth
 	frame = 0
 	var last_depth := 0
 	var room_start := 0
@@ -180,6 +186,8 @@ func play_run(bot_kind: String, bot_jitter: float, run_seed: int) -> Dictionary:
 			stuck_ref_pos = knight.global_position
 	var won: bool = mgr.finished and mgr.run.rooms_cleared >= RunState.RUN_LENGTH and not knight.is_dead
 	var result := {"won": won, "cleared": mgr.run.rooms_cleared, "hp": maxi(knight.health, 0), "frames": frame}
+	if ov.get("healer", 0.0) > 0.0:
+		healer_alive += 1 if mgr.healer != null else 0
 	for a in ["move_left", "move_right", "move_up", "move_down", "block", "attack_light", "attack_heavy", "dodge"]:
 		Input.action_release(a)
 	paused = false

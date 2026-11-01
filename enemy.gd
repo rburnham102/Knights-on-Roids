@@ -106,6 +106,7 @@ func _ready() -> void:
 	health = max_health
 	poise = max_poise
 	player = get_tree().get_first_node_in_group("player")
+	add_to_group("enemies")   # lets the healer find who's near her
 	anim.animation_finished.connect(_on_animation_finished)
 	anim.frame_changed.connect(_on_frame_changed)
 	hitbox.area_entered.connect(_on_hitbox_area_entered)   # hitbox now looks for HurtBox areas
@@ -353,7 +354,8 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	var target: Node2D = area.owner
 	if target == self or target in hit_bodies:
 		return
-	if target.is_in_group("player") and target.has_method("take_damage"):
+	# "allies" = the knight and the healer: a swing hurts whichever it reaches.
+	if target.is_in_group("allies") and target.has_method("take_damage"):
 		hit_bodies.append(target)
 		var result: Combat.HitResult = target.take_damage(current_attack.damage, global_position, current_attack.knockback, 0.0, Combat.flags_of(current_attack))
 		match result:

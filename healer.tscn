@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cehcqnjpbfs2n"]
 
+[ext_resource type="Script" uid="uid://c3lqwko3p82ww" path="res://healer.gd" id="0_script"]
 [ext_resource type="Texture2D" uid="uid://g85k1emc15u4" path="res://Asset/Characters(100x100 split)/Priest/Priest/Priest.png" id="1_ds2si"]
+[ext_resource type="Texture2D" uid="uid://bk1niqteq3gpt" path="res://Asset/Characters(100x100 split)/Priest/Priest/Priest_Heal.png" id="3_ghede"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6m5ix"]
 atlas = ExtResource("1_ds2si")
@@ -55,44 +57,28 @@ atlas = ExtResource("1_ds2si")
 region = Rect2(300, 900, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1rpo"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(0, 500, 100, 100)
+atlas = ExtResource("3_ghede")
+region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_na2tm"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(100, 500, 100, 100)
+atlas = ExtResource("3_ghede")
+region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_05je1"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(200, 500, 100, 100)
+atlas = ExtResource("3_ghede")
+region = Rect2(200, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tvpxy"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(300, 500, 100, 100)
+atlas = ExtResource("3_ghede")
+region = Rect2(300, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ys4i6"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(400, 500, 100, 100)
+atlas = ExtResource("3_ghede")
+region = Rect2(400, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sevbc"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(500, 500, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e8t1b"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(200, 500, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m4wgm"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(300, 500, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_077a2"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(400, 500, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lborp"]
-atlas = ExtResource("1_ds2si")
-region = Rect2(500, 500, 100, 100)
+atlas = ExtResource("3_ghede")
+region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_asggf"]
 atlas = ExtResource("1_ds2si")
@@ -196,7 +182,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_slclp")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack",
 "speed": 10.0
 }, {
@@ -235,18 +221,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sevbc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e8t1b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m4wgm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_077a2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lborp")
 }],
 "loop": 0,
 "name": &"heal",
@@ -332,7 +306,15 @@ height = 14.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_yjpgs"]
 radius = 4.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1024195489]
+[sub_resource type="StyleBoxFlat" id="StyleBox_bar_bg"]
+bg_color = Color(0.1, 0.05, 0.05, 0.85)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_bar_fill"]
+bg_color = Color(0.45, 0.85, 0.35, 1)
+
+[node name="Healer" type="CharacterBody2D" unique_id=1024195489]
+collision_layer = 0
+script = ExtResource("0_script")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=1582148504]
 
@@ -340,8 +322,7 @@ radius = 4.0
 texture_filter = 1
 position = Vector2(-1, -7)
 sprite_frames = SubResource("SpriteFrames_k7vfe")
-animation = &"walk"
-frame_progress = 0.86495405
+animation = &"death"
 
 [node name="Hitbox" type="Area2D" parent="Pivot" unique_id=834957776]
 collision_layer = 0
@@ -368,3 +349,18 @@ position = Vector2(0, -4)
 position = Vector2(0, -1)
 rotation = 1.5707964
 shape = SubResource("CircleShape2D_yjpgs")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=427308577]
+z_index = 10
+custom_minimum_size = Vector2(14, 2)
+offset_left = -7.0
+offset_top = -24.0
+offset_right = 7.0
+offset_bottom = -22.0
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBox_bar_bg")
+theme_override_styles/fill = SubResource("StyleBox_bar_fill")
+max_value = 40.0
+step = 1.0
+value = 40.0
+show_percentage = false

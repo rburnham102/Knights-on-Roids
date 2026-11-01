@@ -122,6 +122,7 @@ var is_blocking: bool:
 
 func _ready() -> void:
 	add_to_group("player")   # <-- lets the orc find the knight
+	add_to_group("allies")   # enemy swings hurt anything in this group (the healer too)
 	if stats == null:
 		stats = Stats.new()   # safety net: all-10 stats = the base numbers
 	health = max_health()
