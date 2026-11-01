@@ -46,16 +46,13 @@ position = Vector2(726, 92)
 [node name="EnemySpawn" type="Node2D" parent="." unique_id=1494902484]
 
 [node name="Marker2D" type="Marker2D" parent="EnemySpawn" unique_id=203244659]
-position = Vector2(229, 69)
-
-[node name="Marker2D3" type="Marker2D" parent="EnemySpawn" unique_id=1853943996]
-position = Vector2(208, 112)
+position = Vector2(310, 69)
 
 [node name="Marker2D2" type="Marker2D" parent="EnemySpawn" unique_id=1323571918]
-position = Vector2(284, 114)
+position = Vector2(243, 120)
 
-[node name="Marker2D4" type="Marker2D" parent="EnemySpawn" unique_id=766213972]
-position = Vector2(303, 79)
+[node name="Marker2D3" type="Marker2D" parent="EnemySpawn" unique_id=625901256]
+position = Vector2(200, 85)
 
-[node name="Marker2D5" type="Marker2D" parent="EnemySpawn" unique_id=549020207]
-position = Vector2(343, 106)
+[node name="Marker2D4" type="Marker2D" parent="EnemySpawn" unique_id=579341423]
+position = Vector2(355, 110)

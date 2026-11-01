@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_attack_data")
 anim = &"attack_heavy"
-damage = 24
+damage = 12
 hit_frame = 3
 knockback = 250.0
 windup_time = 0.4

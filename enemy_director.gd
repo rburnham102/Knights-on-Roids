@@ -4,12 +4,12 @@ extends RefCounted
 ## depth; every enemy costs some of it and only appears from a minimum depth.
 
 const ENTRIES := [
-	{"scene": preload("res://orc.tscn"), "cost": 1.0, "min_depth": 1},
+	{"scene": preload("res://orc.tscn"), "cost": 0.5, "min_depth": 1},   # weak but numerous
 	{"scene": preload("res://skeleton_archer.tscn"), "cost": 1.5, "min_depth": 2},
 	{"scene": preload("res://armored_orc.tscn"), "cost": 3.0, "min_depth": 4},
 ]
 # Tuning knobs (static vars so the run simulation can try other values).
-static var base_budget := 1.2
+static var base_budget := 1.0   # was 1.2: room 1 = exactly two (half-strength) orcs
 static var budget_per_depth := 0.45
 
 static func budget_for(depth: int) -> float:

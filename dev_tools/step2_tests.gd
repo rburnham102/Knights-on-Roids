@@ -131,13 +131,13 @@ func run() -> void:
 	orc = spawn(a, ORC, Vector2(24, 0))
 	orc.player = null
 	await frames(2)
-	check("orc starts with full poise (50)", orc.poise == 50.0 and orc.max_poise == 50.0)
+	check("orc starts with full poise (35)", orc.poise == 35.0 and orc.max_poise == 35.0)
 	orc.take_damage(10, Vector2.ZERO, 100.0, 10.0)
-	check("a chip hit damages but doesn't stagger", orc.health == 40 and orc.state == orc.State.FREE and orc.poise == 40.0)
+	check("a chip hit damages but doesn't stagger", orc.health == 15 and orc.state == orc.State.FREE and orc.poise == 25.0)
 	check("...and applies no knockback", orc.knockback == Vector2.ZERO)
 	orc.take_damage(10, Vector2(-30, 0), 100.0, orc.poise)   # exactly enough poise damage to break it
 	check("poise running out staggers it", orc.state == orc.State.STAGGER, "poise %.0f" % orc.poise)
-	check("...and refills the poise bar", orc.poise == 50.0)
+	check("...and refills the poise bar", orc.poise == 35.0)
 	check("...with knockback away from the attacker", orc.knockback.x > 0.0)
 	var hurt_frame_before: int = orc.anim.frame
 	await frames(10)
@@ -154,7 +154,7 @@ func run() -> void:
 	var poise_after_delay: float = orc.poise
 	await frames(60)           # +1s of regen at 8/s
 	check("poise doesn't regen for 2s after a hit, then recovers ~8/s",
-		poise_after_delay < 41.5 and orc.poise > 46.0 and orc.poise < 49.5, "%.1f then %.1f" % [poise_after_delay, orc.poise])
+		poise_after_delay < 26.5 and orc.poise > 31.0 and orc.poise < 34.5, "%.1f then %.1f" % [poise_after_delay, orc.poise])
 	await end_arena(a)
 
 	a = new_arena()
@@ -293,7 +293,7 @@ func run() -> void:
 		if orc.state == orc.State.STAGGER:
 			was_staggered = true
 	Input.action_release("block")
-	check("blocked swing: orc never staggers, knight guard 60 -> 50", not was_staggered and is_equal_approx(knight.guard, 50.0), "guard %.0f" % knight.guard)
+	check("blocked swing: orc never staggers, knight guard 60 -> 55", not was_staggered and is_equal_approx(knight.guard, 55.0), "guard %.0f" % knight.guard)
 	await end_arena(a)
 
 	# -------------------------------------------------------------------- dodge

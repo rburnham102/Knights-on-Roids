@@ -284,7 +284,8 @@ animations = [{
 [node name="Orc" instance=ExtResource("1_entity")]
 light_attack = ExtResource("2_light_attack")
 heavy_attack = ExtResource("3_heavy_attack")
-max_poise = 50.0
+max_poise = 35.0
+max_health = 25
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_ernif")

@@ -7,6 +7,8 @@ extends SceneTree
 const SCENARIOS := {
 	"1 orc": [["res://orc.tscn", Vector2(70, 0)]],
 	"2 orcs": [["res://orc.tscn", Vector2(70, -6)], ["res://orc.tscn", Vector2(-70, 6)]],
+	"3 orcs": [["res://orc.tscn", Vector2(70, -6)], ["res://orc.tscn", Vector2(-70, 6)], ["res://orc.tscn", Vector2(90, 20)]],
+	"4 orcs": [["res://orc.tscn", Vector2(70, -6)], ["res://orc.tscn", Vector2(-70, 6)], ["res://orc.tscn", Vector2(90, 20)], ["res://orc.tscn", Vector2(-90, -20)]],
 	"armored": [["res://armored_orc.tscn", Vector2(70, 0)]],
 	"orc+armored": [["res://orc.tscn", Vector2(70, 0)], ["res://armored_orc.tscn", Vector2(-80, 6)]],
 	"archer": [["res://skeleton_archer.tscn", Vector2(150, 0)]],
