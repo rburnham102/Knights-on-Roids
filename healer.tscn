@@ -2,6 +2,42 @@
 
 [ext_resource type="Texture2D" uid="uid://g85k1emc15u4" path="res://Asset/Characters(100x100 split)/Priest/Priest/Priest.png" id="1_ds2si"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m5ix"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(0, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lskig"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(100, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1t3u"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(200, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dioop"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(300, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffpv4"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(400, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b62ql"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(500, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1ei2"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(600, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psl3w"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(700, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slclp"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(800, 300, 100, 100)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ds2si"]
 atlas = ExtResource("1_ds2si")
 region = Rect2(0, 900, 100, 100)
@@ -39,6 +75,22 @@ atlas = ExtResource("1_ds2si")
 region = Rect2(400, 500, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sevbc"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(500, 500, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8t1b"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(200, 500, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4wgm"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(300, 500, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_077a2"]
+atlas = ExtResource("1_ds2si")
+region = Rect2(400, 500, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lborp"]
 atlas = ExtResource("1_ds2si")
 region = Rect2(500, 500, 100, 100)
 
@@ -118,6 +170,38 @@ region = Rect2(700, 100, 100, 100)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_6m5ix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lskig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1t3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dioop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffpv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b62ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1ei2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psl3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slclp")
+}],
+"loop": 1,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ds2si")
 }, {
 "duration": 1.0,
@@ -151,10 +235,22 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sevbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8t1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4wgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_077a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lborp")
 }],
 "loop": 0,
 "name": &"heal",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -244,9 +340,8 @@ radius = 4.0
 texture_filter = 1
 position = Vector2(-1, -7)
 sprite_frames = SubResource("SpriteFrames_k7vfe")
-animation = &"death"
-frame = 3
-frame_progress = 1.0
+animation = &"walk"
+frame_progress = 0.86495405
 
 [node name="Hitbox" type="Area2D" parent="Pivot" unique_id=834957776]
 collision_layer = 0

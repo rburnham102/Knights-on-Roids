@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="Item" format=3]
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dmigcm26heedi"]
 
-[ext_resource type="Script" path="res://item.gd" id="1_item"]
-[ext_resource type="Texture2D" path="res://Asset/Pickups/potions.png" id="2_sheet"]
-[ext_resource type="AudioStream" path="res://Sounds effect/Items/heart_collect.wav" id="3_sound"]
+[ext_resource type="Script" uid="uid://cy70tkbgu0iml" path="res://item.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://bkaxnekkgb43u" path="res://Asset/Pickups/potions.png" id="2_sheet"]
+[ext_resource type="AudioStream" uid="uid://bil4817y7beuf" path="res://Sounds effect/Items/heart_collect.wav" id="3_sound"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_icon"]
 atlas = ExtResource("2_sheet")
