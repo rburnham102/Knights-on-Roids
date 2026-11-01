@@ -282,6 +282,7 @@ animations = [{
 
 [node name="SkeletonArcher" instance=ExtResource("1_entity")]
 script = ExtResource("2_script")
+drop_chance = 0.06
 max_health = 30
 speed = 55.0
 detect_range = 280.0

@@ -11,7 +11,13 @@ var perks := {}          # perk id -> how many times it was taken
 var depth := 0           # the room the knight is in (1 = first room)
 var rooms_cleared := 0
 var upgrades_taken: Array[Upgrade] = []
+var items_found: Array[Item] = []
 var rng := RandomNumberGenerator.new()
+## Loot gets its own generator. Drops depend on how you play (which barrels you
+## smash, how many enemies you kill), so if they used `rng` every drop would
+## shift the rooms and enemies that come after. Separate, a seed always gives
+## the same rooms, however you play them.
+var loot_rng := RandomNumberGenerator.new()
 var run_seed := 0
 
 func _init(start_seed := 0) -> void:
@@ -20,6 +26,7 @@ func _init(start_seed := 0) -> void:
 	else:
 		rng.seed = start_seed
 	run_seed = rng.seed
+	loot_rng.seed = run_seed + 1
 
 ## Picks `count` different upgrades from the pool.
 func roll_upgrades(pool: Array[Upgrade], count := 3) -> Array[Upgrade]:
@@ -29,14 +36,23 @@ func roll_upgrades(pool: Array[Upgrade], count := 3) -> Array[Upgrade]:
 		picked.append(bag.pop_at(rng.randi() % bag.size()))
 	return picked
 
-## Applies an upgrade to this run (and heals the knight for anything it grants).
+## Applies an upgrade picked between rooms.
 func apply(upgrade: Upgrade, knight: Node) -> void:
+	_grant(upgrade, knight)
+	upgrades_taken.append(upgrade)
+
+## Applies an item picked up off the ground.
+func apply_item(item: Item, knight: Node) -> void:
+	_grant(item, knight)
+	items_found.append(item)
+
+# What upgrades and items have in common: stats, perks and healing.
+func _grant(upgrade: Upgrade, knight: Node) -> void:
 	var old_max: int = knight.max_health()
 	stats.power += upgrade.power
 	stats.dexterity += upgrade.dexterity
 	stats.vitality += upgrade.vitality
 	if upgrade.perk != &"":
 		perks[upgrade.perk] = int(perks.get(upgrade.perk, 0)) + 1
-	upgrades_taken.append(upgrade)
 	# More max health also fills the new health, so Vitality is never a trap.
 	knight.heal(knight.max_health() - old_max + upgrade.heal)

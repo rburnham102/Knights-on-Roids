@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://breakable.gd" id="1_breakable"]
+[ext_resource type="Texture2D" path="res://TileSet/FL_Houses_v1.0/_PNG/FL_Houses_decoratives.png" id="2_props"]
+[ext_resource type="AudioStream" path="res://Sounds effect/Materials/wood_small_drop.wav" id="3_sound"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whole"]
+atlas = ExtResource("2_props")
+region = Rect2(4, 206, 26, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_broken"]
+atlas = ExtResource("2_props")
+region = Rect2(163, 221, 26, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_body"]
+radius = 4.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hurt"]
+size = Vector2(12, 14)
+
+[node name="Barrel" type="StaticBody2D" groups=["breakables"]]
+collision_mask = 0
+script = ExtResource("1_breakable")
+broken_texture = SubResource("AtlasTexture_broken")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_whole")
+offset = Vector2(0, -13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_body")
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_hurt")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_sound")

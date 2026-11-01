@@ -1,0 +1,44 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://pickup.gd" id="1_pickup"]
+[ext_resource type="AudioStream" path="res://Sounds effect/Items/coin_collect.wav" id="2_sound"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pickup"]
+radius = 6.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_name"]
+font_size = 8
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Pickup" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+monitoring = false
+script = ExtResource("1_pickup")
+
+[node name="Shadow" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 0.3)
+polygon = PackedVector2Array(-4, 0, -3, -1, 0, -1.5, 3, -1, 4, 0, 3, 1, 0, 1.5, -3, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(0.75, 0.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_pickup")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -50.0
+offset_top = -22.0
+offset_right = 50.0
+offset_bottom = -10.0
+label_settings = SubResource("LabelSettings_name")
+horizontal_alignment = 1
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_sound")

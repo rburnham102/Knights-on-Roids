@@ -26,6 +26,8 @@ const ARROW_SCENE := preload("res://aarow.tscn")
 @export var heavy_chance: float = 0.4   # 40% of attacks are heavy
 @export var light_attack: AttackData
 @export var heavy_attack: AttackData
+## Chance (0 to 1) that it drops an item when it dies. See loot.gd.
+@export_range(0.0, 1.0) var drop_chance: float = 0.03   # orcs come in swarms, so each one rarely drops
 
 @export_group("Special attack")
 ## An occasional big move (the armored orc's shield smash).

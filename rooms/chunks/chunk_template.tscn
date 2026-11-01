@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://drvtyidjo5oni" path="res://TileSet/Wilderness.tres" id="1_kvgsg"]
 [ext_resource type="TileSet" uid="uid://karw5rkyk40d" path="res://TileSet/Village_tileset.tres" id="2_gahf0"]
 [ext_resource type="PackedScene" uid="uid://bxua3vflohk4y" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/green_tree.tscn" id="3_gahf0"]
+[ext_resource type="PackedScene" path="res://breakable.tscn" id="99_barrel"]
 
 [node name="Chunk" type="Node2D" unique_id=1769266197]
 y_sort_enabled = true
@@ -52,3 +53,7 @@ position = Vector2(260, 58)
 
 [node name="Marker2D4" type="Marker2D" parent="EnemySpawn" unique_id=1473158606]
 position = Vector2(300, 120)
+
+[node name="Barrel" parent="." instance=ExtResource("99_barrel")]
+position = Vector2(120, 74)
+

@@ -416,6 +416,7 @@ animations = [{
 [node name="ArmoredOrc" instance=ExtResource("1_entity")]
 light_attack = ExtResource("2_light_attack")
 heavy_attack = ExtResource("3_heavy_attack")
+drop_chance = 0.15
 special_attack = ExtResource("4_smash")
 can_guard = true
 special_chance = 0.3

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" format=3]
+
+[ext_resource type="Script" path="res://item.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://Asset/Pickups/potions.png" id="2_sheet"]
+[ext_resource type="AudioStream" path="res://Sounds effect/Items/heart_collect.wav" id="3_sound"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icon"]
+atlas = ExtResource("2_sheet")
+region = Rect2(48, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_item")
+icon = SubResource("AtlasTexture_icon")
+pickup_sound = ExtResource("3_sound")
+title = "Small Health Potion"
+description = "Restores 15 health."
+heal = 15

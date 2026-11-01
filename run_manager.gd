@@ -2,9 +2,11 @@ extends Node
 ## Runs one whole run: builds each level (a village street made of random
 ## chunks), fills it with enemies, locks the door
 ## until they're dead, offers an upgrade, and handles death and victory.
+## It also spawns the loot that enemies and barrels drop, and applies it.
 ## The knight, HUD and screens live in run.tscn and are assigned below.
 
 const LEVEL := preload("res://rooms/level.tscn")
+const PICKUP := preload("res://pickup.tscn")
 const CHUNKS: Array[PackedScene] = [
 	preload("res://rooms/chunks/chunk_template.tscn"),
 	preload("res://rooms/chunks/chunk_template2.tscn"),
@@ -97,6 +99,9 @@ func _build_room() -> void:
 
 	room.exit_door.close()
 	room.exit_door.entered.connect(_on_exit_entered)
+	# The chunk templates place the barrels; the group finds them all.
+	for breakable: Breakable in get_tree().get_nodes_in_group("breakables"):
+		breakable.broken.connect(_on_breakable_broken)
 	_spawn_enemies()
 
 # Every chunk gets its own enemy budget, so enemies are spread along the street.
@@ -117,7 +122,7 @@ func _spawn_enemies() -> void:
 			var enemy: Node2D = scenes[i].instantiate()
 			enemy.position = points[i]
 			actors.add_child(enemy)
-			enemy.died.connect(_on_enemy_died)
+			enemy.died.connect(_on_enemy_died.bind(enemy))   # bind() adds the enemy as an argument
 			_spawn_in(enemy)
 
 # Enemies fade in and do nothing for a moment, so a room never opens with a hit.
@@ -130,9 +135,10 @@ func _spawn_in(enemy: Node2D) -> void:
 		if is_instance_valid(enemy):
 			enemy.process_mode = Node.PROCESS_MODE_INHERIT)
 
-func _on_enemy_died() -> void:
+func _on_enemy_died(enemy: Node2D) -> void:
 	if finished:
 		return
+	_drop_loot(enemy.drop_chance, enemy.global_position)
 	enemies_left -= 1
 	if enemies_left <= 0:
 		_room_cleared()
@@ -160,6 +166,26 @@ func _on_exit_entered() -> void:
 	changing_room = true
 	await _fade_to(1.0)
 	await _enter_room()
+
+# ------------------------------------------------------------------- loot
+
+func _on_breakable_broken(breakable: Breakable) -> void:
+	_drop_loot(breakable.drop_chance, breakable.global_position)
+
+func _drop_loot(chance: float, at: Vector2) -> void:
+	var item := Loot.roll(chance, run.loot_rng)
+	if item == null:
+		return
+	var pickup: Pickup = PICKUP.instantiate()
+	pickup.item = item
+	pickup.position = actors.to_local(at)
+	pickup.collected.connect(_on_item_collected)
+	# Deferred: drops happen inside a physics callback (the hit that killed
+	# something), and Godot doesn't allow adding Area2Ds in the middle of one.
+	actors.add_child.call_deferred(pickup)
+
+func _on_item_collected(item: Item) -> void:
+	run.apply_item(item, knight)
 
 # ------------------------------------------------------------- end of a run
 
