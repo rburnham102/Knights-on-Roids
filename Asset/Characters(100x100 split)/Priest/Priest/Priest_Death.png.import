@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0vlvrtd704g8"
-path="res://.godot/imported/Priest_Death.png-d43765fe94a70c1001fb0dddadf513ca.ctex"
+path="res://.godot/imported/Priest_Death.png-7d06a8fd93e8f52255f718611eae96ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Priest/Priest/Priest_Death.png"
-dest_files=["res://.godot/imported/Priest_Death.png-d43765fe94a70c1001fb0dddadf513ca.ctex"]
+source_file="res://asset/Characters(100x100 split)/Priest/Priest/Priest_Death.png"
+dest_files=["res://.godot/imported/Priest_Death.png-7d06a8fd93e8f52255f718611eae96ba.ctex"]
 
 [params]
 

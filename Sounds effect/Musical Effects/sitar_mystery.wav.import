@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://me21xe1i44pu"
-path="res://.godot/imported/sitar_mystery.wav-e2da249e604db6a63916cf123d4fa445.sample"
+path="res://.godot/imported/sitar_mystery.wav-70aea1184f90c12465cbb00f8b034e95.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/sitar_mystery.wav"
-dest_files=["res://.godot/imported/sitar_mystery.wav-e2da249e604db6a63916cf123d4fa445.sample"]
+source_file="res://sounds effect/Musical Effects/sitar_mystery.wav"
+dest_files=["res://.godot/imported/sitar_mystery.wav-70aea1184f90c12465cbb00f8b034e95.sample"]
 
 [params]
 

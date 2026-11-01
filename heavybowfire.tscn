@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ds1lyxnlchw0l"]
+
+[ext_resource type="Texture2D" uid="uid://ccp73x7y31yht" path="res://effects/Retro Impact Effect Pack 5 A.png" id="1_yxu3h"]
+[ext_resource type="Script" uid="uid://c8kity5tsf1hs" path="res://script/block_effect.gd" id="2_5x45w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbll3"]
+atlas = ExtResource("1_yxu3h")
+region = Rect2(0, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vt2n"]
+atlas = ExtResource("1_yxu3h")
+region = Rect2(64, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvlyb"]
+atlas = ExtResource("1_yxu3h")
+region = Rect2(128, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emtld"]
+atlas = ExtResource("1_yxu3h")
+region = Rect2(192, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8bpw"]
+atlas = ExtResource("1_yxu3h")
+region = Rect2(256, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6byc"]
+atlas = ExtResource("1_yxu3h")
+region = Rect2(320, 512, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmicn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbll3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vt2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvlyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emtld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8bpw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6byc")
+}],
+"loop": 0,
+"name": &"bowheavy",
+"speed": 20.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1567907125]
+z_index = 10
+texture_filter = 1
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_dmicn")
+animation = &"bowheavy"
+script = ExtResource("2_5x45w")

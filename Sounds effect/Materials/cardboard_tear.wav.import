@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cnapq2mgiv1sf"
-path="res://.godot/imported/cardboard_tear.wav-c0340bbb26e9b2054339e850091e6105.sample"
+path="res://.godot/imported/cardboard_tear.wav-42d70fb540089f8cb6a441b9f00dbf96.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/cardboard_tear.wav"
-dest_files=["res://.godot/imported/cardboard_tear.wav-c0340bbb26e9b2054339e850091e6105.sample"]
+source_file="res://sounds effect/Materials/cardboard_tear.wav"
+dest_files=["res://.godot/imported/cardboard_tear.wav-42d70fb540089f8cb6a441b9f00dbf96.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvto66smvnrok"
-path="res://.godot/imported/FL_Houses_int_WallsB5.png-ba0059a32dc1fbb22780f5d257f17942.ctex"
+path="res://.godot/imported/FL_Houses_int_WallsB5.png-0303064c2d97dcccc40122c8729d2c6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileSet/FL_Houses_v1.0/_PNG/Interriors/Walls/FL_Houses_int_WallsB5.png"
-dest_files=["res://.godot/imported/FL_Houses_int_WallsB5.png-ba0059a32dc1fbb22780f5d257f17942.ctex"]
+source_file="res://tileset/FL_Houses_v1.0/_PNG/Interriors/Walls/FL_Houses_int_WallsB5.png"
+dest_files=["res://.godot/imported/FL_Houses_int_WallsB5.png-0303064c2d97dcccc40122c8729d2c6b.ctex"]
 
 [params]
 

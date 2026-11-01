@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e28fr220pcq5"
-path="res://.godot/imported/FL_Houses_ext_terrain_floors.png-a73cea0bd87f3281458444e85e627f48.ctex"
+path="res://.godot/imported/FL_Houses_ext_terrain_floors.png-c77f5cd4821ffff721a76c1e5c559235.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileSet/FL_Houses_v1.0/_PNG/Exterriors/FL_Houses_ext_terrain_floors.png"
-dest_files=["res://.godot/imported/FL_Houses_ext_terrain_floors.png-a73cea0bd87f3281458444e85e627f48.ctex"]
+source_file="res://tileset/FL_Houses_v1.0/_PNG/Exterriors/FL_Houses_ext_terrain_floors.png"
+dest_files=["res://.godot/imported/FL_Houses_ext_terrain_floors.png-c77f5cd4821ffff721a76c1e5c559235.ctex"]
 
 [params]
 

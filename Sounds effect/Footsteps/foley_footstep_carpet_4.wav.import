@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dl6pym8t6taha"
-path="res://.godot/imported/foley_footstep_carpet_4.wav-7082ff3aa98f2fab7af16e70d3f83a33.sample"
+path="res://.godot/imported/foley_footstep_carpet_4.wav-df70c9b45bb8c16ea1dc53458012e686.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Footsteps/foley_footstep_carpet_4.wav"
-dest_files=["res://.godot/imported/foley_footstep_carpet_4.wav-7082ff3aa98f2fab7af16e70d3f83a33.sample"]
+source_file="res://sounds effect/Footsteps/foley_footstep_carpet_4.wav"
+dest_files=["res://.godot/imported/foley_footstep_carpet_4.wav-df70c9b45bb8c16ea1dc53458012e686.sample"]
 
 [params]
 

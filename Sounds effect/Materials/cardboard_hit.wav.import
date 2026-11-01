@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bm4u1qqbvqtc4"
-path="res://.godot/imported/cardboard_hit.wav-021868a6e250c49eb82fcdb9ba62b14d.sample"
+path="res://.godot/imported/cardboard_hit.wav-d000f1cc038020fb35831802c5840b46.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/cardboard_hit.wav"
-dest_files=["res://.godot/imported/cardboard_hit.wav-021868a6e250c49eb82fcdb9ba62b14d.sample"]
+source_file="res://sounds effect/Materials/cardboard_hit.wav"
+dest_files=["res://.godot/imported/cardboard_hit.wav-d000f1cc038020fb35831802c5840b46.sample"]
 
 [params]
 

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dute4v8wk0uop"]
+
+[ext_resource type="Texture2D" uid="uid://ccp73x7y31yht" path="res://effects/Retro Impact Effect Pack 5 A.png" id="1_c55ev"]
+[ext_resource type="Script" uid="uid://c8kity5tsf1hs" path="res://script/block_effect.gd" id="2_7gjq7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c55ev"]
+atlas = ExtResource("1_c55ev")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gjq7"]
+atlas = ExtResource("1_c55ev")
+region = Rect2(64, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhbxr"]
+atlas = ExtResource("1_c55ev")
+region = Rect2(128, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voqjj"]
+atlas = ExtResource("1_c55ev")
+region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmdtm"]
+atlas = ExtResource("1_c55ev")
+region = Rect2(256, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25p2l"]
+atlas = ExtResource("1_c55ev")
+region = Rect2(320, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmicn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c55ev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gjq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhbxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voqjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmdtm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25p2l")
+}],
+"loop": 0,
+"name": &"arrowhit",
+"speed": 9.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1567907125]
+z_index = 10
+texture_filter = 1
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_dmicn")
+animation = &"arrowhit"
+script = ExtResource("2_7gjq7")

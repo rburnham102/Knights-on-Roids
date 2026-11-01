@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://run_over_screen.gd" id="1_bi6si"]
+[ext_resource type="Script" uid="uid://c2ytg1uxmfvsn" path="res://script/run_over_screen.gd" id="1_bi6si"]
 
 [node name="RunOverScreen" type="CanvasLayer" unique_id=367023939]
 layer = 6

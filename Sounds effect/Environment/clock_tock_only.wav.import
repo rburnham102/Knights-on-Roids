@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://gv0j2l30hg12"
-path="res://.godot/imported/clock_tock_only.wav-dac8d44e0a785542071e6e5456c2aec7.sample"
+path="res://.godot/imported/clock_tock_only.wav-4fe29371cb563ddbfb7878baa5141f02.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/clock_tock_only.wav"
-dest_files=["res://.godot/imported/clock_tock_only.wav-dac8d44e0a785542071e6e5456c2aec7.sample"]
+source_file="res://sounds effect/Environment/clock_tock_only.wav"
+dest_files=["res://.godot/imported/clock_tock_only.wav-4fe29371cb563ddbfb7878baa5141f02.sample"]
 
 [params]
 

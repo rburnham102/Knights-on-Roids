@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://1b6o0diykmo2"
-path="res://.godot/imported/broom_sweep_1.wav-c2c30a2cad22d5feeeef9d81b0109899.sample"
+path="res://.godot/imported/broom_sweep_1.wav-65bacd23723d2eeddff507dc149d7b37.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/broom_sweep_1.wav"
-dest_files=["res://.godot/imported/broom_sweep_1.wav-c2c30a2cad22d5feeeef9d81b0109899.sample"]
+source_file="res://sounds effect/Items/broom_sweep_1.wav"
+dest_files=["res://.godot/imported/broom_sweep_1.wav-65bacd23723d2eeddff507dc149d7b37.sample"]
 
 [params]
 

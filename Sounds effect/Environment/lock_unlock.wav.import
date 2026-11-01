@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dwxv4o5by44n8"
-path="res://.godot/imported/lock_unlock.wav-be79a095945275a8e919818e2c901f75.sample"
+path="res://.godot/imported/lock_unlock.wav-4dcbac36ffc65f13c2188145c6cdc30c.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/lock_unlock.wav"
-dest_files=["res://.godot/imported/lock_unlock.wav-be79a095945275a8e919818e2c901f75.sample"]
+source_file="res://sounds effect/Environment/lock_unlock.wav"
+dest_files=["res://.godot/imported/lock_unlock.wav-4dcbac36ffc65f13c2188145c6cdc30c.sample"]
 
 [params]
 

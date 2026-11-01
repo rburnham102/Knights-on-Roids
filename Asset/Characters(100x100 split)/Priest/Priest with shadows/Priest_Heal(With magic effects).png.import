@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://omk6ufrr7cw1"
-path="res://.godot/imported/Priest_Heal(With magic effects).png-e925bc2841380f09d4a929458e9d6127.ctex"
+path="res://.godot/imported/Priest_Heal(With magic effects).png-d998adf36a7caaafff965339b6bfc14e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Priest/Priest with shadows/Priest_Heal(With magic effects).png"
-dest_files=["res://.godot/imported/Priest_Heal(With magic effects).png-e925bc2841380f09d4a929458e9d6127.ctex"]
+source_file="res://asset/Characters(100x100 split)/Priest/Priest with shadows/Priest_Heal(With magic effects).png"
+dest_files=["res://.godot/imported/Priest_Heal(With magic effects).png-d998adf36a7caaafff965339b6bfc14e.ctex"]
 
 [params]
 

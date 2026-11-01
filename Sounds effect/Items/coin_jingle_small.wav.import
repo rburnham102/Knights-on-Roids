@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b418jqdu1o0gy"
-path="res://.godot/imported/coin_jingle_small.wav-d8642bec69304add717f9936f6cff716.sample"
+path="res://.godot/imported/coin_jingle_small.wav-968e3868d8631ff3ce29908839e47a02.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/coin_jingle_small.wav"
-dest_files=["res://.godot/imported/coin_jingle_small.wav-d8642bec69304add717f9936f6cff716.sample"]
+source_file="res://sounds effect/Items/coin_jingle_small.wav"
+dest_files=["res://.godot/imported/coin_jingle_small.wav-968e3868d8631ff3ce29908839e47a02.sample"]
 
 [params]
 

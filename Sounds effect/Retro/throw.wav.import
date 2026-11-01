@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cpb3dbep826a1"
-path="res://.godot/imported/throw.wav-83dd32e0adff86aae8082686ad80f1c9.sample"
+path="res://.godot/imported/throw.wav-d3c9b932a83b0297d0d010e843b16cd3.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Retro/throw.wav"
-dest_files=["res://.godot/imported/throw.wav-83dd32e0adff86aae8082686ad80f1c9.sample"]
+source_file="res://sounds effect/Retro/throw.wav"
+dest_files=["res://.godot/imported/throw.wav-d3c9b932a83b0297d0d010e843b16cd3.sample"]
 
 [params]
 

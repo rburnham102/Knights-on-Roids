@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2lp500o4uwvc"
-path="res://.godot/imported/Necromancer_Attack02_Effect.png-9c1012fd395c8d2a795a1d342ec74cc2.ctex"
+path="res://.godot/imported/Necromancer_Attack02_Effect.png-f95d847635192af1b1b8b22e266f2897.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Necromancer/Necromancer/Necromancer_Attack02_Effect.png"
-dest_files=["res://.godot/imported/Necromancer_Attack02_Effect.png-9c1012fd395c8d2a795a1d342ec74cc2.ctex"]
+source_file="res://asset/Characters(100x100 split)/Necromancer/Necromancer/Necromancer_Attack02_Effect.png"
+dest_files=["res://.godot/imported/Necromancer_Attack02_Effect.png-f95d847635192af1b1b8b22e266f2897.ctex"]
 
 [params]
 

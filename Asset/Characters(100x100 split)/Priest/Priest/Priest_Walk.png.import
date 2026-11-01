@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://10bu3yeal3bd"
-path="res://.godot/imported/Priest_Walk.png-bf9d17c72dc55b61ffdce504c0cfaf91.ctex"
+path="res://.godot/imported/Priest_Walk.png-f3d8dc7fd76485a84625bcc607000226.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Priest/Priest/Priest_Walk.png"
-dest_files=["res://.godot/imported/Priest_Walk.png-bf9d17c72dc55b61ffdce504c0cfaf91.ctex"]
+source_file="res://asset/Characters(100x100 split)/Priest/Priest/Priest_Walk.png"
+dest_files=["res://.godot/imported/Priest_Walk.png-f3d8dc7fd76485a84625bcc607000226.ctex"]
 
 [params]
 

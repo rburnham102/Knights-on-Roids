@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c8qn4cqdnvfyx"
-path="res://.godot/imported/paper_tear_1.wav-49cc832cf0a7c36e909d5377f754919d.sample"
+path="res://.godot/imported/paper_tear_1.wav-7e45069a4fb3af6cdcf04692efd72feb.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/paper_tear_1.wav"
-dest_files=["res://.godot/imported/paper_tear_1.wav-49cc832cf0a7c36e909d5377f754919d.sample"]
+source_file="res://sounds effect/Materials/paper_tear_1.wav"
+dest_files=["res://.godot/imported/paper_tear_1.wav-7e45069a4fb3af6cdcf04692efd72feb.sample"]
 
 [params]
 

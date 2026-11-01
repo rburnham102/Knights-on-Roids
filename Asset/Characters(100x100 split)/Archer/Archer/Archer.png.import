@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhhjgyghsoqlg"
-path="res://.godot/imported/Archer.png-1ac8cc405363e9a924b3f69231bf4e35.ctex"
+path="res://.godot/imported/Archer.png-67883ff7f21fb7b80a44b218e51e39d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Archer/Archer/Archer.png"
-dest_files=["res://.godot/imported/Archer.png-1ac8cc405363e9a924b3f69231bf4e35.ctex"]
+source_file="res://asset/Characters(100x100 split)/Archer/Archer/Archer.png"
+dest_files=["res://.godot/imported/Archer.png-67883ff7f21fb7b80a44b218e51e39d9.ctex"]
 
 [params]
 

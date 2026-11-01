@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cacngxmgowdtj"
-path="res://.godot/imported/Arrow03(100x100).png-82192f85ee2769c6d4a1c932229d1aed.ctex"
+path="res://.godot/imported/Arrow03(100x100).png-e7c3b5d81ecadedf5a63c372c21a2138.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Skeleton Archer/Arrow(projectile)/Arrow03(100x100).png"
-dest_files=["res://.godot/imported/Arrow03(100x100).png-82192f85ee2769c6d4a1c932229d1aed.ctex"]
+source_file="res://asset/Characters(100x100 split)/Skeleton Archer/Arrow(projectile)/Arrow03(100x100).png"
+dest_files=["res://.godot/imported/Arrow03(100x100).png-e7c3b5d81ecadedf5a63c372c21a2138.ctex"]
 
 [params]
 

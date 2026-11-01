@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://hcbge16snetv"
-path="res://.godot/imported/wood_small_pickup.wav-e51a00ceaa68655034762cf0d954ebc9.sample"
+path="res://.godot/imported/wood_small_pickup.wav-ebbeeb21c43068c9be1b354124b3a781.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/wood_small_pickup.wav"
-dest_files=["res://.godot/imported/wood_small_pickup.wav-e51a00ceaa68655034762cf0d954ebc9.sample"]
+source_file="res://sounds effect/Materials/wood_small_pickup.wav"
+dest_files=["res://.godot/imported/wood_small_pickup.wav-ebbeeb21c43068c9be1b354124b3a781.sample"]
 
 [params]
 

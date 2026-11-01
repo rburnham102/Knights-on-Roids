@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://p8pohjrsg2m6"
-path="res://.godot/imported/brass_negative_long.wav-27a201cf338f82f389727483603d533c.sample"
+path="res://.godot/imported/brass_negative_long.wav-58dd0eb39db9d3be648101b77cea75de.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/brass_negative_long.wav"
-dest_files=["res://.godot/imported/brass_negative_long.wav-27a201cf338f82f389727483603d533c.sample"]
+source_file="res://sounds effect/Musical Effects/brass_negative_long.wav"
+dest_files=["res://.godot/imported/brass_negative_long.wav-58dd0eb39db9d3be648101b77cea75de.sample"]
 
 [params]
 

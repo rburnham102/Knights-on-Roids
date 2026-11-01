@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b5cxh3hvxjsss"
-path="res://.godot/imported/shovel_dig.wav-03d65e9172626ed2e6e8cd334755dee7.sample"
+path="res://.godot/imported/shovel_dig.wav-6924e14e1b85d365d30e47f82a08b446.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/shovel_dig.wav"
-dest_files=["res://.godot/imported/shovel_dig.wav-03d65e9172626ed2e6e8cd334755dee7.sample"]
+source_file="res://sounds effect/Items/shovel_dig.wav"
+dest_files=["res://.godot/imported/shovel_dig.wav-6924e14e1b85d365d30e47f82a08b446.sample"]
 
 [params]
 

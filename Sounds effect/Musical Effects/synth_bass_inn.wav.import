@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://vngi220ig4vs"
-path="res://.godot/imported/synth_bass_inn.wav-ce8530022a7fdd04fd4a3a478d4918ef.sample"
+path="res://.godot/imported/synth_bass_inn.wav-dabb67c6ede8328037bf801b669b41c4.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/synth_bass_inn.wav"
-dest_files=["res://.godot/imported/synth_bass_inn.wav-ce8530022a7fdd04fd4a3a478d4918ef.sample"]
+source_file="res://sounds effect/Musical Effects/synth_bass_inn.wav"
+dest_files=["res://.godot/imported/synth_bass_inn.wav-dabb67c6ede8328037bf801b669b41c4.sample"]
 
 [params]
 

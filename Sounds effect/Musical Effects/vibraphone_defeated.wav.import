@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b12guninkvhbr"
-path="res://.godot/imported/vibraphone_defeated.wav-1f97cc00bc0f51eedb18cf0f1c7233e0.sample"
+path="res://.godot/imported/vibraphone_defeated.wav-1654e4f32c64bb868af2edeba06f0ef1.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/vibraphone_defeated.wav"
-dest_files=["res://.godot/imported/vibraphone_defeated.wav-1f97cc00bc0f51eedb18cf0f1c7233e0.sample"]
+source_file="res://sounds effect/Musical Effects/vibraphone_defeated.wav"
+dest_files=["res://.godot/imported/vibraphone_defeated.wav-1654e4f32c64bb868af2edeba06f0ef1.sample"]
 
 [params]
 

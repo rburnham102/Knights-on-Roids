@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://y2n2ek5qhva2"
-path="res://.godot/imported/grand_piano_negative.wav-25b2140926878d97e6e9e5e3dc85222b.sample"
+path="res://.godot/imported/grand_piano_negative.wav-a6a592907bf1dece82e270cd54965e65.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/grand_piano_negative.wav"
-dest_files=["res://.godot/imported/grand_piano_negative.wav-25b2140926878d97e6e9e5e3dc85222b.sample"]
+source_file="res://sounds effect/Musical Effects/grand_piano_negative.wav"
+dest_files=["res://.godot/imported/grand_piano_negative.wav-a6a592907bf1dece82e270cd54965e65.sample"]
 
 [params]
 

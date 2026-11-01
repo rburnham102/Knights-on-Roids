@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://jlv3j7n44mj4"
-path="res://.godot/imported/digital_footstep_wood_2.wav-afddb2b0c6587ea699e9989b509c9d69.sample"
+path="res://.godot/imported/digital_footstep_wood_2.wav-9239011210a331c2324421b15571bd5d.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Footsteps/digital/digital_footstep_wood_2.wav"
-dest_files=["res://.godot/imported/digital_footstep_wood_2.wav-afddb2b0c6587ea699e9989b509c9d69.sample"]
+source_file="res://sounds effect/Footsteps/digital/digital_footstep_wood_2.wav"
+dest_files=["res://.godot/imported/digital_footstep_wood_2.wav-9239011210a331c2324421b15571bd5d.sample"]
 
 [params]
 

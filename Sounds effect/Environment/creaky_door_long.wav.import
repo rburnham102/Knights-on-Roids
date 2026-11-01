@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b1k02b12g2eqm"
-path="res://.godot/imported/creaky_door_long.wav-d4fd3cbe631e854ebf41e8f661e2e52c.sample"
+path="res://.godot/imported/creaky_door_long.wav-a5f8bc86a67807273b3a5f8560c53972.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/creaky_door_long.wav"
-dest_files=["res://.godot/imported/creaky_door_long.wav-d4fd3cbe631e854ebf41e8f661e2e52c.sample"]
+source_file="res://sounds effect/Environment/creaky_door_long.wav"
+dest_files=["res://.godot/imported/creaky_door_long.wav-a5f8bc86a67807273b3a5f8560c53972.sample"]
 
 [params]
 

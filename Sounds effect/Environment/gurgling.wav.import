@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d2e8hscfmfvkq"
-path="res://.godot/imported/gurgling.wav-ccca078a81b708b487b3b065db611ff0.sample"
+path="res://.godot/imported/gurgling.wav-50fbb75514007b7ff4f6c814431345b9.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/gurgling.wav"
-dest_files=["res://.godot/imported/gurgling.wav-ccca078a81b708b487b3b065db611ff0.sample"]
+source_file="res://sounds effect/Environment/gurgling.wav"
+dest_files=["res://.godot/imported/gurgling.wav-50fbb75514007b7ff4f6c814431345b9.sample"]
 
 [params]
 

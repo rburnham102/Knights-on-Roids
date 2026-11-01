@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dl6ni087hb7dy"
-path="res://.godot/imported/record_scratch.wav-e97fcd9bcdbc04157e704a9284f98ad6.sample"
+path="res://.godot/imported/record_scratch.wav-79a7cb9d79fd4fb0a2549d5694d77924.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Other/record_scratch.wav"
-dest_files=["res://.godot/imported/record_scratch.wav-e97fcd9bcdbc04157e704a9284f98ad6.sample"]
+source_file="res://sounds effect/Other/record_scratch.wav"
+dest_files=["res://.godot/imported/record_scratch.wav-79a7cb9d79fd4fb0a2549d5694d77924.sample"]
 
 [params]
 

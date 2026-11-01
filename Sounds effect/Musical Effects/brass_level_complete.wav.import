@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://td13vqkfb0u4"
-path="res://.godot/imported/brass_level_complete.wav-3582a193d6bb8ba403e476d5c2afd0c3.sample"
+path="res://.godot/imported/brass_level_complete.wav-a94c1e418af5d606217c3fcfb650477b.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/brass_level_complete.wav"
-dest_files=["res://.godot/imported/brass_level_complete.wav-3582a193d6bb8ba403e476d5c2afd0c3.sample"]
+source_file="res://sounds effect/Musical Effects/brass_level_complete.wav"
+dest_files=["res://.godot/imported/brass_level_complete.wav-a94c1e418af5d606217c3fcfb650477b.sample"]
 
 [params]
 

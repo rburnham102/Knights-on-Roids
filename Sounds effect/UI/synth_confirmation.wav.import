@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dlodtfg5jesxf"
-path="res://.godot/imported/synth_confirmation.wav-745875b14f860fcf478dcfaa4ebfed87.sample"
+path="res://.godot/imported/synth_confirmation.wav-39329971ab1b9c3934b55f11b321b01d.sample"
 
 [deps]
 
-source_file="res://Sounds effect/UI/synth_confirmation.wav"
-dest_files=["res://.godot/imported/synth_confirmation.wav-745875b14f860fcf478dcfaa4ebfed87.sample"]
+source_file="res://sounds effect/UI/synth_confirmation.wav"
+dest_files=["res://.godot/imported/synth_confirmation.wav-39329971ab1b9c3934b55f11b321b01d.sample"]
 
 [params]
 

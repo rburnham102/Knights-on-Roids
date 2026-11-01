@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://o2aw0ejhpkp2"
-path="res://.godot/imported/splat_quick.wav-3fc385d37342ce8e19b0f5aef556a578.sample"
+path="res://.godot/imported/splat_quick.wav-c9073e3de9a58ae0c38be2622ba00f33.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Combat and Gore/splat_quick.wav"
-dest_files=["res://.godot/imported/splat_quick.wav-3fc385d37342ce8e19b0f5aef556a578.sample"]
+source_file="res://sounds effect/Combat and Gore/splat_quick.wav"
+dest_files=["res://.godot/imported/splat_quick.wav-c9073e3de9a58ae0c38be2622ba00f33.sample"]
 
 [params]
 

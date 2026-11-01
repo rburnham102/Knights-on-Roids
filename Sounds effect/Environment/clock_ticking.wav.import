@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://br7q7dk21mx5g"
-path="res://.godot/imported/clock_ticking.wav-8551dcde6dca58279b7728c1ecbd4822.sample"
+path="res://.godot/imported/clock_ticking.wav-c8d29abf25155f770d839b45e16024e3.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/clock_ticking.wav"
-dest_files=["res://.godot/imported/clock_ticking.wav-8551dcde6dca58279b7728c1ecbd4822.sample"]
+source_file="res://sounds effect/Environment/clock_ticking.wav"
+dest_files=["res://.godot/imported/clock_ticking.wav-c8d29abf25155f770d839b45e16024e3.sample"]
 
 [params]
 

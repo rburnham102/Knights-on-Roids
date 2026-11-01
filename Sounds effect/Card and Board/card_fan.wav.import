@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dff3sldfmyh0g"
-path="res://.godot/imported/card_fan.wav-fb89704e3754ec93a34ca5376b24ebac.sample"
+path="res://.godot/imported/card_fan.wav-b63a52483fe366ad11393eff49bdaab7.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Card and Board/card_fan.wav"
-dest_files=["res://.godot/imported/card_fan.wav-fb89704e3754ec93a34ca5376b24ebac.sample"]
+source_file="res://sounds effect/Card and Board/card_fan.wav"
+dest_files=["res://.godot/imported/card_fan.wav-b63a52483fe366ad11393eff49bdaab7.sample"]
 
 [params]
 

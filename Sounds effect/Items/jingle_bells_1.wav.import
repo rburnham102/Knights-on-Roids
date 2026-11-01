@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bkkkyw34rvknh"
-path="res://.godot/imported/jingle_bells_1.wav-de0de1a4b869af93ac0bc32db107d442.sample"
+path="res://.godot/imported/jingle_bells_1.wav-21a09f1f42f4767f86ac5387eb3c5507.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/jingle_bells_1.wav"
-dest_files=["res://.godot/imported/jingle_bells_1.wav-de0de1a4b869af93ac0bc32db107d442.sample"]
+source_file="res://sounds effect/Items/jingle_bells_1.wav"
+dest_files=["res://.godot/imported/jingle_bells_1.wav-21a09f1f42f4767f86ac5387eb3c5507.sample"]
 
 [params]
 

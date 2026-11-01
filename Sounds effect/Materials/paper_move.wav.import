@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cxrulruuwfkrd"
-path="res://.godot/imported/paper_move.wav-e23d703ac75a4acf7706ebc05947b876.sample"
+path="res://.godot/imported/paper_move.wav-6b63f06e3b13ff6383e56dd7b7435608.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/paper_move.wav"
-dest_files=["res://.godot/imported/paper_move.wav-e23d703ac75a4acf7706ebc05947b876.sample"]
+source_file="res://sounds effect/Materials/paper_move.wav"
+dest_files=["res://.godot/imported/paper_move.wav-6b63f06e3b13ff6383e56dd7b7435608.sample"]
 
 [params]
 

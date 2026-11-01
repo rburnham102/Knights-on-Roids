@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cgjrql3g1kpen"]
 
 [ext_resource type="PackedScene" uid="uid://20jsqtt6c87o" path="res://Knight.tscn" id="2_85c57"]
-[ext_resource type="Script" uid="uid://bldkvj7r805mi" path="res://stats.gd" id="4_yv4ql"]
+[ext_resource type="Script" uid="uid://bldkvj7r805mi" path="res://script/stats.gd" id="4_yv4ql"]
 [ext_resource type="PackedScene" uid="uid://bpv5g1t55xj7" path="res://hud.tscn" id="10_bcohd"]
 [ext_resource type="PackedScene" path="res://upgrade_screen.tscn" id="12_pllgl"]
 [ext_resource type="PackedScene" path="res://run_over_screen.tscn" id="14_in13e"]
-[ext_resource type="Script" uid="uid://bijqbfyq4jclv" path="res://run_manager.gd" id="16_uaer5"]
+[ext_resource type="Script" uid="uid://bijqbfyq4jclv" path="res://script/run_manager.gd" id="16_uaer5"]
 
 [sub_resource type="Resource" id="Resource_stats"]
 script = ExtResource("4_yv4ql")

@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://c6m78mm6bn3bj"]
+
+[ext_resource type="Texture2D" uid="uid://ccp73x7y31yht" path="res://effects/Retro Impact Effect Pack 5 A.png" id="1_ue2yf"]
+[ext_resource type="Script" uid="uid://c8kity5tsf1hs" path="res://script/block_effect.gd" id="3_p52db"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rhxs"]
+atlas = ExtResource("1_ue2yf")
+region = Rect2(0, 1408, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekkvt"]
+atlas = ExtResource("1_ue2yf")
+region = Rect2(64, 1408, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p52db"]
+atlas = ExtResource("1_ue2yf")
+region = Rect2(128, 1408, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poql2"]
+atlas = ExtResource("1_ue2yf")
+region = Rect2(192, 1408, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgxdr"]
+atlas = ExtResource("1_ue2yf")
+region = Rect2(256, 1408, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct438"]
+atlas = ExtResource("1_ue2yf")
+region = Rect2(320, 1408, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws1e4"]
+atlas = ExtResource("1_ue2yf")
+region = Rect2(384, 1408, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3ogl"]
+atlas = ExtResource("1_ue2yf")
+region = Rect2(448, 1408, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmicn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rhxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekkvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p52db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_poql2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgxdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ct438")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws1e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3ogl")
+}],
+"loop": 0,
+"name": &"heavyattack",
+"speed": 20.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1567907125]
+z_index = 10
+texture_filter = 1
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_dmicn")
+animation = &"heavyattack"
+frame = 7
+frame_progress = 1.0
+script = ExtResource("3_p52db")

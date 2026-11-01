@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bda3iavy8icop"
-path="res://.godot/imported/coins_gather_medium.wav-42fbb1bcc0505cc1c53d13322df79603.sample"
+path="res://.godot/imported/coins_gather_medium.wav-f7608cccd61fd50851684f1de6d11d72.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/coins_gather_medium.wav"
-dest_files=["res://.godot/imported/coins_gather_medium.wav-42fbb1bcc0505cc1c53d13322df79603.sample"]
+source_file="res://sounds effect/Items/coins_gather_medium.wav"
+dest_files=["res://.godot/imported/coins_gather_medium.wav-f7608cccd61fd50851684f1de6d11d72.sample"]
 
 [params]
 

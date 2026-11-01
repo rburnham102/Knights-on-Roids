@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d4hri6exd0bmf"
-path="res://.godot/imported/keys_jingling.wav-19b7562422664ae05696b3dc03f9cc0c.sample"
+path="res://.godot/imported/keys_jingling.wav-e54b272184999184e61b981a8dec92c3.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/keys_jingling.wav"
-dest_files=["res://.godot/imported/keys_jingling.wav-19b7562422664ae05696b3dc03f9cc0c.sample"]
+source_file="res://sounds effect/Items/keys_jingling.wav"
+dest_files=["res://.godot/imported/keys_jingling.wav-e54b272184999184e61b981a8dec92c3.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c6t2opsavxabs"
-path="res://.godot/imported/bamboo_drop.wav-3e4876dbff5abca8079e8ffb71cea30a.sample"
+path="res://.godot/imported/bamboo_drop.wav-d7d11fa3a536519c5db1ba6d47a68676.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/bamboo_drop.wav"
-dest_files=["res://.godot/imported/bamboo_drop.wav-3e4876dbff5abca8079e8ffb71cea30a.sample"]
+source_file="res://sounds effect/Materials/bamboo_drop.wav"
+dest_files=["res://.godot/imported/bamboo_drop.wav-d7d11fa3a536519c5db1ba6d47a68676.sample"]
 
 [params]
 

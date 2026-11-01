@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byeuxet5ttuir"
-path="res://.godot/imported/frog.png-31f40ea93ceab7b0d0b1cb9cb1560ad8.ctex"
+path="res://.godot/imported/frog.png-a24113e6202a95dd6ac7ac52a73b5e5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileSet/FLSET1_v1.1/_PNG/Anim/Nature/frog.png"
-dest_files=["res://.godot/imported/frog.png-31f40ea93ceab7b0d0b1cb9cb1560ad8.ctex"]
+source_file="res://tileset/FLSET1_v1.1/_PNG/Anim/Nature/frog.png"
+dest_files=["res://.godot/imported/frog.png-a24113e6202a95dd6ac7ac52a73b5e5c.ctex"]
 
 [params]
 

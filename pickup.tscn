@@ -1,7 +1,7 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://pickup.gd" id="1_pickup"]
-[ext_resource type="AudioStream" path="res://Sounds effect/Items/coin_collect.wav" id="2_sound"]
+[ext_resource type="Script" uid="uid://6qrex0ftdtdk" path="res://script/pickup.gd" id="1_pickup"]
+[ext_resource type="AudioStream" uid="uid://d3myyhvmpop3t" path="res://sounds effect/Items/coin_collect.wav" id="2_sound"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pickup"]
 radius = 6.0

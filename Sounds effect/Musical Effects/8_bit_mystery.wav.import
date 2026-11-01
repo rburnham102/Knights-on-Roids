@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bl6kt8ne3u3bp"
-path="res://.godot/imported/8_bit_mystery.wav-bf97204cb522f702514284056d473b0d.sample"
+path="res://.godot/imported/8_bit_mystery.wav-42a04d00d8aff2b5724bfb8af63fd6f0.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/8_bit_mystery.wav"
-dest_files=["res://.godot/imported/8_bit_mystery.wav-bf97204cb522f702514284056d473b0d.sample"]
+source_file="res://sounds effect/Musical Effects/8_bit_mystery.wav"
+dest_files=["res://.godot/imported/8_bit_mystery.wav-42a04d00d8aff2b5724bfb8af63fd6f0.sample"]
 
 [params]
 

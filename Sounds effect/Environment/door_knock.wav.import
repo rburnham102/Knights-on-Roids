@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cp3cdug61mjtr"
-path="res://.godot/imported/door_knock.wav-4387cf80429c98b044a26156a14f5391.sample"
+path="res://.godot/imported/door_knock.wav-f59f2e9fb714ec5880756f31d547a28d.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/door_knock.wav"
-dest_files=["res://.godot/imported/door_knock.wav-4387cf80429c98b044a26156a14f5391.sample"]
+source_file="res://sounds effect/Environment/door_knock.wav"
+dest_files=["res://.godot/imported/door_knock.wav-f59f2e9fb714ec5880756f31d547a28d.sample"]
 
 [params]
 

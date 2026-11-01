@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bmkl0p44f6mx"
-path="res://.godot/imported/itching.wav-1c9a68236274f167fa0c694ee2935ce4.sample"
+path="res://.godot/imported/itching.wav-573cf76a4f4a6af4e9d73e4ec2967c15.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Other/itching.wav"
-dest_files=["res://.godot/imported/itching.wav-1c9a68236274f167fa0c694ee2935ce4.sample"]
+source_file="res://sounds effect/Other/itching.wav"
+dest_files=["res://.godot/imported/itching.wav-573cf76a4f4a6af4e9d73e4ec2967c15.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://benveu0pxbx76"
-path="res://.godot/imported/Orc rider_Death.png-ec51a035c713e3800b6aaa06ac6a846d.ctex"
+path="res://.godot/imported/Orc rider_Death.png-3d882b225610c206d85fab154625cb31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Orc rider/Orc rider with shadows/Orc rider_Death.png"
-dest_files=["res://.godot/imported/Orc rider_Death.png-ec51a035c713e3800b6aaa06ac6a846d.ctex"]
+source_file="res://asset/Characters(100x100 split)/Orc rider/Orc rider with shadows/Orc rider_Death.png"
+dest_files=["res://.godot/imported/Orc rider_Death.png-3d882b225610c206d85fab154625cb31.ctex"]
 
 [params]
 

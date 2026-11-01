@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://skhxlvqli223"
-path="res://.godot/imported/slap.wav-2536535eac32732efb9b8c941f65abdf.sample"
+path="res://.godot/imported/slap.wav-e323d638806076c4b682a8d925493c9b.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Combat and Gore/slap.wav"
-dest_files=["res://.godot/imported/slap.wav-2536535eac32732efb9b8c941f65abdf.sample"]
+source_file="res://sounds effect/Combat and Gore/slap.wav"
+dest_files=["res://.godot/imported/slap.wav-e323d638806076c4b682a8d925493c9b.sample"]
 
 [params]
 

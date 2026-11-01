@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ceye5toff228s"
-path="res://.godot/imported/sword_unsheath.wav-636cbd82d47a524162ee0bea023f6366.sample"
+path="res://.godot/imported/sword_unsheath.wav-f202a3ab34f53d12c2be0ad683b85f38.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Weapons/sword_unsheath.wav"
-dest_files=["res://.godot/imported/sword_unsheath.wav-636cbd82d47a524162ee0bea023f6366.sample"]
+source_file="res://sounds effect/Weapons/sword_unsheath.wav"
+dest_files=["res://.godot/imported/sword_unsheath.wav-f202a3ab34f53d12c2be0ad683b85f38.sample"]
 
 [params]
 

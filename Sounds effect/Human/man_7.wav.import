@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bu20pmnh2sg0v"
-path="res://.godot/imported/man_7.wav-9cc924797f48b63b20651da6252a55ac.sample"
+path="res://.godot/imported/man_7.wav-f33783cefe0c78c24c072be6ac867036.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Human/man_7.wav"
-dest_files=["res://.godot/imported/man_7.wav-9cc924797f48b63b20651da6252a55ac.sample"]
+source_file="res://sounds effect/Human/man_7.wav"
+dest_files=["res://.godot/imported/man_7.wav-f33783cefe0c78c24c072be6ac867036.sample"]
 
 [params]
 

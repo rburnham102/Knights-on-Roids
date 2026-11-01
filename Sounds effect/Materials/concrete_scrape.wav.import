@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cr76efdl8w4o8"
-path="res://.godot/imported/concrete_scrape.wav-be468cdfaba79bbd78df2b4f7941cbae.sample"
+path="res://.godot/imported/concrete_scrape.wav-e7313b0ef331ab7a77c5977b1f5ed928.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/concrete_scrape.wav"
-dest_files=["res://.godot/imported/concrete_scrape.wav-be468cdfaba79bbd78df2b4f7941cbae.sample"]
+source_file="res://sounds effect/Materials/concrete_scrape.wav"
+dest_files=["res://.godot/imported/concrete_scrape.wav-e7313b0ef331ab7a77c5977b1f5ed928.sample"]
 
 [params]
 

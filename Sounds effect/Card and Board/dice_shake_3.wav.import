@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://roug6tcduqob"
-path="res://.godot/imported/dice_shake_3.wav-f3ce85344e67d53babf7958861ba7a8a.sample"
+path="res://.godot/imported/dice_shake_3.wav-585d156dd87d2ecd56e13d64457160eb.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Card and Board/dice_shake_3.wav"
-dest_files=["res://.godot/imported/dice_shake_3.wav-f3ce85344e67d53babf7958861ba7a8a.sample"]
+source_file="res://sounds effect/Card and Board/dice_shake_3.wav"
+dest_files=["res://.godot/imported/dice_shake_3.wav-585d156dd87d2ecd56e13d64457160eb.sample"]
 
 [params]
 

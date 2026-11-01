@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://hf6qkhsvmyg7"
-path="res://.godot/imported/ambient_wind.wav-2a7ddbb32c9eb892eb8dbd4f2517ee94.sample"
+path="res://.godot/imported/ambient_wind.wav-d35f6db6df9012b7bcb08dea8ad7978a.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/ambient_wind.wav"
-dest_files=["res://.godot/imported/ambient_wind.wav-2a7ddbb32c9eb892eb8dbd4f2517ee94.sample"]
+source_file="res://sounds effect/Environment/ambient_wind.wav"
+dest_files=["res://.godot/imported/ambient_wind.wav-d35f6db6df9012b7bcb08dea8ad7978a.sample"]
 
 [params]
 

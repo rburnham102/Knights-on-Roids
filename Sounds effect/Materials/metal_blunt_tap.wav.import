@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://wki2tr6cqtg0"
-path="res://.godot/imported/metal_blunt_tap.wav-acf7758302dc14440d626c35ce6c3ccd.sample"
+path="res://.godot/imported/metal_blunt_tap.wav-644995c3c039c48ef0d87ef9d6c2526c.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/metal_blunt_tap.wav"
-dest_files=["res://.godot/imported/metal_blunt_tap.wav-acf7758302dc14440d626c35ce6c3ccd.sample"]
+source_file="res://sounds effect/Materials/metal_blunt_tap.wav"
+dest_files=["res://.godot/imported/metal_blunt_tap.wav-644995c3c039c48ef0d87ef9d6c2526c.sample"]
 
 [params]
 

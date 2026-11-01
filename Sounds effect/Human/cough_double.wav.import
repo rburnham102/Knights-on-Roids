@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ci753t2w1pqkl"
-path="res://.godot/imported/cough_double.wav-ae3815491d21615ce3e88e67128678b4.sample"
+path="res://.godot/imported/cough_double.wav-af953f3d01144ac5963db9110759119d.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Human/cough_double.wav"
-dest_files=["res://.godot/imported/cough_double.wav-ae3815491d21615ce3e88e67128678b4.sample"]
+source_file="res://sounds effect/Human/cough_double.wav"
+dest_files=["res://.godot/imported/cough_double.wav-af953f3d01144ac5963db9110759119d.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b376v7j0l3jpp"
-path="res://.godot/imported/Werebear_Death.png-1d24e73df2411377c7a907be0afc27b6.ctex"
+path="res://.godot/imported/Werebear_Death.png-558ad894b9c04ffa948ec350ae488a14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Werebear/Werebear with shadows/Werebear_Death.png"
-dest_files=["res://.godot/imported/Werebear_Death.png-1d24e73df2411377c7a907be0afc27b6.ctex"]
+source_file="res://asset/Characters(100x100 split)/Werebear/Werebear with shadows/Werebear_Death.png"
+dest_files=["res://.godot/imported/Werebear_Death.png-558ad894b9c04ffa948ec350ae488a14.ctex"]
 
 [params]
 

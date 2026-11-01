@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bcw42n8x6ayrk"
-path="res://.godot/imported/cork_stabbed.wav-8f336db3857e6ee9785a3fd2e860f526.sample"
+path="res://.godot/imported/cork_stabbed.wav-3480e9167c0e13924b9b4adf88322868.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/cork_stabbed.wav"
-dest_files=["res://.godot/imported/cork_stabbed.wav-8f336db3857e6ee9785a3fd2e860f526.sample"]
+source_file="res://sounds effect/Materials/cork_stabbed.wav"
+dest_files=["res://.godot/imported/cork_stabbed.wav-3480e9167c0e13924b9b4adf88322868.sample"]
 
 [params]
 

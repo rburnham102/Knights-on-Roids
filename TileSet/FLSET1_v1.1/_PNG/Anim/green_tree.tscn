@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxua3vflohk4y"]
 
-[ext_resource type="Texture2D" uid="uid://dexs3cxgj0qjd" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/Trees/Tree_A_v1.png" id="1_1nl71"]
-[ext_resource type="Texture2D" uid="uid://c4c5g23om2jk1" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/Trees/Tree_A_v2.png" id="2_rkfhq"]
+[ext_resource type="Texture2D" uid="uid://dexs3cxgj0qjd" path="res://tileset/FLSET1_v1.1/_PNG/Anim/Trees/Tree_A_v1.png" id="1_1nl71"]
+[ext_resource type="Texture2D" uid="uid://c4c5g23om2jk1" path="res://tileset/FLSET1_v1.1/_PNG/Anim/Trees/Tree_A_v2.png" id="2_rkfhq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rkfhq"]
 atlas = ExtResource("1_1nl71")

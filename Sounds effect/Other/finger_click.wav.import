@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://yhlavvoubs45"
-path="res://.godot/imported/finger_click.wav-6ce525a09279c02c2efc43c26e4fa82f.sample"
+path="res://.godot/imported/finger_click.wav-8b1361efb2efec64c55f5d2e3279b1e5.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Other/finger_click.wav"
-dest_files=["res://.godot/imported/finger_click.wav-6ce525a09279c02c2efc43c26e4fa82f.sample"]
+source_file="res://sounds effect/Other/finger_click.wav"
+dest_files=["res://.godot/imported/finger_click.wav-8b1361efb2efec64c55f5d2e3279b1e5.sample"]
 
 [params]
 

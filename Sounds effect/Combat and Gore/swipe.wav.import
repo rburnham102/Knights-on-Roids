@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://baxwpmtpkxsp6"
-path="res://.godot/imported/swipe.wav-03dbc4494468f04e5cccf6720aac6c17.sample"
+path="res://.godot/imported/swipe.wav-5c4c4fc4e7a70fd7f59bf667f3e3b980.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Combat and Gore/swipe.wav"
-dest_files=["res://.godot/imported/swipe.wav-03dbc4494468f04e5cccf6720aac6c17.sample"]
+source_file="res://sounds effect/Combat and Gore/swipe.wav"
+dest_files=["res://.godot/imported/swipe.wav-5c4c4fc4e7a70fd7f59bf667f3e3b980.sample"]
 
 [params]
 

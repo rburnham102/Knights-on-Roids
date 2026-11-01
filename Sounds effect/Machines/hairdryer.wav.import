@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c7h6itcsi1xlp"
-path="res://.godot/imported/hairdryer.wav-833495d6bc7e87cea4670cf2323d4569.sample"
+path="res://.godot/imported/hairdryer.wav-f4aa3d2074a0d5eeb6cc7a0537be7028.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Machines/hairdryer.wav"
-dest_files=["res://.godot/imported/hairdryer.wav-833495d6bc7e87cea4670cf2323d4569.sample"]
+source_file="res://sounds effect/Machines/hairdryer.wav"
+dest_files=["res://.godot/imported/hairdryer.wav-f4aa3d2074a0d5eeb6cc7a0537be7028.sample"]
 
 [params]
 

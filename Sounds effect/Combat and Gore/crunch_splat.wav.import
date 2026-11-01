@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bxvhxu05t2ijp"
-path="res://.godot/imported/crunch_splat.wav-ff7f90a211b9a935db441ff6c90c51bf.sample"
+path="res://.godot/imported/crunch_splat.wav-ba6a656de460e8d6865d082fbd69485d.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Combat and Gore/crunch_splat.wav"
-dest_files=["res://.godot/imported/crunch_splat.wav-ff7f90a211b9a935db441ff6c90c51bf.sample"]
+source_file="res://sounds effect/Combat and Gore/crunch_splat.wav"
+dest_files=["res://.godot/imported/crunch_splat.wav-ba6a656de460e8d6865d082fbd69485d.sample"]
 
 [params]
 

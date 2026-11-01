@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bil4817y7beuf"
-path="res://.godot/imported/heart_collect.wav-81faa0148bf12641f7512612fb69530c.sample"
+path="res://.godot/imported/heart_collect.wav-4cbc137b11844b448c9129f7c7f27ad4.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/heart_collect.wav"
-dest_files=["res://.godot/imported/heart_collect.wav-81faa0148bf12641f7512612fb69530c.sample"]
+source_file="res://sounds effect/Items/heart_collect.wav"
+dest_files=["res://.godot/imported/heart_collect.wav-4cbc137b11844b448c9129f7c7f27ad4.sample"]
 
 [params]
 

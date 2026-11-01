@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://lmsenxbebmd1"
-path="res://.godot/imported/air_burst.wav-a2a375929d50af9d37d4798e24255b64.sample"
+path="res://.godot/imported/air_burst.wav-6dd7a90ecad742d0d3c2a35d52b8074d.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/air_burst.wav"
-dest_files=["res://.godot/imported/air_burst.wav-a2a375929d50af9d37d4798e24255b64.sample"]
+source_file="res://sounds effect/Environment/air_burst.wav"
+dest_files=["res://.godot/imported/air_burst.wav-6dd7a90ecad742d0d3c2a35d52b8074d.sample"]
 
 [params]
 

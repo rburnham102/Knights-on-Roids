@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0oslw2fcyt5q"
-path="res://.godot/imported/Archer_Walk.png-94cd7a59b86e6e0d621707ec707f3353.ctex"
+path="res://.godot/imported/Archer_Walk.png-6af90b58437a9f961562d7513e3b7d48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Archer/Archer/Archer_Walk.png"
-dest_files=["res://.godot/imported/Archer_Walk.png-94cd7a59b86e6e0d621707ec707f3353.ctex"]
+source_file="res://asset/Characters(100x100 split)/Archer/Archer/Archer_Walk.png"
+dest_files=["res://.godot/imported/Archer_Walk.png-6af90b58437a9f961562d7513e3b7d48.ctex"]
 
 [params]
 

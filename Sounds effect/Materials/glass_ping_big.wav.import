@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d1bl7okes4myx"
-path="res://.godot/imported/glass_ping_big.wav-bdca22c7c427bc11d0c5237666f390cb.sample"
+path="res://.godot/imported/glass_ping_big.wav-b52607e1cf8559aa81f3fcf7d3abd81d.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/glass_ping_big.wav"
-dest_files=["res://.godot/imported/glass_ping_big.wav-bdca22c7c427bc11d0c5237666f390cb.sample"]
+source_file="res://sounds effect/Materials/glass_ping_big.wav"
+dest_files=["res://.godot/imported/glass_ping_big.wav-b52607e1cf8559aa81f3fcf7d3abd81d.sample"]
 
 [params]
 

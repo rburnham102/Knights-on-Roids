@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b6ho6yfd0jysa"]
 
-[ext_resource type="Texture2D" uid="uid://csnskkn5713av" path="res://TileSet/FL_Houses_v1.0/_PNG/Interriors/Anim/FL_Houses_torch.png" id="2_hq50g"]
-[ext_resource type="Texture2D" uid="uid://c4c5g23om2jk1" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/Trees/Tree_A_v2.png" id="3_nbuet"]
+[ext_resource type="Texture2D" uid="uid://csnskkn5713av" path="res://tileset/FL_Houses_v1.0/_PNG/Interriors/Anim/FL_Houses_torch.png" id="2_hq50g"]
+[ext_resource type="Texture2D" uid="uid://c4c5g23om2jk1" path="res://tileset/FLSET1_v1.1/_PNG/Anim/Trees/Tree_A_v2.png" id="3_nbuet"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ctu8"]
 atlas = ExtResource("2_hq50g")

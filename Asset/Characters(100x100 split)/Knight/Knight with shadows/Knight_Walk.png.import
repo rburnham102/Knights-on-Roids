@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ew56iu7ia1np"
-path="res://.godot/imported/Knight_Walk.png-d185a7d96b3c620745c051219de5f064.ctex"
+path="res://.godot/imported/Knight_Walk.png-10d59c2541259272d54247e8ba263885.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Knight/Knight with shadows/Knight_Walk.png"
-dest_files=["res://.godot/imported/Knight_Walk.png-d185a7d96b3c620745c051219de5f064.ctex"]
+source_file="res://asset/Characters(100x100 split)/Knight/Knight with shadows/Knight_Walk.png"
+dest_files=["res://.godot/imported/Knight_Walk.png-10d59c2541259272d54247e8ba263885.ctex"]
 
 [params]
 

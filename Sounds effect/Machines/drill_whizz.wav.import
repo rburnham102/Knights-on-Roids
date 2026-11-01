@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cwtapa3oo75a6"
-path="res://.godot/imported/drill_whizz.wav-bd7cc6120a6d3ac679c30806160bb386.sample"
+path="res://.godot/imported/drill_whizz.wav-a79618c6ae99db0590ae8322b034c382.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Machines/drill_whizz.wav"
-dest_files=["res://.godot/imported/drill_whizz.wav-bd7cc6120a6d3ac679c30806160bb386.sample"]
+source_file="res://sounds effect/Machines/drill_whizz.wav"
+dest_files=["res://.godot/imported/drill_whizz.wav-a79618c6ae99db0590ae8322b034c382.sample"]
 
 [params]
 

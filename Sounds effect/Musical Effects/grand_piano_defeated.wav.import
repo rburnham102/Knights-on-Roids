@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://xfyncqfi3xl7"
-path="res://.godot/imported/grand_piano_defeated.wav-8c4905d4105967529ddccc9ad68c4784.sample"
+path="res://.godot/imported/grand_piano_defeated.wav-5e86b1bc2e1e262e2fbc8781a741b747.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/grand_piano_defeated.wav"
-dest_files=["res://.godot/imported/grand_piano_defeated.wav-8c4905d4105967529ddccc9ad68c4784.sample"]
+source_file="res://sounds effect/Musical Effects/grand_piano_defeated.wav"
+dest_files=["res://.godot/imported/grand_piano_defeated.wav-5e86b1bc2e1e262e2fbc8781a741b747.sample"]
 
 [params]
 

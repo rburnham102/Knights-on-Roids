@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c1stnbcn2hbst"
-path="res://.godot/imported/xylophone_inn.wav-b56595202c13549a4cfa8ae2eb9a1f69.sample"
+path="res://.godot/imported/xylophone_inn.wav-53cd4fea21a174af772fa2b2e250868c.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/xylophone_inn.wav"
-dest_files=["res://.godot/imported/xylophone_inn.wav-b56595202c13549a4cfa8ae2eb9a1f69.sample"]
+source_file="res://sounds effect/Musical Effects/xylophone_inn.wav"
+dest_files=["res://.godot/imported/xylophone_inn.wav-53cd4fea21a174af772fa2b2e250868c.sample"]
 
 [params]
 

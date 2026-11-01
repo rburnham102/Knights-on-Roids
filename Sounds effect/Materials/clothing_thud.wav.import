@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dtvpn1trcsvnq"
-path="res://.godot/imported/clothing_thud.wav-40a7966eed57054e167b6568c7474f18.sample"
+path="res://.godot/imported/clothing_thud.wav-45597b48a998512003f0b02f6b302692.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/clothing_thud.wav"
-dest_files=["res://.godot/imported/clothing_thud.wav-40a7966eed57054e167b6568c7474f18.sample"]
+source_file="res://sounds effect/Materials/clothing_thud.wav"
+dest_files=["res://.godot/imported/clothing_thud.wav-45597b48a998512003f0b02f6b302692.sample"]
 
 [params]
 

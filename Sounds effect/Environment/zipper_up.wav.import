@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bqhae4lra0s21"
-path="res://.godot/imported/zipper_up.wav-a1c8752758d826a3f35c5887b6ff3c11.sample"
+path="res://.godot/imported/zipper_up.wav-1ef4f0624e48f5ef1c2b5e7dad753492.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/zipper_up.wav"
-dest_files=["res://.godot/imported/zipper_up.wav-a1c8752758d826a3f35c5887b6ff3c11.sample"]
+source_file="res://sounds effect/Environment/zipper_up.wav"
+dest_files=["res://.godot/imported/zipper_up.wav-1ef4f0624e48f5ef1c2b5e7dad753492.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dsacpvcqg728h"
-path="res://.godot/imported/water_babbling_loop.wav-109b4123494c03312b1ca6209ffec6e1.sample"
+path="res://.godot/imported/water_babbling_loop.wav-6a2bf32d3cc441c19a161b5083aff46f.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/water_babbling_loop.wav"
-dest_files=["res://.godot/imported/water_babbling_loop.wav-109b4123494c03312b1ca6209ffec6e1.sample"]
+source_file="res://sounds effect/Environment/water_babbling_loop.wav"
+dest_files=["res://.godot/imported/water_babbling_loop.wav-6a2bf32d3cc441c19a161b5083aff46f.sample"]
 
 [params]
 

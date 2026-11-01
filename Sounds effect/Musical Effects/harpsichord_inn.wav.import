@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://h7l5ky20s2sl"
-path="res://.godot/imported/harpsichord_inn.wav-29a553672564fa69a14fdf9b368d38bd.sample"
+path="res://.godot/imported/harpsichord_inn.wav-6ea5515f1019c59687dfd5dc88700824.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/harpsichord_inn.wav"
-dest_files=["res://.godot/imported/harpsichord_inn.wav-29a553672564fa69a14fdf9b368d38bd.sample"]
+source_file="res://sounds effect/Musical Effects/harpsichord_inn.wav"
+dest_files=["res://.godot/imported/harpsichord_inn.wav-6ea5515f1019c59687dfd5dc88700824.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfdprqmuybfrd"
-path="res://.godot/imported/Knight_Block.png-3c21e46b7162549064aec330db568351.ctex"
+path="res://.godot/imported/Knight_Block.png-3b349d25b7c800d9fc20aab9ea778512.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Knight/Knight/Knight_Block.png"
-dest_files=["res://.godot/imported/Knight_Block.png-3c21e46b7162549064aec330db568351.ctex"]
+source_file="res://asset/Characters(100x100 split)/Knight/Knight/Knight_Block.png"
+dest_files=["res://.godot/imported/Knight_Block.png-3b349d25b7c800d9fc20aab9ea778512.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbvd6unwbdnse"
-path="res://.godot/imported/Skeleton Archer_Death.png-45a9ffc76f5ae4c3a25a58a76812c14b.ctex"
+path="res://.godot/imported/Skeleton Archer_Death.png-feace4526466f4342693c4b31541361f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer/Skeleton Archer_Death.png"
-dest_files=["res://.godot/imported/Skeleton Archer_Death.png-45a9ffc76f5ae4c3a25a58a76812c14b.ctex"]
+source_file="res://asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer/Skeleton Archer_Death.png"
+dest_files=["res://.godot/imported/Skeleton Archer_Death.png-feace4526466f4342693c4b31541361f.ctex"]
 
 [params]
 

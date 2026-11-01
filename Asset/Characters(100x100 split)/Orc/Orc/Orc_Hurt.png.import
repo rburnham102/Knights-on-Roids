@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdtrv7a06sws1"
-path="res://.godot/imported/Orc_Hurt.png-6aad7a54059f0a5cc4280cac38478bd5.ctex"
+path="res://.godot/imported/Orc_Hurt.png-3f13e5df2a506721a23742c36149eec5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Orc/Orc/Orc_Hurt.png"
-dest_files=["res://.godot/imported/Orc_Hurt.png-6aad7a54059f0a5cc4280cac38478bd5.ctex"]
+source_file="res://asset/Characters(100x100 split)/Orc/Orc/Orc_Hurt.png"
+dest_files=["res://.godot/imported/Orc_Hurt.png-3f13e5df2a506721a23742c36149eec5.ctex"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cehcqnjpbfs2n"]
 
-[ext_resource type="Script" uid="uid://c3lqwko3p82ww" path="res://healer.gd" id="0_script"]
-[ext_resource type="Texture2D" uid="uid://g85k1emc15u4" path="res://Asset/Characters(100x100 split)/Priest/Priest/Priest.png" id="1_ds2si"]
-[ext_resource type="Texture2D" uid="uid://bk1niqteq3gpt" path="res://Asset/Characters(100x100 split)/Priest/Priest/Priest_Heal.png" id="3_ghede"]
+[ext_resource type="Script" uid="uid://c3lqwko3p82ww" path="res://script/healer.gd" id="0_script"]
+[ext_resource type="Texture2D" uid="uid://g85k1emc15u4" path="res://asset/Characters(100x100 split)/Priest/Priest/Priest.png" id="1_ds2si"]
+[ext_resource type="Texture2D" uid="uid://bk1niqteq3gpt" path="res://asset/Characters(100x100 split)/Priest/Priest/Priest_Heal.png" id="3_ghede"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6m5ix"]
 atlas = ExtResource("1_ds2si")

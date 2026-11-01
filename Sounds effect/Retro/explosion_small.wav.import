@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://n1vdsp2par5l"
-path="res://.godot/imported/explosion_small.wav-565328c864b032a5848341331297960d.sample"
+path="res://.godot/imported/explosion_small.wav-56a4d5e6b219df53b48834d9a0be6bd8.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Retro/explosion_small.wav"
-dest_files=["res://.godot/imported/explosion_small.wav-565328c864b032a5848341331297960d.sample"]
+source_file="res://sounds effect/Retro/explosion_small.wav"
+dest_files=["res://.godot/imported/explosion_small.wav-56a4d5e6b219df53b48834d9a0be6bd8.sample"]
 
 [params]
 

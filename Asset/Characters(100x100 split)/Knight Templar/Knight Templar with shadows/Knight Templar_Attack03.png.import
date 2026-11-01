@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b10ix6jgpnrp3"
-path="res://.godot/imported/Knight Templar_Attack03.png-6b524b56ce9f8efd15df48d7f9c0fe96.ctex"
+path="res://.godot/imported/Knight Templar_Attack03.png-a3b36b62ef79764312c074d0259f7771.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Attack03.png"
-dest_files=["res://.godot/imported/Knight Templar_Attack03.png-6b524b56ce9f8efd15df48d7f9c0fe96.ctex"]
+source_file="res://asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Attack03.png"
+dest_files=["res://.godot/imported/Knight Templar_Attack03.png-a3b36b62ef79764312c074d0259f7771.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cw4vxh22yv2bo"
-path="res://.godot/imported/Greatsword Skeleton_Idle.png-faa526c6969633c0f97842da509f7053.ctex"
+path="res://.godot/imported/Greatsword Skeleton_Idle.png-44d7b42b95d76aae8d73e8a76bcddb23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton_Idle.png"
-dest_files=["res://.godot/imported/Greatsword Skeleton_Idle.png-faa526c6969633c0f97842da509f7053.ctex"]
+source_file="res://asset/Characters(100x100 split)/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton_Idle.png"
+dest_files=["res://.godot/imported/Greatsword Skeleton_Idle.png-44d7b42b95d76aae8d73e8a76bcddb23.ctex"]
 
 [params]
 

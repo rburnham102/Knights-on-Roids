@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cgmj01vgur432"]
 
 [ext_resource type="PackedScene" uid="uid://d3rd5n5xn843a" path="res://entity.tscn" id="1_entity"]
-[ext_resource type="Script" path="res://skeleton_archer.gd" id="2_script"]
+[ext_resource type="Script" uid="uid://bvrs8oahhc1cn" path="res://script/skeleton_archer.gd" id="2_script"]
 [ext_resource type="Resource" uid="uid://p1yhc5pxtk2m" path="res://attacks/enemy/archer_shot.tres" id="3_shot"]
-[ext_resource type="Texture2D" uid="uid://caw8v4jk0tucp" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Idle.png" id="4_idle"]
-[ext_resource type="Texture2D" uid="uid://p28igvupp76v" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Walk.png" id="5_walk"]
-[ext_resource type="Texture2D" uid="uid://chlkxf1jgi5iu" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Attack.png" id="6_attack_light"]
-[ext_resource type="Texture2D" uid="uid://k722kf053lmh" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Hurt.png" id="7_hurt"]
-[ext_resource type="Texture2D" uid="uid://v7kqinq5q8u3" path="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Death.png" id="8_death"]
+[ext_resource type="Texture2D" uid="uid://caw8v4jk0tucp" path="res://asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Idle.png" id="4_idle"]
+[ext_resource type="Texture2D" uid="uid://p28igvupp76v" path="res://asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Walk.png" id="5_walk"]
+[ext_resource type="Texture2D" uid="uid://chlkxf1jgi5iu" path="res://asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Attack.png" id="6_attack_light"]
+[ext_resource type="Texture2D" uid="uid://k722kf053lmh" path="res://asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Hurt.png" id="7_hurt"]
+[ext_resource type="Texture2D" uid="uid://v7kqinq5q8u3" path="res://asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer_Death.png" id="8_death"]
 
 [sub_resource type="AtlasTexture" id="AT_idle_0"]
 atlas = ExtResource("4_idle")

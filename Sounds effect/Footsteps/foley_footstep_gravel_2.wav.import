@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bx17ie6ndwd64"
-path="res://.godot/imported/foley_footstep_gravel_2.wav-79d3c0cbd620689b5ad0f6dc8e2b0ab7.sample"
+path="res://.godot/imported/foley_footstep_gravel_2.wav-c23bd8365b6ccd9f924dfaadeb6631d9.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Footsteps/foley_footstep_gravel_2.wav"
-dest_files=["res://.godot/imported/foley_footstep_gravel_2.wav-79d3c0cbd620689b5ad0f6dc8e2b0ab7.sample"]
+source_file="res://sounds effect/Footsteps/foley_footstep_gravel_2.wav"
+dest_files=["res://.godot/imported/foley_footstep_gravel_2.wav-c23bd8365b6ccd9f924dfaadeb6631d9.sample"]
 
 [params]
 

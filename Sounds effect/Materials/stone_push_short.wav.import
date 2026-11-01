@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cga0nqq5lvwnf"
-path="res://.godot/imported/stone_push_short.wav-ff04ea0c1c23764acabfc8e020a163ed.sample"
+path="res://.godot/imported/stone_push_short.wav-11f889049852b3a8d3ec87a3c04931f0.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/stone_push_short.wav"
-dest_files=["res://.godot/imported/stone_push_short.wav-ff04ea0c1c23764acabfc8e020a163ed.sample"]
+source_file="res://sounds effect/Materials/stone_push_short.wav"
+dest_files=["res://.godot/imported/stone_push_short.wav-11f889049852b3a8d3ec87a3c04931f0.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c6t15je7o3q8g"
-path="res://.godot/imported/pencil_eraser.wav-ab3fa49223b9ec966b3afbd0b620bc02.sample"
+path="res://.godot/imported/pencil_eraser.wav-c8b34fa5190f0fd1d44eb3905af8118a.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/pencil_eraser.wav"
-dest_files=["res://.godot/imported/pencil_eraser.wav-ab3fa49223b9ec966b3afbd0b620bc02.sample"]
+source_file="res://sounds effect/Items/pencil_eraser.wav"
+dest_files=["res://.godot/imported/pencil_eraser.wav-c8b34fa5190f0fd1d44eb3905af8118a.sample"]
 
 [params]
 

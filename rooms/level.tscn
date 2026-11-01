@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://level.gd" id="1_level"]
+[ext_resource type="Script" uid="uid://cacxluguuhrp1" path="res://script/level.gd" id="1_level"]
 [ext_resource type="PackedScene" path="res://exit_door.tscn" id="2_door"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_side"]

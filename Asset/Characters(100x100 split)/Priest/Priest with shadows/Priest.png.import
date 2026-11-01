@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vpm0ffvaxns"
-path="res://.godot/imported/Priest.png-2635a33cd458b3082be3731fba1a9756.ctex"
+path="res://.godot/imported/Priest.png-f12092e10182ab812ad728e8d5693157.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Priest/Priest with shadows/Priest.png"
-dest_files=["res://.godot/imported/Priest.png-2635a33cd458b3082be3731fba1a9756.ctex"]
+source_file="res://asset/Characters(100x100 split)/Priest/Priest with shadows/Priest.png"
+dest_files=["res://.godot/imported/Priest.png-f12092e10182ab812ad728e8d5693157.ctex"]
 
 [params]
 

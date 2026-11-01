@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bsga6sphtyqpy"
-path="res://.godot/imported/item_equip.wav-91e367e76eecce12752452bda74e23bc.sample"
+path="res://.godot/imported/item_equip.wav-8cb7eb31000bed63e0bf9af0889beeda.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/item_equip.wav"
-dest_files=["res://.godot/imported/item_equip.wav-91e367e76eecce12752452bda74e23bc.sample"]
+source_file="res://sounds effect/Items/item_equip.wav"
+dest_files=["res://.godot/imported/item_equip.wav-8cb7eb31000bed63e0bf9af0889beeda.sample"]
 
 [params]
 

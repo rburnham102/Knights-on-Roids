@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ig1v875h486c"
-path="res://.godot/imported/munching_food.wav-f8f1bf200d693bfa1d996bf3a54b7fa3.sample"
+path="res://.godot/imported/munching_food.wav-fd0c2387eab1d25115401b54bf6e5aaa.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Other/munching_food.wav"
-dest_files=["res://.godot/imported/munching_food.wav-f8f1bf200d693bfa1d996bf3a54b7fa3.sample"]
+source_file="res://sounds effect/Other/munching_food.wav"
+dest_files=["res://.godot/imported/munching_food.wav-fd0c2387eab1d25115401b54bf6e5aaa.sample"]
 
 [params]
 

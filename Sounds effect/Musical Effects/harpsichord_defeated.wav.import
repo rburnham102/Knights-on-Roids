@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ctupvmj8jnp4r"
-path="res://.godot/imported/harpsichord_defeated.wav-c6960bea188ebd537a5005f6e61ef531.sample"
+path="res://.godot/imported/harpsichord_defeated.wav-b0c876b1ac562d9ae6fd6c0c185f901b.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/harpsichord_defeated.wav"
-dest_files=["res://.godot/imported/harpsichord_defeated.wav-c6960bea188ebd537a5005f6e61ef531.sample"]
+source_file="res://sounds effect/Musical Effects/harpsichord_defeated.wav"
+dest_files=["res://.godot/imported/harpsichord_defeated.wav-b0c876b1ac562d9ae6fd6c0c185f901b.sample"]
 
 [params]
 

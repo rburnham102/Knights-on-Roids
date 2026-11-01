@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bu6btax0e2jai"
-path="res://.godot/imported/lock_quick.wav-ab6d3c442d4ae242471e2b48ad171c37.sample"
+path="res://.godot/imported/lock_quick.wav-27f02dc2887899a0ea1dc8aab4b499ce.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/lock_quick.wav"
-dest_files=["res://.godot/imported/lock_quick.wav-ab6d3c442d4ae242471e2b48ad171c37.sample"]
+source_file="res://sounds effect/Environment/lock_quick.wav"
+dest_files=["res://.godot/imported/lock_quick.wav-27f02dc2887899a0ea1dc8aab4b499ce.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://m2jp80mtlknh"
-path="res://.godot/imported/steel_drums_defeated.wav-629e7713b5d3a19dbebe7b7841f3f0e4.sample"
+path="res://.godot/imported/steel_drums_defeated.wav-434b6a073dfe137890e32e65f4a37982.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/steel_drums_defeated.wav"
-dest_files=["res://.godot/imported/steel_drums_defeated.wav-629e7713b5d3a19dbebe7b7841f3f0e4.sample"]
+source_file="res://sounds effect/Musical Effects/steel_drums_defeated.wav"
+dest_files=["res://.godot/imported/steel_drums_defeated.wav-434b6a073dfe137890e32e65f4a37982.sample"]
 
 [params]
 

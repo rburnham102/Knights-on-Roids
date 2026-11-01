@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dpsibb4coexqb"
-path="res://.godot/imported/ceramic_jar_open.wav-8bb85e088179634e61f570fc90d683c9.sample"
+path="res://.godot/imported/ceramic_jar_open.wav-c110ae8ba5efd0745e8fcf5080dda026.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/ceramic_jar_open.wav"
-dest_files=["res://.godot/imported/ceramic_jar_open.wav-8bb85e088179634e61f570fc90d683c9.sample"]
+source_file="res://sounds effect/Materials/ceramic_jar_open.wav"
+dest_files=["res://.godot/imported/ceramic_jar_open.wav-c110ae8ba5efd0745e8fcf5080dda026.sample"]
 
 [params]
 

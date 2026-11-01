@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://br7dl7bvahwc2"
-path="res://.godot/imported/map_close.wav-89055d732986e8c6bfe21e9c23720bc0.sample"
+path="res://.godot/imported/map_close.wav-14303fdb5b0feceaebe7e28f092f64f7.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/map_close.wav"
-dest_files=["res://.godot/imported/map_close.wav-89055d732986e8c6bfe21e9c23720bc0.sample"]
+source_file="res://sounds effect/Items/map_close.wav"
+dest_files=["res://.godot/imported/map_close.wav-14303fdb5b0feceaebe7e28f092f64f7.sample"]
 
 [params]
 

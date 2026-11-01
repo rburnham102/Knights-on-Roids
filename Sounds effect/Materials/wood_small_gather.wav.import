@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bhcra83fnk6qw"
-path="res://.godot/imported/wood_small_gather.wav-e6ebd0e95d1308ccea6d584ce3c460b1.sample"
+path="res://.godot/imported/wood_small_gather.wav-e45bef7668ed2a58abc52c4e3b494ba9.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/wood_small_gather.wav"
-dest_files=["res://.godot/imported/wood_small_gather.wav-e6ebd0e95d1308ccea6d584ce3c460b1.sample"]
+source_file="res://sounds effect/Materials/wood_small_gather.wav"
+dest_files=["res://.godot/imported/wood_small_gather.wav-e45bef7668ed2a58abc52c4e3b494ba9.sample"]
 
 [params]
 

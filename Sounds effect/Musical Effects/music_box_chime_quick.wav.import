@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://boccpsooafu17"
-path="res://.godot/imported/music_box_chime_quick.wav-226164c7f71ca54852a1493801288872.sample"
+path="res://.godot/imported/music_box_chime_quick.wav-86abb31e51f68ffcaa4962f2627b29b3.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/music_box_chime_quick.wav"
-dest_files=["res://.godot/imported/music_box_chime_quick.wav-226164c7f71ca54852a1493801288872.sample"]
+source_file="res://sounds effect/Musical Effects/music_box_chime_quick.wav"
+dest_files=["res://.godot/imported/music_box_chime_quick.wav-86abb31e51f68ffcaa4962f2627b29b3.sample"]
 
 [params]
 

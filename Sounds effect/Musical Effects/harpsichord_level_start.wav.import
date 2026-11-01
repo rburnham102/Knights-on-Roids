@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://flnd7ft7iunk"
-path="res://.godot/imported/harpsichord_level_start.wav-e6704dcc821834c6b461e78fb0630a26.sample"
+path="res://.godot/imported/harpsichord_level_start.wav-292ccb996c84d1a4b35848980c51168e.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/harpsichord_level_start.wav"
-dest_files=["res://.godot/imported/harpsichord_level_start.wav-e6704dcc821834c6b461e78fb0630a26.sample"]
+source_file="res://sounds effect/Musical Effects/harpsichord_level_start.wav"
+dest_files=["res://.godot/imported/harpsichord_level_start.wav-292ccb996c84d1a4b35848980c51168e.sample"]
 
 [params]
 

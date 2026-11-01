@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bu5dnv6hd2cua"
-path="res://.godot/imported/water_boiling_loop.wav-57ac975d7ece1ad5fc8307c147303b3e.sample"
+path="res://.godot/imported/water_boiling_loop.wav-694446438e5e20c02173c3217070d3b5.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/water_boiling_loop.wav"
-dest_files=["res://.godot/imported/water_boiling_loop.wav-57ac975d7ece1ad5fc8307c147303b3e.sample"]
+source_file="res://sounds effect/Environment/water_boiling_loop.wav"
+dest_files=["res://.godot/imported/water_boiling_loop.wav-694446438e5e20c02173c3217070d3b5.sample"]
 
 [params]
 

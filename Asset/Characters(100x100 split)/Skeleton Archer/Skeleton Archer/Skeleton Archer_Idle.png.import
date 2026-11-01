@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br6hw47rktw71"
-path="res://.godot/imported/Skeleton Archer_Idle.png-7ec39f09f6bf41e525184d9052922f88.ctex"
+path="res://.godot/imported/Skeleton Archer_Idle.png-89851468058857367cfec0708be6a8e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer/Skeleton Archer_Idle.png"
-dest_files=["res://.godot/imported/Skeleton Archer_Idle.png-7ec39f09f6bf41e525184d9052922f88.ctex"]
+source_file="res://asset/Characters(100x100 split)/Skeleton Archer/Skeleton Archer/Skeleton Archer_Idle.png"
+dest_files=["res://.godot/imported/Skeleton Archer_Idle.png-89851468058857367cfec0708be6a8e3.ctex"]
 
 [params]
 

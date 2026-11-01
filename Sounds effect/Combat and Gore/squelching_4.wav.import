@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dr7p8fftqba5l"
-path="res://.godot/imported/squelching_4.wav-c9577c457245a7c7ecb10abbcfb779ff.sample"
+path="res://.godot/imported/squelching_4.wav-1e25a3b62bf992302eb0ea4c358e84e2.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Combat and Gore/squelching_4.wav"
-dest_files=["res://.godot/imported/squelching_4.wav-c9577c457245a7c7ecb10abbcfb779ff.sample"]
+source_file="res://sounds effect/Combat and Gore/squelching_4.wav"
+dest_files=["res://.godot/imported/squelching_4.wav-1e25a3b62bf992302eb0ea4c358e84e2.sample"]
 
 [params]
 

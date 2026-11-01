@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b1ryi8d02muhk"
-path="res://.godot/imported/harsh_thud.wav-f23653ca5612a18cd618a10589e5315a.sample"
+path="res://.godot/imported/harsh_thud.wav-8cc768c1d78a0c7b00ca2a9c88fe4cca.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Weapons/harsh_thud.wav"
-dest_files=["res://.godot/imported/harsh_thud.wav-f23653ca5612a18cd618a10589e5315a.sample"]
+source_file="res://sounds effect/Weapons/harsh_thud.wav"
+dest_files=["res://.godot/imported/harsh_thud.wav-8cc768c1d78a0c7b00ca2a9c88fe4cca.sample"]
 
 [params]
 

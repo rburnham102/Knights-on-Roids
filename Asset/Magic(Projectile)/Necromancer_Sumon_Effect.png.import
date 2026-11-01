@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csx7w5dfl4346"
-path="res://.godot/imported/Necromancer_Sumon_Effect.png-30aabe7e9e7934503d5f49a5b194f27f.ctex"
+path="res://.godot/imported/Necromancer_Sumon_Effect.png-ac8e5ed1f47bc6f115bf7cfa8703571e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Magic(Projectile)/Necromancer_Sumon_Effect.png"
-dest_files=["res://.godot/imported/Necromancer_Sumon_Effect.png-30aabe7e9e7934503d5f49a5b194f27f.ctex"]
+source_file="res://asset/Magic(Projectile)/Necromancer_Sumon_Effect.png"
+dest_files=["res://.godot/imported/Necromancer_Sumon_Effect.png-ac8e5ed1f47bc6f115bf7cfa8703571e.ctex"]
 
 [params]
 

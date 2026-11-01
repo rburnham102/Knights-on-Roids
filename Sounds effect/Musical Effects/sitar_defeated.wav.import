@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://j1mm28hx51ct"
-path="res://.godot/imported/sitar_defeated.wav-eef4feb485f0cb8d31fb90553703be62.sample"
+path="res://.godot/imported/sitar_defeated.wav-daad90762b8ff0071c88e0098c8f39d4.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/sitar_defeated.wav"
-dest_files=["res://.godot/imported/sitar_defeated.wav-eef4feb485f0cb8d31fb90553703be62.sample"]
+source_file="res://sounds effect/Musical Effects/sitar_defeated.wav"
+dest_files=["res://.godot/imported/sitar_defeated.wav-daad90762b8ff0071c88e0098c8f39d4.sample"]
 
 [params]
 

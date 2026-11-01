@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dncyaksb30lsc"
-path="res://.godot/imported/grand_piano_chime_quick.wav-a87064758a7546a51d5b2c0da895b859.sample"
+path="res://.godot/imported/grand_piano_chime_quick.wav-953cc1bebf7ae631c28372dde877e81c.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/grand_piano_chime_quick.wav"
-dest_files=["res://.godot/imported/grand_piano_chime_quick.wav-a87064758a7546a51d5b2c0da895b859.sample"]
+source_file="res://sounds effect/Musical Effects/grand_piano_chime_quick.wav"
+dest_files=["res://.godot/imported/grand_piano_chime_quick.wav-953cc1bebf7ae631c28372dde877e81c.sample"]
 
 [params]
 

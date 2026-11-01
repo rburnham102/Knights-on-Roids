@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dtlae1bnea1by"
-path="res://.godot/imported/steel_drums_chime_quick.wav-515617544635db1e659ef8401233726d.sample"
+path="res://.godot/imported/steel_drums_chime_quick.wav-5e40e5eab73bb8d14c523bee1cc1d8fc.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/steel_drums_chime_quick.wav"
-dest_files=["res://.godot/imported/steel_drums_chime_quick.wav-515617544635db1e659ef8401233726d.sample"]
+source_file="res://sounds effect/Musical Effects/steel_drums_chime_quick.wav"
+dest_files=["res://.godot/imported/steel_drums_chime_quick.wav-5e40e5eab73bb8d14c523bee1cc1d8fc.sample"]
 
 [params]
 

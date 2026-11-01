@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bvqxkpbu7b3sh"
-path="res://.godot/imported/vibraphone_chime_quick.wav-7f0017a892c7d3153f1d670b41a7dad3.sample"
+path="res://.godot/imported/vibraphone_chime_quick.wav-4b0a33269cfa7efa0b077511671ce506.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/vibraphone_chime_quick.wav"
-dest_files=["res://.godot/imported/vibraphone_chime_quick.wav-7f0017a892c7d3153f1d670b41a7dad3.sample"]
+source_file="res://sounds effect/Musical Effects/vibraphone_chime_quick.wav"
+dest_files=["res://.godot/imported/vibraphone_chime_quick.wav-4b0a33269cfa7efa0b077511671ce506.sample"]
 
 [params]
 

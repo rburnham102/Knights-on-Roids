@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dnjvyvdd18h03"
-path="res://.godot/imported/hydraulic_up.wav-130c07419813e040b9f4b7f10a390aba.sample"
+path="res://.godot/imported/hydraulic_up.wav-cb33d8cee95ea90eab48eec0b6012098.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Machines/hydraulic_up.wav"
-dest_files=["res://.godot/imported/hydraulic_up.wav-130c07419813e040b9f4b7f10a390aba.sample"]
+source_file="res://sounds effect/Machines/hydraulic_up.wav"
+dest_files=["res://.godot/imported/hydraulic_up.wav-cb33d8cee95ea90eab48eec0b6012098.sample"]
 
 [params]
 

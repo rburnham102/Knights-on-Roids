@@ -1,8 +1,8 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://breakable.gd" id="1_breakable"]
-[ext_resource type="Texture2D" path="res://TileSet/FL_Houses_v1.0/_PNG/FL_Houses_decoratives.png" id="2_props"]
-[ext_resource type="AudioStream" path="res://Sounds effect/Materials/wood_small_drop.wav" id="3_sound"]
+[ext_resource type="Script" uid="uid://5nlkkdt33b50" path="res://script/breakable.gd" id="1_breakable"]
+[ext_resource type="Texture2D" uid="uid://b41nub2ilbt3p" path="res://tileset/FL_Houses_v1.0/_PNG/FL_Houses_decoratives.png" id="2_props"]
+[ext_resource type="AudioStream" uid="uid://dnpyphbobtbfo" path="res://sounds effect/Materials/wood_small_drop.wav" id="3_sound"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_whole"]
 atlas = ExtResource("2_props")

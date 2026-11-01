@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cd5tr8i157shh"
-path="res://.godot/imported/razor_buzz.wav-8544436ae9891fa817845b5b0aa56459.sample"
+path="res://.godot/imported/razor_buzz.wav-86ea410538411124db13d6e3863a7243.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Machines/razor_buzz.wav"
-dest_files=["res://.godot/imported/razor_buzz.wav-8544436ae9891fa817845b5b0aa56459.sample"]
+source_file="res://sounds effect/Machines/razor_buzz.wav"
+dest_files=["res://.godot/imported/razor_buzz.wav-86ea410538411124db13d6e3863a7243.sample"]
 
 [params]
 

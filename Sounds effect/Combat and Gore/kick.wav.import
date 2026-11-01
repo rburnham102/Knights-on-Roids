@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dbqmv0nctrsar"
-path="res://.godot/imported/kick.wav-a416fc28d0b57de9edf75f318b185916.sample"
+path="res://.godot/imported/kick.wav-f9156bb5c850a629eb42908d4f0a9ef2.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Combat and Gore/kick.wav"
-dest_files=["res://.godot/imported/kick.wav-a416fc28d0b57de9edf75f318b185916.sample"]
+source_file="res://sounds effect/Combat and Gore/kick.wav"
+dest_files=["res://.godot/imported/kick.wav-f9156bb5c850a629eb42908d4f0a9ef2.sample"]
 
 [params]
 

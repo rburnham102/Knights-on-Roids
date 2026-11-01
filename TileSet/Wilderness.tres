@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" format=3 uid="uid://drvtyidjo5oni"]
 
-[ext_resource type="Texture2D" uid="uid://cilu8l0l1jerh" path="res://TileSet/FLSET1_v1.1/_PNG/FLSET1_ground.png" id="1_6b557"]
-[ext_resource type="Texture2D" uid="uid://b6m33etle2jot" path="res://TileSet/FLSET1_v1.1/_PNG/FLSET1_ground_dec_props.png" id="2_orpb0"]
-[ext_resource type="Texture2D" uid="uid://cwwokcdperwr5" path="res://TileSet/FLSET1_v1.1/_PNG/FLSET1_hills.png" id="3_klviy"]
-[ext_resource type="Texture2D" uid="uid://ca5if3l1f5xee" path="res://TileSet/FLSET1_v1.1/_PNG/FLSET1_water_env.png" id="4_oabuc"]
-[ext_resource type="Texture2D" uid="uid://g38ti1jhngwt" path="res://TileSet/FLSET1_v1.1/_PNG/FLSET1_bridges and fences.png" id="5_orpb0"]
+[ext_resource type="Texture2D" uid="uid://cilu8l0l1jerh" path="res://tileset/FLSET1_v1.1/_PNG/FLSET1_ground.png" id="1_6b557"]
+[ext_resource type="Texture2D" uid="uid://b6m33etle2jot" path="res://tileset/FLSET1_v1.1/_PNG/FLSET1_ground_dec_props.png" id="2_orpb0"]
+[ext_resource type="Texture2D" uid="uid://cwwokcdperwr5" path="res://tileset/FLSET1_v1.1/_PNG/FLSET1_hills.png" id="3_klviy"]
+[ext_resource type="Texture2D" uid="uid://ca5if3l1f5xee" path="res://tileset/FLSET1_v1.1/_PNG/FLSET1_water_env.png" id="4_oabuc"]
+[ext_resource type="Texture2D" uid="uid://g38ti1jhngwt" path="res://tileset/FLSET1_v1.1/_PNG/FLSET1_bridges and fences.png" id="5_orpb0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5ias"]
 texture = ExtResource("1_6b557")

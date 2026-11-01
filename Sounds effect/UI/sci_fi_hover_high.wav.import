@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://itqi4vbthdxs"
-path="res://.godot/imported/sci_fi_hover_high.wav-d2def00f830ed616980dccc279ca48c3.sample"
+path="res://.godot/imported/sci_fi_hover_high.wav-7a763e2b1e30fa282ede1b3bf956df37.sample"
 
 [deps]
 
-source_file="res://Sounds effect/UI/sci_fi_hover_high.wav"
-dest_files=["res://.godot/imported/sci_fi_hover_high.wav-d2def00f830ed616980dccc279ca48c3.sample"]
+source_file="res://sounds effect/UI/sci_fi_hover_high.wav"
+dest_files=["res://.godot/imported/sci_fi_hover_high.wav-7a763e2b1e30fa282ede1b3bf956df37.sample"]
 
 [params]
 

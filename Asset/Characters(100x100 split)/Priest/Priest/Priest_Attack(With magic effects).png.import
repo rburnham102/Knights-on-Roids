@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdnu2ddtiu5sf"
-path="res://.godot/imported/Priest_Attack(With magic effects).png-23a52655b20bef2c9811690708f58b4d.ctex"
+path="res://.godot/imported/Priest_Attack(With magic effects).png-5b3360ff78669c7a38a4e4101e04e114.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Priest/Priest/Priest_Attack(With magic effects).png"
-dest_files=["res://.godot/imported/Priest_Attack(With magic effects).png-23a52655b20bef2c9811690708f58b4d.ctex"]
+source_file="res://asset/Characters(100x100 split)/Priest/Priest/Priest_Attack(With magic effects).png"
+dest_files=["res://.godot/imported/Priest_Attack(With magic effects).png-5b3360ff78669c7a38a4e4101e04e114.ctex"]
 
 [params]
 

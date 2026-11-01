@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bv1djn8ia4buj"
-path="res://.godot/imported/sci_fi_disallow.wav-df54ea19a14d1aa717f09983297df768.sample"
+path="res://.godot/imported/sci_fi_disallow.wav-c9017614411eb593f61d599c99da722f.sample"
 
 [deps]
 
-source_file="res://Sounds effect/UI/sci_fi_disallow.wav"
-dest_files=["res://.godot/imported/sci_fi_disallow.wav-df54ea19a14d1aa717f09983297df768.sample"]
+source_file="res://sounds effect/UI/sci_fi_disallow.wav"
+dest_files=["res://.godot/imported/sci_fi_disallow.wav-c9017614411eb593f61d599c99da722f.sample"]
 
 [params]
 

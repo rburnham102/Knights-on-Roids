@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://by0ti7xlpvtl6"
-path="res://.godot/imported/weapon_pick_up.wav-5d9b51016ad050f1351ac2b3d8ed3e68.sample"
+path="res://.godot/imported/weapon_pick_up.wav-18eb02a3e11529a9b182fd73cf8793e2.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Weapons/weapon_pick_up.wav"
-dest_files=["res://.godot/imported/weapon_pick_up.wav-5d9b51016ad050f1351ac2b3d8ed3e68.sample"]
+source_file="res://sounds effect/Weapons/weapon_pick_up.wav"
+dest_files=["res://.godot/imported/weapon_pick_up.wav-18eb02a3e11529a9b182fd73cf8793e2.sample"]
 
 [params]
 

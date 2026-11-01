@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bets4yy4kfgrs"
-path="res://.godot/imported/synth_shut_down.wav-8b8aa5660aee1cfef0f0b4a7b15cd5b7.sample"
+path="res://.godot/imported/synth_shut_down.wav-5e6c276dac71116047b31ccbd477e1eb.sample"
 
 [deps]
 
-source_file="res://Sounds effect/UI/synth_shut_down.wav"
-dest_files=["res://.godot/imported/synth_shut_down.wav-8b8aa5660aee1cfef0f0b4a7b15cd5b7.sample"]
+source_file="res://sounds effect/UI/synth_shut_down.wav"
+dest_files=["res://.godot/imported/synth_shut_down.wav-5e6c276dac71116047b31ccbd477e1eb.sample"]
 
 [params]
 

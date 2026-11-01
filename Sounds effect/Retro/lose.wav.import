@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://70i3cxiiinjg"
-path="res://.godot/imported/lose.wav-f773dc7a0534a4399392864e4c9bf067.sample"
+path="res://.godot/imported/lose.wav-dac34177bb9a1e8466c76513dc5f2e77.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Retro/lose.wav"
-dest_files=["res://.godot/imported/lose.wav-f773dc7a0534a4399392864e4c9bf067.sample"]
+source_file="res://sounds effect/Retro/lose.wav"
+dest_files=["res://.godot/imported/lose.wav-dac34177bb9a1e8466c76513dc5f2e77.sample"]
 
 [params]
 

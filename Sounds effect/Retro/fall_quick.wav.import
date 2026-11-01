@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dcjmgaljeuh76"
-path="res://.godot/imported/fall_quick.wav-c9fde20313a0b88d7a4b530aa2d33af9.sample"
+path="res://.godot/imported/fall_quick.wav-11b2f9ad506e5bc17c6572f28feb5092.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Retro/fall_quick.wav"
-dest_files=["res://.godot/imported/fall_quick.wav-c9fde20313a0b88d7a4b530aa2d33af9.sample"]
+source_file="res://sounds effect/Retro/fall_quick.wav"
+dest_files=["res://.godot/imported/fall_quick.wav-11b2f9ad506e5bc17c6572f28feb5092.sample"]
 
 [params]
 

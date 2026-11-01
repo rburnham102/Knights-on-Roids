@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwecwfbmp5v2v"
-path="res://.godot/imported/Soldier-combo.png-fdb123bb407b71726e3a4351d67da516.ctex"
+path="res://.godot/imported/Soldier-combo.png-f0e5fa57c942c0563f1aa327945eeb0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier-combo.png"
-dest_files=["res://.godot/imported/Soldier-combo.png-fdb123bb407b71726e3a4351d67da516.ctex"]
+source_file="res://asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier-combo.png"
+dest_files=["res://.godot/imported/Soldier-combo.png-f0e5fa57c942c0563f1aa327945eeb0b.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dyyoidbapsk0m"
-path="res://.godot/imported/water_splashing.wav-54a7543db6882edb6511e18742237942.sample"
+path="res://.godot/imported/water_splashing.wav-3a56cc1706c8028ce5c3818b98589050.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Environment/water_splashing.wav"
-dest_files=["res://.godot/imported/water_splashing.wav-54a7543db6882edb6511e18742237942.sample"]
+source_file="res://sounds effect/Environment/water_splashing.wav"
+dest_files=["res://.godot/imported/water_splashing.wav-3a56cc1706c8028ce5c3818b98589050.sample"]
 
 [params]
 

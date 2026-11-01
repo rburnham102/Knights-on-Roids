@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dwbt8isccefik"
-path="res://.godot/imported/page_turn.wav-6e5ec4551b640431f3d858de27a10fe4.sample"
+path="res://.godot/imported/page_turn.wav-7b1ffe87e3970bd4ffad7735c6131d81.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/page_turn.wav"
-dest_files=["res://.godot/imported/page_turn.wav-6e5ec4551b640431f3d858de27a10fe4.sample"]
+source_file="res://sounds effect/Items/page_turn.wav"
+dest_files=["res://.godot/imported/page_turn.wav-7b1ffe87e3970bd4ffad7735c6131d81.sample"]
 
 [params]
 

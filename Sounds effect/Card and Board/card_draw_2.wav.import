@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://g2tvwxxqxmh5"
-path="res://.godot/imported/card_draw_2.wav-3137e2679b250045ed1b7cf9a22186c2.sample"
+path="res://.godot/imported/card_draw_2.wav-bf599b919db6eaccdad2bfcc2765541f.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Card and Board/card_draw_2.wav"
-dest_files=["res://.godot/imported/card_draw_2.wav-3137e2679b250045ed1b7cf9a22186c2.sample"]
+source_file="res://sounds effect/Card and Board/card_draw_2.wav"
+dest_files=["res://.godot/imported/card_draw_2.wav-bf599b919db6eaccdad2bfcc2765541f.sample"]
 
 [params]
 

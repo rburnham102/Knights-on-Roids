@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bkvtgfscijaoo"
-path="res://.godot/imported/harpsichord_negative.wav-68f0cd98e3bd5a957ca1a0bd63940bec.sample"
+path="res://.godot/imported/harpsichord_negative.wav-6f84c6244422f25fbb2192a08bf35e6d.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/harpsichord_negative.wav"
-dest_files=["res://.godot/imported/harpsichord_negative.wav-68f0cd98e3bd5a957ca1a0bd63940bec.sample"]
+source_file="res://sounds effect/Musical Effects/harpsichord_negative.wav"
+dest_files=["res://.godot/imported/harpsichord_negative.wav-6f84c6244422f25fbb2192a08bf35e6d.sample"]
 
 [params]
 

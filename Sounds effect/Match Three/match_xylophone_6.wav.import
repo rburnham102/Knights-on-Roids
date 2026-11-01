@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cqenqqt1olh2k"
-path="res://.godot/imported/match_xylophone_6.wav-df6b0c41fc4adbd9b71dd6ed5fdfc1ba.sample"
+path="res://.godot/imported/match_xylophone_6.wav-b57fb6d88b6997bd3572ad273b77936e.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Match Three/match_xylophone_6.wav"
-dest_files=["res://.godot/imported/match_xylophone_6.wav-df6b0c41fc4adbd9b71dd6ed5fdfc1ba.sample"]
+source_file="res://sounds effect/Match Three/match_xylophone_6.wav"
+dest_files=["res://.godot/imported/match_xylophone_6.wav-b57fb6d88b6997bd3572ad273b77936e.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dvr6jmbmsqgdy"
-path="res://.godot/imported/explosion_large.wav-c2678b7bd711e01e880946f78ef711b5.sample"
+path="res://.godot/imported/explosion_large.wav-88984b2ed359b1a75caac584146dbcd4.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Retro/explosion_large.wav"
-dest_files=["res://.godot/imported/explosion_large.wav-c2678b7bd711e01e880946f78ef711b5.sample"]
+source_file="res://sounds effect/Retro/explosion_large.wav"
+dest_files=["res://.godot/imported/explosion_large.wav-88984b2ed359b1a75caac584146dbcd4.sample"]
 
 [params]
 

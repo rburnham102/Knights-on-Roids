@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b0oedtsj0etjy"
-path="res://.godot/imported/xylophone_mystery.wav-daa890a87a174bf3c0550a9af613f912.sample"
+path="res://.godot/imported/xylophone_mystery.wav-192812ff7f12d0fe0bb64c767c57e934.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/xylophone_mystery.wav"
-dest_files=["res://.godot/imported/xylophone_mystery.wav-daa890a87a174bf3c0550a9af613f912.sample"]
+source_file="res://sounds effect/Musical Effects/xylophone_mystery.wav"
+dest_files=["res://.godot/imported/xylophone_mystery.wav-192812ff7f12d0fe0bb64c767c57e934.sample"]
 
 [params]
 

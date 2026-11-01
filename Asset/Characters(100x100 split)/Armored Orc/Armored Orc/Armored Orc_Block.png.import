@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4vupw20sqgmc"
-path="res://.godot/imported/Armored Orc_Block.png-526cfc7bb4db7fbc5b5212201f2a8330.ctex"
+path="res://.godot/imported/Armored Orc_Block.png-cc4be3ca10345d0036e0fca30f057a6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Armored Orc/Armored Orc/Armored Orc_Block.png"
-dest_files=["res://.godot/imported/Armored Orc_Block.png-526cfc7bb4db7fbc5b5212201f2a8330.ctex"]
+source_file="res://asset/Characters(100x100 split)/Armored Orc/Armored Orc/Armored Orc_Block.png"
+dest_files=["res://.godot/imported/Armored Orc_Block.png-cc4be3ca10345d0036e0fca30f057a6a.ctex"]
 
 [params]
 

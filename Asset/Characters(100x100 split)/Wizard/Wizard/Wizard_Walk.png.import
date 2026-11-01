@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s0klhb401lum"
-path="res://.godot/imported/Wizard_Walk.png-5d9146cad39da90303c0ff533d16217d.ctex"
+path="res://.godot/imported/Wizard_Walk.png-cca6458b4fe30c9643139632786a8e95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Wizard/Wizard/Wizard_Walk.png"
-dest_files=["res://.godot/imported/Wizard_Walk.png-5d9146cad39da90303c0ff533d16217d.ctex"]
+source_file="res://asset/Characters(100x100 split)/Wizard/Wizard/Wizard_Walk.png"
+dest_files=["res://.godot/imported/Wizard_Walk.png-cca6458b4fe30c9643139632786a8e95.ctex"]
 
 [params]
 

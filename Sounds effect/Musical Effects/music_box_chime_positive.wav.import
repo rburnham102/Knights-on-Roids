@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b5o76halaccm8"
-path="res://.godot/imported/music_box_chime_positive.wav-27e0ba0b35d9d03981c8dcfbae3208ad.sample"
+path="res://.godot/imported/music_box_chime_positive.wav-441e57acac8b76d85deb823d9b6f3ff7.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/music_box_chime_positive.wav"
-dest_files=["res://.godot/imported/music_box_chime_positive.wav-27e0ba0b35d9d03981c8dcfbae3208ad.sample"]
+source_file="res://sounds effect/Musical Effects/music_box_chime_positive.wav"
+dest_files=["res://.godot/imported/music_box_chime_positive.wav-441e57acac8b76d85deb823d9b6f3ff7.sample"]
 
 [params]
 

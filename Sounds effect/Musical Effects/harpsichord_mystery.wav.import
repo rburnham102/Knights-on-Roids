@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b6j5rtis8erms"
-path="res://.godot/imported/harpsichord_mystery.wav-2c058c19e1dbbdf69014c0d89d8cc106.sample"
+path="res://.godot/imported/harpsichord_mystery.wav-117d3200563e95a6a70f3dd78d4303be.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/harpsichord_mystery.wav"
-dest_files=["res://.godot/imported/harpsichord_mystery.wav-2c058c19e1dbbdf69014c0d89d8cc106.sample"]
+source_file="res://sounds effect/Musical Effects/harpsichord_mystery.wav"
+dest_files=["res://.godot/imported/harpsichord_mystery.wav-117d3200563e95a6a70f3dd78d4303be.sample"]
 
 [params]
 

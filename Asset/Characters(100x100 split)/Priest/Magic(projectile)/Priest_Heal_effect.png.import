@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7w40akm0ewfq"
-path="res://.godot/imported/Priest_Heal_effect.png-eb0558ea984f675c6fc6fdc10e0fabdf.ctex"
+path="res://.godot/imported/Priest_Heal_effect.png-06ef7410b79bb2b25d4346493c2226da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Priest/Magic(projectile)/Priest_Heal_effect.png"
-dest_files=["res://.godot/imported/Priest_Heal_effect.png-eb0558ea984f675c6fc6fdc10e0fabdf.ctex"]
+source_file="res://asset/Characters(100x100 split)/Priest/Magic(projectile)/Priest_Heal_effect.png"
+dest_files=["res://.godot/imported/Priest_Heal_effect.png-06ef7410b79bb2b25d4346493c2226da.ctex"]
 
 [params]
 

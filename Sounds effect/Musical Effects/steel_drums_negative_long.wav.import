@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://clkrbxv68gmet"
-path="res://.godot/imported/steel_drums_negative_long.wav-2d93db044a2b095bd044947fa22bc797.sample"
+path="res://.godot/imported/steel_drums_negative_long.wav-260fe52720268bf7ce69ce00b46bd37b.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/steel_drums_negative_long.wav"
-dest_files=["res://.godot/imported/steel_drums_negative_long.wav-2d93db044a2b095bd044947fa22bc797.sample"]
+source_file="res://sounds effect/Musical Effects/steel_drums_negative_long.wav"
+dest_files=["res://.godot/imported/steel_drums_negative_long.wav-260fe52720268bf7ce69ce00b46bd37b.sample"]
 
 [params]
 

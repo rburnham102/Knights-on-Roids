@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://kqqep6wwogoe"
-path="res://.godot/imported/belch_3.wav-3dad3841c4b6e8dd23d4150cd9b431cf.sample"
+path="res://.godot/imported/belch_3.wav-f5ce1b45783b68536f347615bccbc051.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Human/belch_3.wav"
-dest_files=["res://.godot/imported/belch_3.wav-3dad3841c4b6e8dd23d4150cd9b431cf.sample"]
+source_file="res://sounds effect/Human/belch_3.wav"
+dest_files=["res://.godot/imported/belch_3.wav-f5ce1b45783b68536f347615bccbc051.sample"]
 
 [params]
 

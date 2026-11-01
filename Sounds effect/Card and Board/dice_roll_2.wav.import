@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bu4rabwulppgs"
-path="res://.godot/imported/dice_roll_2.wav-7c3f5442f721111bf40248892c1b846d.sample"
+path="res://.godot/imported/dice_roll_2.wav-7a96f110439d7c4b9f56755ba5a29ed5.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Card and Board/dice_roll_2.wav"
-dest_files=["res://.godot/imported/dice_roll_2.wav-7c3f5442f721111bf40248892c1b846d.sample"]
+source_file="res://sounds effect/Card and Board/dice_roll_2.wav"
+dest_files=["res://.godot/imported/dice_roll_2.wav-7a96f110439d7c4b9f56755ba5a29ed5.sample"]
 
 [params]
 

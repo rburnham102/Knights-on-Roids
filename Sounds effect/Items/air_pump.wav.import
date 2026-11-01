@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b72sgv5p6inq8"
-path="res://.godot/imported/air_pump.wav-98f61340301361f460419aa96ef81002.sample"
+path="res://.godot/imported/air_pump.wav-114852d2b013d1f74e4b6f27cb173ebf.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/air_pump.wav"
-dest_files=["res://.godot/imported/air_pump.wav-98f61340301361f460419aa96ef81002.sample"]
+source_file="res://sounds effect/Items/air_pump.wav"
+dest_files=["res://.godot/imported/air_pump.wav-114852d2b013d1f74e4b6f27cb173ebf.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bugy8w0uo0bst"
-path="res://.godot/imported/Elite Orc.png-84093240a24dfff44a64d39bd8364d42.ctex"
+path="res://.godot/imported/Elite Orc.png-908a82c245fed5128ab8fac539fa884f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Elite Orc/Elite Orc with shadows/Elite Orc.png"
-dest_files=["res://.godot/imported/Elite Orc.png-84093240a24dfff44a64d39bd8364d42.ctex"]
+source_file="res://asset/Characters(100x100 split)/Elite Orc/Elite Orc with shadows/Elite Orc.png"
+dest_files=["res://.godot/imported/Elite Orc.png-908a82c245fed5128ab8fac539fa884f.ctex"]
 
 [params]
 

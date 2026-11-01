@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ccj5k6o7i65qu"
-path="res://.godot/imported/tennis_ball_bounce_2.wav-866f5521cfc86b1662503f2ab2cac659.sample"
+path="res://.godot/imported/tennis_ball_bounce_2.wav-76146c0c00c752f0c84b97e509b3510c.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/tennis_ball_bounce_2.wav"
-dest_files=["res://.godot/imported/tennis_ball_bounce_2.wav-866f5521cfc86b1662503f2ab2cac659.sample"]
+source_file="res://sounds effect/Items/tennis_ball_bounce_2.wav"
+dest_files=["res://.godot/imported/tennis_ball_bounce_2.wav-76146c0c00c752f0c84b97e509b3510c.sample"]
 
 [params]
 

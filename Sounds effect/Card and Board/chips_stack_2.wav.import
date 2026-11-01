@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://2cyxxhv3t7xl"
-path="res://.godot/imported/chips_stack_2.wav-fb2d4aaa1a586bf9cf2e8beee8406327.sample"
+path="res://.godot/imported/chips_stack_2.wav-74c4470ceeba573eb9d2b38d300e26f5.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Card and Board/chips_stack_2.wav"
-dest_files=["res://.godot/imported/chips_stack_2.wav-fb2d4aaa1a586bf9cf2e8beee8406327.sample"]
+source_file="res://sounds effect/Card and Board/chips_stack_2.wav"
+dest_files=["res://.godot/imported/chips_stack_2.wav-74c4470ceeba573eb9d2b38d300e26f5.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbi1t2xrsmtub"
-path="res://.godot/imported/Soldier-block.png-5f0e47f648bd107b81f0a8f2f9f30b79.ctex"
+path="res://.godot/imported/Soldier-block.png-5ce20bfd90e732ba42028232074eca63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier-block.png"
-dest_files=["res://.godot/imported/Soldier-block.png-5f0e47f648bd107b81f0a8f2f9f30b79.ctex"]
+source_file="res://asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier-block.png"
+dest_files=["res://.godot/imported/Soldier-block.png-5ce20bfd90e732ba42028232074eca63.ctex"]
 
 [params]
 

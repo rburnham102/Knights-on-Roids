@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5w6baqc63l67"
-path="res://.godot/imported/Necromancer_Summon(With magic effects).png-db058dde2106752967e1e14ea8a67f49.ctex"
+path="res://.godot/imported/Necromancer_Summon(With magic effects).png-e9b93e90d8586a911d05b7a522144063.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Necromancer/Necromancer/Necromancer_Summon(With magic effects).png"
-dest_files=["res://.godot/imported/Necromancer_Summon(With magic effects).png-db058dde2106752967e1e14ea8a67f49.ctex"]
+source_file="res://asset/Characters(100x100 split)/Necromancer/Necromancer/Necromancer_Summon(With magic effects).png"
+dest_files=["res://.godot/imported/Necromancer_Summon(With magic effects).png-e9b93e90d8586a911d05b7a522144063.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dxybhu3cdqqkn"
-path="res://.godot/imported/synth_bass_mystery.wav-236b7d40938bc0e8e4d83a8a4a10e1b5.sample"
+path="res://.godot/imported/synth_bass_mystery.wav-a91dca928c7eb0d6e6eb743dc3999b08.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/synth_bass_mystery.wav"
-dest_files=["res://.godot/imported/synth_bass_mystery.wav-236b7d40938bc0e8e4d83a8a4a10e1b5.sample"]
+source_file="res://sounds effect/Musical Effects/synth_bass_mystery.wav"
+dest_files=["res://.godot/imported/synth_bass_mystery.wav-a91dca928c7eb0d6e6eb743dc3999b08.sample"]
 
 [params]
 

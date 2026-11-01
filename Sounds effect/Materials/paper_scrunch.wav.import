@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d0axy1yjfmbu3"
-path="res://.godot/imported/paper_scrunch.wav-42003dd2c455aedcd31b7002549a3bf0.sample"
+path="res://.godot/imported/paper_scrunch.wav-7d16adc110f3f4a451b2ae9661bad6f2.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/paper_scrunch.wav"
-dest_files=["res://.godot/imported/paper_scrunch.wav-42003dd2c455aedcd31b7002549a3bf0.sample"]
+source_file="res://sounds effect/Materials/paper_scrunch.wav"
+dest_files=["res://.godot/imported/paper_scrunch.wav-7d16adc110f3f4a451b2ae9661bad6f2.sample"]
 
 [params]
 

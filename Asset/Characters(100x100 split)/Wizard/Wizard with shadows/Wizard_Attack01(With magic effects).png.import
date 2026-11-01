@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqyugc2lj3jpb"
-path="res://.godot/imported/Wizard_Attack01(With magic effects).png-1d3a27720a20aab36b4aa144e907b924.ctex"
+path="res://.godot/imported/Wizard_Attack01(With magic effects).png-6af789278c6883c6ed4866258a039f7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Attack01(With magic effects).png"
-dest_files=["res://.godot/imported/Wizard_Attack01(With magic effects).png-1d3a27720a20aab36b4aa144e907b924.ctex"]
+source_file="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Attack01(With magic effects).png"
+dest_files=["res://.godot/imported/Wizard_Attack01(With magic effects).png-6af789278c6883c6ed4866258a039f7c.ctex"]
 
 [params]
 

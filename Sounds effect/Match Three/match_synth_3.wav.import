@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://divf6g76rlcxq"
-path="res://.godot/imported/match_synth_3.wav-4f22ad36d26dd260ce025639e1b4dfe4.sample"
+path="res://.godot/imported/match_synth_3.wav-f87f6ef1858b7ce051a6f990862d1323.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Match Three/match_synth_3.wav"
-dest_files=["res://.godot/imported/match_synth_3.wav-4f22ad36d26dd260ce025639e1b4dfe4.sample"]
+source_file="res://sounds effect/Match Three/match_synth_3.wav"
+dest_files=["res://.godot/imported/match_synth_3.wav-f87f6ef1858b7ce051a6f990862d1323.sample"]
 
 [params]
 

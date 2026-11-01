@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g38ti1jhngwt"
-path="res://.godot/imported/FLSET1_bridges and fences.png-ef509cfd446e66fd4d609895c10ad183.ctex"
+path="res://.godot/imported/FLSET1_bridges and fences.png-fc440ab13feb4bf2ac42fe1782847847.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileSet/FLSET1_v1.1/_PNG/FLSET1_bridges and fences.png"
-dest_files=["res://.godot/imported/FLSET1_bridges and fences.png-ef509cfd446e66fd4d609895c10ad183.ctex"]
+source_file="res://tileset/FLSET1_v1.1/_PNG/FLSET1_bridges and fences.png"
+dest_files=["res://.godot/imported/FLSET1_bridges and fences.png-fc440ab13feb4bf2ac42fe1782847847.ctex"]
 
 [params]
 

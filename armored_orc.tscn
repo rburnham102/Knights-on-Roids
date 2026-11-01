@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://c4edp8uapnx5g" path="res://attacks/enemy/armored_light.tres" id="2_light_attack"]
 [ext_resource type="Resource" uid="uid://b8w5erdo7whg5" path="res://attacks/enemy/armored_heavy.tres" id="3_heavy_attack"]
 [ext_resource type="Resource" uid="uid://ca47pqoj1uty0" path="res://attacks/enemy/armored_smash.tres" id="4_smash"]
-[ext_resource type="Texture2D" uid="uid://clt3euyyapljy" path="res://Asset/Characters(100x100 split)/Armored Orc/Armored Orc with shadows/Armored Orc.png" id="2_7orxc"]
+[ext_resource type="Texture2D" uid="uid://clt3euyyapljy" path="res://asset/Characters(100x100 split)/Armored Orc/Armored Orc with shadows/Armored Orc.png" id="2_7orxc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwnm5"]
 atlas = ExtResource("2_7orxc")

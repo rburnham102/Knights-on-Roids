@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b0teosq4ot7n0"
-path="res://.godot/imported/synth_bass_level_complete.wav-3f7b292919059e9c3de30ce98d2001af.sample"
+path="res://.godot/imported/synth_bass_level_complete.wav-1f22d9413c33aeeb21b654fcc7e67d2a.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/synth_bass_level_complete.wav"
-dest_files=["res://.godot/imported/synth_bass_level_complete.wav-3f7b292919059e9c3de30ce98d2001af.sample"]
+source_file="res://sounds effect/Musical Effects/synth_bass_level_complete.wav"
+dest_files=["res://.godot/imported/synth_bass_level_complete.wav-1f22d9413c33aeeb21b654fcc7e67d2a.sample"]
 
 [params]
 

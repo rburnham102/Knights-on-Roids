@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dil20kyo701h"
-path="res://.godot/imported/whistle.wav-994c25eefe87d8f0adb698e9ba1ee46f.sample"
+path="res://.godot/imported/whistle.wav-bacbc3b6a08feec7934832bb684812b8.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Human/whistle.wav"
-dest_files=["res://.godot/imported/whistle.wav-994c25eefe87d8f0adb698e9ba1ee46f.sample"]
+source_file="res://sounds effect/Human/whistle.wav"
+dest_files=["res://.godot/imported/whistle.wav-bacbc3b6a08feec7934832bb684812b8.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bagxfcklvrbby"
-path="res://.godot/imported/punch_2.wav-81a4ddeebf16dff108aa9a7475fec370.sample"
+path="res://.godot/imported/punch_2.wav-a4dece04beae4122f907699b9ee0bd82.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Combat and Gore/punch_2.wav"
-dest_files=["res://.godot/imported/punch_2.wav-81a4ddeebf16dff108aa9a7475fec370.sample"]
+source_file="res://sounds effect/Combat and Gore/punch_2.wav"
+dest_files=["res://.godot/imported/punch_2.wav-a4dece04beae4122f907699b9ee0bd82.sample"]
 
 [params]
 

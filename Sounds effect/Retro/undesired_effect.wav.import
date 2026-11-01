@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ilagm6f51frv"
-path="res://.godot/imported/undesired_effect.wav-6c4e6bbcf4d6a0cda6298e12a425a230.sample"
+path="res://.godot/imported/undesired_effect.wav-13774a1644227774761a36ec05857bf2.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Retro/undesired_effect.wav"
-dest_files=["res://.godot/imported/undesired_effect.wav-6c4e6bbcf4d6a0cda6298e12a425a230.sample"]
+source_file="res://sounds effect/Retro/undesired_effect.wav"
+dest_files=["res://.godot/imported/undesired_effect.wav-13774a1644227774761a36ec05857bf2.sample"]
 
 [params]
 

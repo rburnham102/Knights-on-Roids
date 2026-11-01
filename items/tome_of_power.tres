@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://c8xrsbnht8xia"]
 
-[ext_resource type="Script" uid="uid://cy70tkbgu0iml" path="res://item.gd" id="1_item"]
-[ext_resource type="Texture2D" uid="uid://c656cj6p5s0kp" path="res://Asset/Pickups/books.png" id="2_sheet"]
-[ext_resource type="AudioStream" uid="uid://c6wrqodj3kqop" path="res://Sounds effect/Items/book_open.wav" id="3_sound"]
+[ext_resource type="Script" uid="uid://cy70tkbgu0iml" path="res://script/item.gd" id="1_item"]
+[ext_resource type="AudioStream" uid="uid://c6wrqodj3kqop" path="res://sounds effect/Items/book_open.wav" id="2_6g1wy"]
+[ext_resource type="Texture2D" uid="uid://c656cj6p5s0kp" path="res://asset/Pickups/books.png" id="2_sheet"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_icon"]
 atlas = ExtResource("2_sheet")
@@ -11,7 +11,7 @@ region = Rect2(48, 128, 16, 16)
 [resource]
 script = ExtResource("1_item")
 icon = SubResource("AtlasTexture_icon")
-pickup_sound = ExtResource("3_sound")
+pickup_sound = ExtResource("2_6g1wy")
 title = "Tome of Power"
 description = "+1 Power for the rest of the run."
 power = 1

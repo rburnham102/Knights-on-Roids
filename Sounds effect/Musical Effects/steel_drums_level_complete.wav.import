@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cg70fw6s85jx3"
-path="res://.godot/imported/steel_drums_level_complete.wav-d55e3211b22341e521929cb046983808.sample"
+path="res://.godot/imported/steel_drums_level_complete.wav-3352963edab23b245096a942536ca28d.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/steel_drums_level_complete.wav"
-dest_files=["res://.godot/imported/steel_drums_level_complete.wav-d55e3211b22341e521929cb046983808.sample"]
+source_file="res://sounds effect/Musical Effects/steel_drums_level_complete.wav"
+dest_files=["res://.godot/imported/steel_drums_level_complete.wav-3352963edab23b245096a942536ca28d.sample"]
 
 [params]
 

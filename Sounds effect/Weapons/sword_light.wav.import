@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://0j80dmu0d6ov"
-path="res://.godot/imported/sword_light.wav-cd06cdf92a763127df2a85e0afe491f5.sample"
+path="res://.godot/imported/sword_light.wav-d0e67600c6ba6afe30d20039c33528df.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Weapons/sword_light.wav"
-dest_files=["res://.godot/imported/sword_light.wav-cd06cdf92a763127df2a85e0afe491f5.sample"]
+source_file="res://sounds effect/Weapons/sword_light.wav"
+dest_files=["res://.godot/imported/sword_light.wav-d0e67600c6ba6afe30d20039c33528df.sample"]
 
 [params]
 

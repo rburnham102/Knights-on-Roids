@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cr2gdn6yss02i"
-path="res://.godot/imported/synth_bass_defeated.wav-1a651d06f0270ca42b417a8307d06e67.sample"
+path="res://.godot/imported/synth_bass_defeated.wav-26be779b8d7e312943fb147bbac22073.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/synth_bass_defeated.wav"
-dest_files=["res://.godot/imported/synth_bass_defeated.wav-1a651d06f0270ca42b417a8307d06e67.sample"]
+source_file="res://sounds effect/Musical Effects/synth_bass_defeated.wav"
+dest_files=["res://.godot/imported/synth_bass_defeated.wav-26be779b8d7e312943fb147bbac22073.sample"]
 
 [params]
 

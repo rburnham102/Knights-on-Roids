@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://cl5e4cwlk6eie"]
 
-[ext_resource type="TileSet" uid="uid://drvtyidjo5oni" path="res://TileSet/Wilderness.tres" id="1_swugp"]
-[ext_resource type="TileSet" uid="uid://karw5rkyk40d" path="res://TileSet/Village_tileset.tres" id="2_e3ppg"]
-[ext_resource type="PackedScene" uid="uid://b2dtp5x5athv7" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/green_tree2.tscn" id="3_v2jcm"]
+[ext_resource type="TileSet" uid="uid://drvtyidjo5oni" path="res://tileset/Wilderness.tres" id="1_swugp"]
+[ext_resource type="TileSet" uid="uid://karw5rkyk40d" path="res://tileset/Village_tileset.tres" id="2_e3ppg"]
+[ext_resource type="PackedScene" uid="uid://b2dtp5x5athv7" path="res://tileset/FLSET1_v1.1/_PNG/Anim/green_tree2.tscn" id="3_v2jcm"]
 [ext_resource type="PackedScene" path="res://breakable.tscn" id="99_barrel"]
 
 [node name="Chunk" type="Node2D" unique_id=793137434]

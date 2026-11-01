@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://52mb3b0en3s"
-path="res://.godot/imported/brass_chime_positive.wav-1a2b072486fd3dfc745f9293ac9dfafa.sample"
+path="res://.godot/imported/brass_chime_positive.wav-9784d10328518f72fbf305231c13dc85.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/brass_chime_positive.wav"
-dest_files=["res://.godot/imported/brass_chime_positive.wav-1a2b072486fd3dfc745f9293ac9dfafa.sample"]
+source_file="res://sounds effect/Musical Effects/brass_chime_positive.wav"
+dest_files=["res://.godot/imported/brass_chime_positive.wav-9784d10328518f72fbf305231c13dc85.sample"]
 
 [params]
 

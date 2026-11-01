@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://be7prvgjh4tyo"
-path="res://.godot/imported/elastic_twang.wav-9ebd0a7bbb4aeb63abb37706721ce44b.sample"
+path="res://.godot/imported/elastic_twang.wav-036320a6b08cccdf9a354dd7a7b9b0d9.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Other/elastic_twang.wav"
-dest_files=["res://.godot/imported/elastic_twang.wav-9ebd0a7bbb4aeb63abb37706721ce44b.sample"]
+source_file="res://sounds effect/Other/elastic_twang.wav"
+dest_files=["res://.godot/imported/elastic_twang.wav-036320a6b08cccdf9a354dd7a7b9b0d9.sample"]
 
 [params]
 

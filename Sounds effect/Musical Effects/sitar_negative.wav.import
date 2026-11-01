@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bjmgd7iq128o1"
-path="res://.godot/imported/sitar_negative.wav-9c04f3a36c958c1c5c77129c0a574172.sample"
+path="res://.godot/imported/sitar_negative.wav-0cfb9c07f807e5daea30ef90a895513b.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/sitar_negative.wav"
-dest_files=["res://.godot/imported/sitar_negative.wav-9c04f3a36c958c1c5c77129c0a574172.sample"]
+source_file="res://sounds effect/Musical Effects/sitar_negative.wav"
+dest_files=["res://.godot/imported/sitar_negative.wav-0cfb9c07f807e5daea30ef90a895513b.sample"]
 
 [params]
 

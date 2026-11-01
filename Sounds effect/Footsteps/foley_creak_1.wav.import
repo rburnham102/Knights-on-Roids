@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://3168vkgc2bny"
-path="res://.godot/imported/foley_creak_1.wav-4b868c29e52c02fc0f19f56fc8d07831.sample"
+path="res://.godot/imported/foley_creak_1.wav-8d8a9f6a75cb49be9e1aff3e29de6dfa.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Footsteps/foley_creak_1.wav"
-dest_files=["res://.godot/imported/foley_creak_1.wav-4b868c29e52c02fc0f19f56fc8d07831.sample"]
+source_file="res://sounds effect/Footsteps/foley_creak_1.wav"
+dest_files=["res://.godot/imported/foley_creak_1.wav-8d8a9f6a75cb49be9e1aff3e29de6dfa.sample"]
 
 [params]
 

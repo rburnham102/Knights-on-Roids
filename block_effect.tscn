@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://4ivnjoyj7kin"]
 
-[ext_resource type="Texture2D" uid="uid://b65iq7c8gxfr8" path="res://Effects/Retro Impact Effect Pack 5 F.png" id="1_bhn2r"]
-[ext_resource type="Texture2D" uid="uid://d4f7ppbdemrd8" path="res://Effects/Retro Impact Effect Pack 5 C.png" id="2_ecs7j"]
-[ext_resource type="Script" uid="uid://c8kity5tsf1hs" path="res://block_effect.gd" id="3_ecs7j"]
+[ext_resource type="Texture2D" uid="uid://b65iq7c8gxfr8" path="res://effects/Retro Impact Effect Pack 5 F.png" id="1_bhn2r"]
+[ext_resource type="Texture2D" uid="uid://d4f7ppbdemrd8" path="res://effects/Retro Impact Effect Pack 5 C.png" id="2_ecs7j"]
+[ext_resource type="Script" uid="uid://c8kity5tsf1hs" path="res://script/block_effect.gd" id="3_ecs7j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qetrw"]
 atlas = ExtResource("1_bhn2r")

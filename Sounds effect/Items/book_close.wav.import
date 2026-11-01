@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dpwuit67vnuwu"
-path="res://.godot/imported/book_close.wav-7132a4de7fc2c5981f0894280b03dfb6.sample"
+path="res://.godot/imported/book_close.wav-2b11893c843231e73967fa54f33e9066.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Items/book_close.wav"
-dest_files=["res://.godot/imported/book_close.wav-7132a4de7fc2c5981f0894280b03dfb6.sample"]
+source_file="res://sounds effect/Items/book_close.wav"
+dest_files=["res://.godot/imported/book_close.wav-2b11893c843231e73967fa54f33e9066.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://qe7ewdpy2gqs"
-path="res://.godot/imported/grow_big.wav-c8ad88726c3b460e1e371381f9bb9233.sample"
+path="res://.godot/imported/grow_big.wav-22ebe21d1c89936e41825a3faeb28706.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Retro/grow_big.wav"
-dest_files=["res://.godot/imported/grow_big.wav-c8ad88726c3b460e1e371381f9bb9233.sample"]
+source_file="res://sounds effect/Retro/grow_big.wav"
+dest_files=["res://.godot/imported/grow_big.wav-22ebe21d1c89936e41825a3faeb28706.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://doo4hf6jiwlyk"
-path="res://.godot/imported/harpsichord_chime_quick.wav-365882b4cf59d4f0248b45b3113e39ee.sample"
+path="res://.godot/imported/harpsichord_chime_quick.wav-ccf117c56cd0e057aa5f0d9479562bdf.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/harpsichord_chime_quick.wav"
-dest_files=["res://.godot/imported/harpsichord_chime_quick.wav-365882b4cf59d4f0248b45b3113e39ee.sample"]
+source_file="res://sounds effect/Musical Effects/harpsichord_chime_quick.wav"
+dest_files=["res://.godot/imported/harpsichord_chime_quick.wav-ccf117c56cd0e057aa5f0d9479562bdf.sample"]
 
 [params]
 

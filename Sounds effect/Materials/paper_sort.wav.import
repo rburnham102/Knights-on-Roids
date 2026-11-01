@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bfkwp6ah2af4q"
-path="res://.godot/imported/paper_sort.wav-92c75dd5190e8357e0951aed54a57077.sample"
+path="res://.godot/imported/paper_sort.wav-7f46c386504b51729c953abd400cf392.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/paper_sort.wav"
-dest_files=["res://.godot/imported/paper_sort.wav-92c75dd5190e8357e0951aed54a57077.sample"]
+source_file="res://sounds effect/Materials/paper_sort.wav"
+dest_files=["res://.godot/imported/paper_sort.wav-7f46c386504b51729c953abd400cf392.sample"]
 
 [params]
 

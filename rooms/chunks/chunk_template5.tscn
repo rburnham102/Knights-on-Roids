@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://cahj1hnqo0wiq"]
 
-[ext_resource type="TileSet" uid="uid://drvtyidjo5oni" path="res://TileSet/Wilderness.tres" id="1_6oop4"]
-[ext_resource type="TileSet" uid="uid://karw5rkyk40d" path="res://TileSet/Village_tileset.tres" id="2_1abki"]
-[ext_resource type="PackedScene" uid="uid://b2dtp5x5athv7" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/green_tree2.tscn" id="3_mipnb"]
-[ext_resource type="PackedScene" uid="uid://bxua3vflohk4y" path="res://TileSet/FLSET1_v1.1/_PNG/Anim/green_tree.tscn" id="4_twm5y"]
+[ext_resource type="TileSet" uid="uid://drvtyidjo5oni" path="res://tileset/Wilderness.tres" id="1_6oop4"]
+[ext_resource type="TileSet" uid="uid://karw5rkyk40d" path="res://tileset/Village_tileset.tres" id="2_1abki"]
+[ext_resource type="PackedScene" uid="uid://b2dtp5x5athv7" path="res://tileset/FLSET1_v1.1/_PNG/Anim/green_tree2.tscn" id="3_mipnb"]
+[ext_resource type="PackedScene" uid="uid://bxua3vflohk4y" path="res://tileset/FLSET1_v1.1/_PNG/Anim/green_tree.tscn" id="4_twm5y"]
 [ext_resource type="PackedScene" path="res://breakable.tscn" id="99_barrel"]
 
 [node name="Chunk" type="Node2D" unique_id=1094888499]
@@ -58,6 +58,5 @@ position = Vector2(200, 85)
 [node name="Marker2D4" type="Marker2D" parent="EnemySpawn" unique_id=579341423]
 position = Vector2(355, 110)
 
-[node name="Barrel" parent="." instance=ExtResource("99_barrel")]
+[node name="Barrel" parent="." unique_id=1020033253 instance=ExtResource("99_barrel")]
 position = Vector2(70, 138)
-

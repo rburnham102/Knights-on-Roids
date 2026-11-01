@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wneqnpmlvm5s"
-path="res://.godot/imported/Lancer_Hurt.png-d427e9b913c1af8a1ff4eb962e857292.ctex"
+path="res://.godot/imported/Lancer_Hurt.png-6709f9e274e57936036295e2e516fa87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Lancer/Lancer with shadows/Lancer_Hurt.png"
-dest_files=["res://.godot/imported/Lancer_Hurt.png-d427e9b913c1af8a1ff4eb962e857292.ctex"]
+source_file="res://asset/Characters(100x100 split)/Lancer/Lancer with shadows/Lancer_Hurt.png"
+dest_files=["res://.godot/imported/Lancer_Hurt.png-6709f9e274e57936036295e2e516fa87.ctex"]
 
 [params]
 

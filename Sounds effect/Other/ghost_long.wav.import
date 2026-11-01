@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://t2fpn4qciipx"
-path="res://.godot/imported/ghost_long.wav-6e8f6c3a59e78ecf7f18de80ae13dfd0.sample"
+path="res://.godot/imported/ghost_long.wav-3f0e24112090773e841b44fb81be2bab.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Other/ghost_long.wav"
-dest_files=["res://.godot/imported/ghost_long.wav-6e8f6c3a59e78ecf7f18de80ae13dfd0.sample"]
+source_file="res://sounds effect/Other/ghost_long.wav"
+dest_files=["res://.godot/imported/ghost_long.wav-3f0e24112090773e841b44fb81be2bab.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://llkbvo2tc1hx"
-path="res://.godot/imported/Werewolf.png-4a108929046a44cba495df217234ebfb.ctex"
+path="res://.godot/imported/Werewolf.png-5fa2516e2b62aa4b44fdff0205dd43f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Werewolf/Werewolf/Werewolf.png"
-dest_files=["res://.godot/imported/Werewolf.png-4a108929046a44cba495df217234ebfb.ctex"]
+source_file="res://asset/Characters(100x100 split)/Werewolf/Werewolf/Werewolf.png"
+dest_files=["res://.godot/imported/Werewolf.png-5fa2516e2b62aa4b44fdff0205dd43f7.ctex"]
 
 [params]
 

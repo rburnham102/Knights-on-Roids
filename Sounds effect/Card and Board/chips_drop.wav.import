@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b3r5fkbfp31pi"
-path="res://.godot/imported/chips_drop.wav-da9ba91d8773b9733b9e65b64d23ad42.sample"
+path="res://.godot/imported/chips_drop.wav-a4b11db29ab794c730d72b94a0fc3bae.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Card and Board/chips_drop.wav"
-dest_files=["res://.godot/imported/chips_drop.wav-da9ba91d8773b9733b9e65b64d23ad42.sample"]
+source_file="res://sounds effect/Card and Board/chips_drop.wav"
+dest_files=["res://.godot/imported/chips_drop.wav-a4b11db29ab794c730d72b94a0fc3bae.sample"]
 
 [params]
 

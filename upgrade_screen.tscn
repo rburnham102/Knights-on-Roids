@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://upgrade_screen.gd" id="1_adbc8"]
+[ext_resource type="Script" uid="uid://dkx3m4keuaex7" path="res://script/upgrade_screen.gd" id="1_adbc8"]
 
 [node name="UpgradeScreen" type="CanvasLayer" unique_id=1499110795]
 layer = 5

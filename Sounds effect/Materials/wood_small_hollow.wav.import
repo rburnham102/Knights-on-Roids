@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dity07oce4kvw"
-path="res://.godot/imported/wood_small_hollow.wav-494627f2e00b502f49e90f92615607a0.sample"
+path="res://.godot/imported/wood_small_hollow.wav-b61579582c9318a7ca6e513bf07d2113.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Materials/wood_small_hollow.wav"
-dest_files=["res://.godot/imported/wood_small_hollow.wav-494627f2e00b502f49e90f92615607a0.sample"]
+source_file="res://sounds effect/Materials/wood_small_hollow.wav"
+dest_files=["res://.godot/imported/wood_small_hollow.wav-b61579582c9318a7ca6e513bf07d2113.sample"]
 
 [params]
 

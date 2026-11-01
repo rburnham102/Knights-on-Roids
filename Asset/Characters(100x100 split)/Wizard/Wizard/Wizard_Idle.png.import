@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bttg8ejm8nps8"
-path="res://.godot/imported/Wizard_Idle.png-4b26e2215b7971de03f47139257b8553.ctex"
+path="res://.godot/imported/Wizard_Idle.png-5184a1438b7f241ea317121a0a2c392c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Characters(100x100 split)/Wizard/Wizard/Wizard_Idle.png"
-dest_files=["res://.godot/imported/Wizard_Idle.png-4b26e2215b7971de03f47139257b8553.ctex"]
+source_file="res://asset/Characters(100x100 split)/Wizard/Wizard/Wizard_Idle.png"
+dest_files=["res://.godot/imported/Wizard_Idle.png-5184a1438b7f241ea317121a0a2c392c.ctex"]
 
 [params]
 

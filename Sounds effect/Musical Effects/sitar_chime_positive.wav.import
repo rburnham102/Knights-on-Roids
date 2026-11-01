@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bk5ca4wy78x37"
-path="res://.godot/imported/sitar_chime_positive.wav-17e33785c85f06ac36fd464fd770e5f4.sample"
+path="res://.godot/imported/sitar_chime_positive.wav-787644ccf7eac4ff599e0d2be3f6af0c.sample"
 
 [deps]
 
-source_file="res://Sounds effect/Musical Effects/sitar_chime_positive.wav"
-dest_files=["res://.godot/imported/sitar_chime_positive.wav-17e33785c85f06ac36fd464fd770e5f4.sample"]
+source_file="res://sounds effect/Musical Effects/sitar_chime_positive.wav"
+dest_files=["res://.godot/imported/sitar_chime_positive.wav-787644ccf7eac4ff599e0d2be3f6af0c.sample"]
 
 [params]
 
