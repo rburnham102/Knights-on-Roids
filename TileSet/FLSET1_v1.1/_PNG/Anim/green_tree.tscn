@@ -52,7 +52,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -78,7 +78,7 @@ radius = 13.341664
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=922279893]
 sprite_frames = SubResource("SpriteFrames_ernif")
 autoplay = "default"
-frame_progress = 0.8616885
+frame_progress = 0.38594192
 offset = Vector2(-1, -41)
 
 [node name="Area2D" type="StaticBody2D" parent="." unique_id=566217963]
