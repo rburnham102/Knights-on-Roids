@@ -457,9 +457,9 @@ riposte_attack = ExtResource("5_light2")
 texture_filter = 1
 position = Vector2(-1, -7)
 sprite_frames = SubResource("SpriteFrames_ernif")
-animation = &"attack_heavy"
+animation = &"attack_bow"
 frame = 5
-frame_progress = 1.0
+frame_progress = 0.19657755
 
 [node name="Hitbox" type="Area2D" parent="Pivot" unique_id=1714173508]
 collision_layer = 0
@@ -480,10 +480,10 @@ shape = SubResource("CapsuleShape2D_ernif")
 
 [node name="ShootingPoint" type="Marker2D" parent="Pivot" unique_id=1519558528]
 unique_name_in_owner = true
-position = Vector2(0, -4)
+position = Vector2(6, -7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1403377057]
-position = Vector2(0, -1)
+position = Vector2(0, -3)
 rotation = 1.5707964
 shape = SubResource("CircleShape2D_feb5d")
 

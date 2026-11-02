@@ -1,0 +1,118 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://script/dev_screen.gd" id="1_dev"]
+
+[node name="DevScreen" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_dev")
+
+[node name="Dim" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.08, 0.92)
+
+[node name="Center" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center"]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Center/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="Box" type="VBoxContainer" parent="Center/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="Center/Panel/Margin/Box"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "DEV START"
+horizontal_alignment = 1
+
+[node name="Hint" type="Label" parent="Center/Panel/Margin/Box"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "Starting upgrades (hover a name for details)"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="Center/Panel/Margin/Box"]
+custom_minimum_size = Vector2(700, 230)
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Grid" type="GridContainer" parent="Center/Panel/Margin/Box/Scroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 4
+columns = 4
+
+[node name="Separator" type="HSeparator" parent="Center/Panel/Margin/Box"]
+layout_mode = 2
+
+[node name="Settings" type="GridContainer" parent="Center/Panel/Margin/Box"]
+layout_mode = 2
+theme_override_constants/h_separation = 24
+columns = 2
+
+[node name="RoomLabel" type="Label" parent="Center/Panel/Margin/Box/Settings"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Start in room"
+
+[node name="StartRoom" type="SpinBox" parent="Center/Panel/Margin/Box/Settings"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+
+[node name="SeedLabel" type="Label" parent="Center/Panel/Margin/Box/Settings"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Seed"
+
+[node name="Seed" type="LineEdit" parent="Center/Panel/Margin/Box/Settings"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+placeholder_text = "blank = random"
+
+[node name="SeedError" type="Label" parent="Center/Panel/Margin/Box"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.4, 0.35, 1)
+theme_override_font_sizes/font_size = 13
+text = "The seed must be a whole number."
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Center/Panel/Margin/Box"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Clear" type="Button" parent="Center/Panel/Margin/Box/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 34)
+layout_mode = 2
+text = "Clear"
+
+[node name="Start" type="Button" parent="Center/Panel/Margin/Box/Buttons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 34)
+layout_mode = 2
+text = "Start run"

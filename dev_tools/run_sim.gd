@@ -121,6 +121,7 @@ func play_run(bot_kind: String, bot_jitter: float, run_seed: int) -> Dictionary:
 	block_until = 0.0
 	var scene: Node2D = load("res://run.tscn").instantiate()
 	scene.get_node("RunManager").start_seed = run_seed
+	scene.get_node("RunManager").dev_screen_enabled = false   # no dev screen: start right away
 	if ov.has("heal"): scene.get_node("RunManager").heal_after_room = ov["heal"]
 	root.add_child(scene)
 	current_scene = scene

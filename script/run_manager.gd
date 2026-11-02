@@ -44,6 +44,10 @@ const PEEL_CHANCE := 0.2
 @export var upgrade_screen: CanvasLayer
 @export var end_screen: CanvasLayer
 @export var fade_rect: ColorRect
+@export var dev_screen: CanvasLayer
+## Show the dev loadout screen before the run. It only ever appears in debug
+## builds (running from the editor), never in an exported release game.
+@export var dev_screen_enabled := true
 
 var run: RunState
 var room: Level   # the current level (still called "room" so the dev tools keep working)
@@ -55,17 +59,38 @@ var changing_room := false
 var healer: Healer   # null until hired (and again after she dies)
 
 func _ready() -> void:
-	run = RunState.new(start_seed)
+	_new_run_state(start_seed)
 	for upgrade in UPGRADES:
 		pool.append(upgrade)
-	# The knight plays with the run's stats and perks, so upgrades apply to him.
-	knight.stats = run.stats
-	knight.perks = run.perks
 	knight.died.connect(_on_knight_died)
 	upgrade_screen.chosen.connect(_on_upgrade_chosen)
 	end_screen.new_run_requested.connect(_on_new_run_requested)
 	fade_rect.color.a = 1.0
-	_begin.call_deferred()
+	if dev_screen and dev_screen_enabled and OS.is_debug_build():
+		dev_screen.started.connect(_on_dev_start)
+		dev_screen.open(UPGRADES, RunState.RUN_LENGTH, [HEALER_UPGRADE])
+	else:
+		_begin.call_deferred()
+
+func _new_run_state(run_seed: int) -> void:
+	run = RunState.new(run_seed)
+	# The knight plays with the run's stats and perks, so upgrades apply to him.
+	knight.stats = run.stats
+	knight.perks = run.perks
+
+# The dev screen's Start button: set up the run the way it asked, then begin.
+func _on_dev_start(picks: Dictionary, start_room: int, run_seed: int) -> void:
+	if run_seed != 0:
+		_new_run_state(run_seed)   # a typed seed beats the Inspector's start_seed
+	run.depth = start_room - 1     # _enter_room() adds one as it builds the room
+	for upgrade: Upgrade in picks:
+		for i in picks[upgrade]:
+			# The same call as picking it between rooms, so stats, perks,
+			# healing and the end screen's upgrade list all just work.
+			run.apply(upgrade, knight)
+		if upgrade == HEALER_UPGRADE:
+			_hire_healer()
+	_begin()
 
 func _begin() -> void:
 	changing_room = true

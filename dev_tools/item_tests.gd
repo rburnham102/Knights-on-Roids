@@ -194,6 +194,7 @@ func test_loot_keeps_seed() -> void:
 func test_run() -> void:
 	var scene: Node2D = load("res://run.tscn").instantiate()
 	scene.get_node("RunManager").start_seed = 777
+	scene.get_node("RunManager").dev_screen_enabled = false   # no dev screen: start right away
 	root.add_child(scene)
 	current_scene = scene
 	var mgr: Node = scene.get_node("RunManager")

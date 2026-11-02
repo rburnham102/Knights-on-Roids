@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" path="res://upgrade_screen.tscn" id="12_pllgl"]
 [ext_resource type="PackedScene" path="res://run_over_screen.tscn" id="14_in13e"]
 [ext_resource type="Script" uid="uid://bijqbfyq4jclv" path="res://script/run_manager.gd" id="16_uaer5"]
+[ext_resource type="PackedScene" path="res://dev_screen.tscn" id="17_dev"]
 
 [sub_resource type="Resource" id="Resource_stats"]
 script = ExtResource("4_yv4ql")
@@ -28,6 +29,8 @@ stats = SubResource("Resource_stats")
 
 [node name="RunOverScreen" parent="." unique_id=367023939 instance=ExtResource("14_in13e")]
 
+[node name="DevScreen" parent="." instance=ExtResource("17_dev")]
+
 [node name="FadeLayer" type="CanvasLayer" parent="." unique_id=676377866]
 layer = 10
 
@@ -38,7 +41,7 @@ anchor_bottom = 1.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="RunManager" type="Node" parent="." unique_id=1338843670 node_paths=PackedStringArray("knight", "actors", "room_holder", "hud", "upgrade_screen", "end_screen", "fade_rect")]
+[node name="RunManager" type="Node" parent="." unique_id=1338843670 node_paths=PackedStringArray("knight", "actors", "room_holder", "hud", "upgrade_screen", "end_screen", "fade_rect", "dev_screen")]
 script = ExtResource("16_uaer5")
 knight = NodePath("../Actors/Knight")
 actors = NodePath("../Actors")
@@ -47,3 +50,4 @@ hud = NodePath("../HUD")
 upgrade_screen = NodePath("../UpgradeScreen")
 end_screen = NodePath("../RunOverScreen")
 fade_rect = NodePath("../FadeLayer/Rect")
+dev_screen = NodePath("../DevScreen")
