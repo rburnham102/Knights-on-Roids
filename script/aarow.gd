@@ -9,11 +9,13 @@ var direction := Vector2.RIGHT
 var knockback_force := 0.0
 var poise_damage := 0.0
 var from_enemy := false   # set by the shooter before it is added to the scene
+var charged := false      # a charged shot from the knight: bursts when it hits
 ## How far the arrow flies before it's gone. The shooter can change it before
 ## adding the arrow to the scene (the archer's shots are short-ranged).
 var max_range := 1200.0
 
 const FADE_DISTANCE := 40.0   # fades out over its last few pixels instead of popping
+const CHARGE_HIT_FX := preload("res://arrowchargehit.tscn")
 
 func _ready() -> void:
 	rotation = direction.angle()
@@ -43,7 +45,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(_body: Node2D) -> void:
 	# The mask only includes the world layer for bodies, so this is a wall.
-	queue_free()
+	hit()
 
 func _on_area_entered(area: Area2D) -> void:
 	# `area` is a HurtBox; its owner is the character it belongs to.
@@ -52,7 +54,7 @@ func _on_area_entered(area: Area2D) -> void:
 		return
 	if not from_enemy:
 		target.take_damage(damage, global_position - direction * 8.0, knockback_force, poise_damage)
-		queue_free()
+		hit()
 		return
 	var result: Combat.HitResult = target.take_damage(damage, global_position - direction * 8.0, knockback_force, 0.0, Combat.FLAG_PROJECTILE)
 	match result:
@@ -62,6 +64,14 @@ func _on_area_entered(area: Area2D) -> void:
 			pass   # sails right through a dodging knight
 		_:
 			queue_free()
+
+# The arrow stops here. A charged one bursts first.
+func hit() -> void:
+	if charged:
+		var fx: Node2D = CHARGE_HIT_FX.instantiate()
+		fx.position = position   # same parent as the arrow, so same coordinates
+		get_parent().add_child(fx)
+	queue_free()
 
 # A parried arrow flies back the way it came and now hurts enemies.
 func reflect() -> void:

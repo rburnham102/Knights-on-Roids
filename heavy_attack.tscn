@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c6m78mm6bn3bj"]
 
 [ext_resource type="Texture2D" uid="uid://ccp73x7y31yht" path="res://effects/Retro Impact Effect Pack 5 A.png" id="1_ue2yf"]
-[ext_resource type="Script" uid="uid://c8kity5tsf1hs" path="res://script/block_effect.gd" id="3_p52db"]
+[ext_resource type="Script" uid="uid://csa42mphnjttu" path="res://effects/one_shot_effect.gd" id="3_p52db"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3rhxs"]
 atlas = ExtResource("1_ue2yf")
@@ -64,15 +64,16 @@ animations = [{
 }],
 "loop": 0,
 "name": &"heavyattack",
-"speed": 20.0
+"speed": 30.0
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1567907125]
 z_index = 10
 texture_filter = 1
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_dmicn")
 animation = &"heavyattack"
 frame = 7
 frame_progress = 1.0
+offset = Vector2(0, -16)
 script = ExtResource("3_p52db")

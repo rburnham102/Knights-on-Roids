@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ds1lyxnlchw0l"]
 
 [ext_resource type="Texture2D" uid="uid://ccp73x7y31yht" path="res://effects/Retro Impact Effect Pack 5 A.png" id="1_yxu3h"]
-[ext_resource type="Script" uid="uid://c8kity5tsf1hs" path="res://script/block_effect.gd" id="2_5x45w"]
+[ext_resource type="Script" uid="uid://csa42mphnjttu" path="res://effects/one_shot_effect.gd" id="2_5x45w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbll3"]
 atlas = ExtResource("1_yxu3h")
@@ -56,6 +56,7 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1567907125]
 z_index = 10
 texture_filter = 1
+position = Vector2(17, -1)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_dmicn")
 animation = &"bowheavy"

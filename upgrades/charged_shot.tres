@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3]
+
+[ext_resource type="Script" uid="uid://1tvvrbb8fn3d" path="res://script/upgrade.gd" id="1_upgrade"]
+
+[resource]
+script = ExtResource("1_upgrade")
+title = "Siege Shot"
+description = "Hold Left Mouse to charge your bow. A full charge (3s) fires a cannon shot: 4x damage and huge knockback.
+Each extra pick charges 0.5s faster."
+perk = &"charged_shot"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dute4v8wk0uop"]
 
 [ext_resource type="Texture2D" uid="uid://ccp73x7y31yht" path="res://effects/Retro Impact Effect Pack 5 A.png" id="1_c55ev"]
-[ext_resource type="Script" uid="uid://c8kity5tsf1hs" path="res://script/block_effect.gd" id="2_7gjq7"]
+[ext_resource type="Script" uid="uid://csa42mphnjttu" path="res://effects/one_shot_effect.gd" id="2_7gjq7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c55ev"]
 atlas = ExtResource("1_c55ev")
@@ -56,7 +56,7 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1567907125]
 z_index = 10
 texture_filter = 1
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_dmicn")
 animation = &"arrowhit"
 script = ExtResource("2_7gjq7")

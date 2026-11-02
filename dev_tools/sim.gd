@@ -14,6 +14,10 @@ const SCENARIOS := {
 	"archer": [["res://skeleton_archer.tscn", Vector2(150, 0)]],
 	"orc+archer": [["res://orc.tscn", Vector2(70, 0)], ["res://skeleton_archer.tscn", Vector2(-160, -10)]],
 	"armored+archer": [["res://armored_orc.tscn", Vector2(70, 0)], ["res://skeleton_archer.tscn", Vector2(-160, -10)]],
+	# Start far away, like entering a big room: time for a ranged opener.
+	"far 3 orcs": [["res://orc.tscn", Vector2(200, -10)], ["res://orc.tscn", Vector2(220, 15)], ["res://orc.tscn", Vector2(240, 0)]],
+	"far armored": [["res://armored_orc.tscn", Vector2(220, 0)]],
+	"far orc+armored": [["res://orc.tscn", Vector2(200, 0)], ["res://armored_orc.tscn", Vector2(230, 10)]],
 }
 # kind, parry/dodge timing jitter (seconds, std dev)
 const BOTS := [
@@ -23,7 +27,15 @@ const BOTS := [
 	["parry", 0.08],
 	["dodge", 0.04],
 	["dodge", 0.08],
+	# Bow bots (need nothing but the Input actions plus a mouse pointed at the target):
+	["bow", 0.0],        # keeps its distance and taps the bow
+	["charge", 0.0],     # keeps its distance and fires full Siege Shots
+	["charge50", 0.0],   # same, but lets go at half charge
+	["hybrid", 0.04],    # the parry bot, but opens with a Siege Shot while they're far off
 ]
+# Only these bots use the Siege Shot perk.
+const CHARGE_BOTS := ["charge", "charge50", "hybrid"]
+const KITE_RANGE := 70.0     # bow bots back off when anything is closer than this
 const MAX_FRAMES := 75 * 60
 const REACTION := 0.15   # a bot only notices a wind-up this long after it starts
 
@@ -40,13 +52,19 @@ var plan := {}        # enemy instance id -> {at: float, done: bool}
 var block_until := 0.0
 var ov := {}                 # tuning overrides from the command line (key=value)
 var knight_poise_base := {}  # original poise_damage of the knight's attacks
+var only_bots: Array = []    # bots=a,b on the command line runs just those
+var only_scenarios: Array = []   # scenarios=a,b (use _ for spaces: far_3_orcs)
 
 func _initialize() -> void:
 	var trials := 12
 	for arg in OS.get_cmdline_user_args():
 		var k: String = arg.get_slice("=", 0)
 		var v: float = float(arg.get_slice("=", 1))
-		if k == "trials":
+		if k == "bots":
+			only_bots = Array(arg.get_slice("=", 1).split(","))
+		elif k == "scenarios":
+			only_scenarios = Array(arg.get_slice("=", 1).replace("_", " ").split(","))
+		elif k == "trials":
 			trials = int(v)
 		else:
 			ov[k] = v
@@ -59,7 +77,11 @@ func run(trials: int) -> void:
 	await process_frame
 	print("%-12s %-12s %6s %8s %8s %8s" % ["bot", "scenario", "wins", "avg hp", "avg sec", "parries"])
 	for b in BOTS:
+		if not only_bots.is_empty() and not b[0] in only_bots:
+			continue
 		for sc in SCENARIOS:
+			if not only_scenarios.is_empty() and not sc in only_scenarios:
+				continue
 			var wins := 0
 			var hp_sum := 0.0
 			var t_sum := 0.0
@@ -88,6 +110,12 @@ func fight(bot_kind: String, bot_jitter: float, scenario: String, trial_seed: in
 	root.add_child(arena)
 	knight = load("res://Knight.tscn").instantiate()
 	apply_knight_overrides()
+	if bot_kind in CHARGE_BOTS:
+		knight.perks = {&"charged_shot": 1}
+	if bot_kind in ["bow", "hybrid"] or bot_kind in CHARGE_BOTS:
+		# Headless Godot's mouse is stuck at screen (0, 0). With the camera
+		# off we move the view instead, so (0, 0) is wherever the bot "points".
+		knight.get_node("Camera2D").enabled = false
 	arena.add_child(knight)
 	enemies.clear()
 	for e in SCENARIOS[scenario]:
@@ -145,7 +173,7 @@ func tap(action: String, frames_held := 2) -> void:
 	tap_left[action] = frames_held
 
 func apply_inputs() -> void:
-	for a in ["move_left", "move_right", "move_up", "move_down", "block", "attack_light", "attack_heavy", "dodge"]:
+	for a in ["move_left", "move_right", "move_up", "move_down", "block", "attack_light", "attack_heavy", "attack_bow", "dodge"]:
 		var want: bool = down.get(a, false) or tap_left.get(a, 0) > 0
 		if tap_left.get(a, 0) > 0:
 			tap_left[a] -= 1
@@ -153,7 +181,7 @@ func apply_inputs() -> void:
 			Input.action_press(a)
 		elif not want and Input.is_action_pressed(a):
 			Input.action_release(a)
-	for a in ["move_left", "move_right", "move_up", "move_down", "block"]:
+	for a in ["move_left", "move_right", "move_up", "move_down", "block", "attack_bow"]:
 		down[a] = false
 
 func steer(dir: Vector2) -> void:
@@ -172,6 +200,60 @@ func think() -> void:
 			press("block")
 		"parry", "dodge":
 			skilled()
+		"bow":
+			kite(0.0)
+		"charge":
+			kite(1.0)
+		"charge50":
+			kite(0.5)
+		"hybrid":
+			hybrid()
+
+# Point the "mouse" at a world position (see fight()).
+func point_at(world: Vector2) -> void:
+	root.canvas_transform = Transform2D(0.0, -world)
+
+# Bow bot: back away from anything close, otherwise shoot the nearest enemy.
+# `charge` = how charged to let the arrow go (0 = just tap).
+func kite(charge: float) -> void:
+	var t := nearest()
+	if t == null:
+		return
+	point_at(t.global_position)
+	var d := t.global_position - knight.global_position
+	if knight.is_charging:
+		# Hold until charged enough, or let go early if it's on top of us
+		# or an arrow is about to land (a hit would waste the charge).
+		if knight.charge_ratio() < charge and d.length() > 30.0 and not arrow_incoming():
+			press("attack_bow")
+		return
+	if knight.state != knight.State.FREE:
+		if knight.state == knight.State.ATTACK and knight.current_attack == knight.ranged_attack and charge > 0.0:
+			press("attack_bow")   # keep holding through the draw
+		return
+	if d.length() < KITE_RANGE:
+		steer(-d)
+		return
+	if charge > 0.0:
+		press("attack_bow")
+	else:
+		tap("attack_bow")
+
+# The skilled parry bot, but while every enemy is still far away it stands
+# and charges a Siege Shot at the nearest one.
+func hybrid() -> void:
+	var t := nearest()
+	if t != null and (knight.is_charging or (knight.state == knight.State.ATTACK and knight.current_attack == knight.ranged_attack)):
+		point_at(t.global_position)
+		var close := t.global_position.distance_to(knight.global_position) < 45.0
+		if knight.state == knight.State.ATTACK and not (knight.is_charging and (knight.charge_ratio() >= 1.0 or close or arrow_incoming())):
+			press("attack_bow")
+		return
+	if t != null and knight.state == knight.State.FREE and t.global_position.distance_to(knight.global_position) > 110.0:
+		point_at(t.global_position)
+		press("attack_bow")
+		return
+	skilled()
 
 # Walk up to the nearest enemy, face it, and tap an attack every `cadence` frames.
 # `adaptive` bots switch to the heavy attack (it breaks a raised shield) when
@@ -205,6 +287,14 @@ func time_to_impact(e: Node2D) -> float:
 	if e.state == e.State.ATTACK and e.anim.frame < e.current_attack.hit_frame:
 		return (e.current_attack.hit_frame - e.anim.frame - 0.5) / attack_speed(e)
 	return -1.0
+
+# An enemy arrow will reach us within ~0.3 s (a player sees it coming).
+func arrow_incoming() -> bool:
+	for ar in enemy_arrows():
+		var to_k: Vector2 = knight.global_position - ar.global_position
+		if ar.direction.dot(to_k.normalized()) > 0.95 and to_k.length() / ar.speed < 0.3:
+			return true
+	return false
 
 func enemy_arrows() -> Array:
 	return knight.get_parent().get_children().filter(func(c): return c is Area2D and "from_enemy" in c and c.from_enemy)

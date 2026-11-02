@@ -1,4 +1,4 @@
-extends "res://enemy.gd"
+extends "res://script/enemy.gd"
 # Ranged enemy. Everything that makes an enemy an enemy (states, poise, the
 # wind-up tint, being parried, firing arrows) is inherited from enemy.gd. The only
 # thing the archer changes is how it MOVES while free: it keeps its distance

@@ -56,6 +56,22 @@ const DIRECTIONS := {
 	"right": Vector2.RIGHT,
 }
 const HITBOX_DISTANCE := 18.0   # was 20: 18 also reaches an enemy at body contact (8 px)
+const IMPACT_DISTANCE := 16.0   # how far in front of the feet an attack's impact_effect lands
+
+# Charged bow (the "charged_shot" perk). Hold the bow button: the draw pauses
+# just before the release frame and charges until you let go. Every multiplier
+# below is the value at FULL charge; partial charges are in between.
+const CHARGE_TIME := 3.0               # seconds of holding for a full charge
+const CHARGE_TIME_PER_STACK := 0.5     # each extra pick of the perk charges this much faster...
+const CHARGE_TIME_MIN := 1.5           # ...down to this
+const CHARGE_DAMAGE_MULT := 4.0        # 60 dmg: about the same damage per second as tapping, all in one hit
+const CHARGE_KNOCKBACK_MULT := 3.0
+const CHARGE_POISE_MULT := 7.5
+const CHARGE_SPEED_MULT := 1.75        # the arrow flies faster too
+const CHARGE_FX_THRESHOLD := 0.25      # below this much charge it looks like a normal shot
+const ARROW_CHARGE_FX := preload("res://arrowcharge.tscn")
+const BOW_FIRE_FX := preload("res://heavybowfire.tscn")
+const CHARGE_FX_OFFSET := Vector2(6, 0)   # the glow sits on the arrow tip, in front of the ShootingPoint
 
 # Set these in the Inspector (see Knight.tscn).
 @export var stats: Stats
@@ -106,6 +122,10 @@ var dodge_velocity := Vector2.ZERO
 var dodge_direction_pending := false   # dash started with no direction yet; a late key can still steer it
 var last_move_input := Vector2.ZERO
 var since_move := 10.0                  # seconds since a movement key was last held
+var is_charging := false    # holding a drawn bow (only during a bow attack)
+var charge_time := 0.0      # seconds the current draw has been held
+var shot_charge := 0.0      # 0..1: charge of the arrow about to fire
+var charge_fx: AnimatedSprite2D   # the glow on the arrow while charging
 var normal_collision_layer := 0
 var normal_collision_mask := 0
 # True while a dodge's invulnerable frames are running.
@@ -178,6 +198,7 @@ func _exit_state(old_state: State) -> void:
 			attack_from_combo = false
 			lunge_velocity = Vector2.ZERO
 			disable_hitbox()
+			stop_charging()
 
 func _enter_state(new_state: State) -> void:
 	match new_state:
@@ -338,6 +359,10 @@ func process_dodge(delta: float) -> void:
 		change_state(State.FREE)
 
 func process_attack(delta: float) -> void:
+	if is_charging:
+		process_charge(delta)
+		apply_lunge(delta)
+		return
 	# Light button during a swing buffers the next combo hit, but only after
 	# the hit frame (so mashing doesn't chain by itself). A riposte is the
 	# exception: it starts on its own, so a press any time during it counts.
@@ -382,8 +407,7 @@ func start_attack(attack: AttackData, from_combo := false) -> void:
 	hit_bodies.clear()
 
 	if attack.type == AttackData.Type.RANGED:
-		aim_direction = (get_global_mouse_position() - global_position).normalized()
-		face(aim_direction.x)
+		aim_at_mouse()
 	elif not is_riposte:
 		# Swing the way the player is pressing right now. Without this, a combo
 		# keeps the direction of its first swing, because last_direction is
@@ -441,12 +465,91 @@ func start_riposte(attacker_position: Vector2) -> void:
 func fire_arrow() -> void:
 	var arrow = ARROW_SCENE.instantiate()
 	arrow.direction = aim_direction
-	arrow.damage = attack_damage()
-	arrow.knockback_force = attack_knockback()
-	arrow.poise_damage = attack_poise_damage()
+	# charge_mult() is 1.0 for an uncharged shot, so this is the plain arrow
+	# unless the bow was held.
+	arrow.damage = roundi(attack_damage() * charge_mult(CHARGE_DAMAGE_MULT))
+	arrow.knockback_force = attack_knockback() * charge_mult(CHARGE_KNOCKBACK_MULT)
+	arrow.poise_damage = attack_poise_damage() * charge_mult(CHARGE_POISE_MULT)
+	arrow.speed *= charge_mult(CHARGE_SPEED_MULT)
+	arrow.charged = shot_charge >= CHARGE_FX_THRESHOLD
 	# Add to the level, NOT to the knight, so it doesn't move with him
 	get_parent().add_child(arrow)
 	arrow.global_position = %ShootingPoint.global_position
+	if arrow.charged:
+		# The cannon blast at the bow. Drawn pointing right, so rotating it
+		# by the aim angle points it the way the arrow flies.
+		var fx: Node2D = BOW_FIRE_FX.instantiate()
+		get_parent().add_child(fx)
+		fx.global_position = %ShootingPoint.global_position + aim_direction * 6.0
+		fx.rotation = aim_direction.angle()
+		fx.scale *= lerpf(0.7, 1.2, shot_charge)   # bigger charge, bigger bang
+		shake(1.0 + 2.0 * shot_charge)
+	shot_charge = 0.0
+
+# --------------------------------------------------------------- charged bow
+
+# Lerps from 1.0 (no charge) to full_mult (full charge).
+func charge_mult(full_mult: float) -> float:
+	return lerpf(1.0, full_mult, shot_charge)
+
+func can_charge() -> bool:
+	return current_attack == ranged_attack and perk(&"charged_shot") > 0
+
+func full_charge_time() -> float:
+	return maxf(CHARGE_TIME - CHARGE_TIME_PER_STACK * (perk(&"charged_shot") - 1), CHARGE_TIME_MIN)
+
+func charge_ratio() -> float:
+	return clampf(charge_time / full_charge_time(), 0.0, 1.0)
+
+func aim_at_mouse() -> void:
+	aim_direction = (get_global_mouse_position() - global_position).normalized()
+	face(aim_direction.x)
+
+# Called on the frame before the release while the bow button is still held:
+# freeze the draw and start charging.
+func start_charging() -> void:
+	is_charging = true
+	charge_time = 0.0
+	anim.pause()   # play() later resumes from this exact frame
+	charge_fx = ARROW_CHARGE_FX.instantiate()
+	%ShootingPoint.add_child(charge_fx)   # a child, so it follows the bow when he turns
+	charge_fx.position = CHARGE_FX_OFFSET
+	charge_fx.frame = 0
+
+func process_charge(delta: float) -> void:
+	var was_full := charge_ratio() >= 1.0
+	charge_time += delta   # delta is slowed by hit-stop too, so the charge pauses with the world
+	aim_at_mouse()         # keep tracking the mouse while drawn
+	update_charge_fx()
+	if not was_full and charge_ratio() >= 1.0:
+		# Fully charged: a quick white flash so you know without looking.
+		anim.modulate = Color(2.0, 2.0, 2.0)
+		create_tween().tween_property(anim, "modulate", Color.WHITE, 0.15)
+	if not Input.is_action_pressed("attack_bow"):
+		release_charge()
+
+func update_charge_fx() -> void:
+	# The effect's frames ARE the charge meter: frame 0 = just drawn,
+	# last frame = fully charged.
+	var last := charge_fx.sprite_frames.get_frame_count(charge_fx.animation) - 1
+	charge_fx.frame = floori(charge_ratio() * last)
+
+func release_charge() -> void:
+	shot_charge = charge_ratio()
+	stop_charging()
+	anim.play()   # resume the paused animation...
+	# ...and jump straight to the release frame, so the arrow leaves the
+	# moment you let go. Changing the frame emits frame_changed, which fires
+	# the arrow through the normal hit-frame code.
+	anim.frame = current_attack.hit_frame
+
+# Cleans up the drawn bow, whether released or interrupted (the ATTACK exit hook calls it).
+func stop_charging() -> void:
+	is_charging = false
+	charge_time = 0.0
+	if is_instance_valid(charge_fx):
+		charge_fx.queue_free()
+	charge_fx = null
 
 func enable_hitbox() -> void:
 	var d: Vector2 = DIRECTIONS[last_direction]
@@ -477,6 +580,11 @@ func _on_frame_changed() -> void:
 		return
 	if anim.animation != current_attack.anim:
 		return
+	# Charged bow: still holding the button on the frame before the release?
+	# Hold the draw here instead of firing.
+	if can_charge() and anim.frame == current_attack.hit_frame - 1 and Input.is_action_pressed("attack_bow"):
+		start_charging()
+		return
 	if anim.frame != current_attack.hit_frame:
 		return
 
@@ -485,6 +593,15 @@ func _on_frame_changed() -> void:
 			enable_hitbox()
 		AttackData.Type.RANGED:
 			fire_arrow()
+	if current_attack.impact_effect != null:
+		spawn_impact_effect()
+
+# The attack's ground effect (the heavy's crater), in front of his feet.
+func spawn_impact_effect() -> void:
+	var fx: Node2D = current_attack.impact_effect.instantiate()
+	get_parent().add_child(fx)   # in the level, so it stays put when he moves
+	fx.global_position = global_position + DIRECTIONS[last_direction] * IMPACT_DISTANCE
+	fx.scale.x *= pivot.scale.x   # mirror it when he faces left
 
 # ------------------------------------------------------------------ guard / HP
 

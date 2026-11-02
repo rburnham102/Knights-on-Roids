@@ -27,6 +27,7 @@ const UPGRADES := [
 	preload("res://upgrades/ghost_step.tres"),
 	preload("res://upgrades/light_footed.tres"),
 	preload("res://upgrades/iron_guard.tres"),
+	preload("res://upgrades/charged_shot.tres"),
 	HEALER_UPGRADE,
 ]
 const SPAWN_IN_TIME := 0.5     # enemies fade in and stay idle this long

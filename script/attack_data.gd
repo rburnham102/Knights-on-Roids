@@ -43,3 +43,8 @@ enum Type { MELEE, RANGED }
 @export var projectile_speed := 400.0
 ## Ranged attacks (enemies): how far the projectile flies before vanishing (pixels).
 @export var projectile_range := 1200.0
+## Optional visual spawned on the ground in front of the attacker on the hit
+## frame, whether or not anything is hit (dust, a crater, a shockwave...).
+## The scene should remove itself when its animation ends (one_shot_effect.gd).
+## Only the knight uses this for now.
+@export var impact_effect: PackedScene
