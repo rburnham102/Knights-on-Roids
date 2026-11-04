@@ -480,7 +480,7 @@ shape = SubResource("CapsuleShape2D_ernif")
 
 [node name="ShootingPoint" type="Marker2D" parent="Pivot" unique_id=1519558528]
 unique_name_in_owner = true
-position = Vector2(6, -7)
+position = Vector2(5, -7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1403377057]
 position = Vector2(0, -3)

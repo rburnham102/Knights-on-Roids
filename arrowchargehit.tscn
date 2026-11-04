@@ -50,7 +50,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"arrowhit",
-"speed": 9.0
+"speed": 30.0
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1567907125]
@@ -59,4 +59,6 @@ texture_filter = 1
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_dmicn")
 animation = &"arrowhit"
+frame = 5
+frame_progress = 1.0
 script = ExtResource("2_7gjq7")

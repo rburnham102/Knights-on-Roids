@@ -61,9 +61,9 @@ const IMPACT_DISTANCE := 16.0   # how far in front of the feet an attack's impac
 # Charged bow (the "charged_shot" perk). Hold the bow button: the draw pauses
 # just before the release frame and charges until you let go. Every multiplier
 # below is the value at FULL charge; partial charges are in between.
-const CHARGE_TIME := 3.0               # seconds of holding for a full charge
-const CHARGE_TIME_PER_STACK := 0.5     # each extra pick of the perk charges this much faster...
-const CHARGE_TIME_MIN := 1.5           # ...down to this
+const CHARGE_TIME := 2.0               # seconds of holding for a full charge
+const CHARGE_TIME_PER_STACK := 0.2     # each extra pick of the perk charges this much faster...
+const CHARGE_TIME_MIN := 1.0           # ...down to this
 const CHARGE_DAMAGE_MULT := 4.0        # 60 dmg: about the same damage per second as tapping, all in one hit
 const CHARGE_KNOCKBACK_MULT := 3.0
 const CHARGE_POISE_MULT := 7.5
