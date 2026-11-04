@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="CharacterClass" format=3]
+
+[ext_resource type="Script" path="res://script/upgrade.gd" id="1_dpa0d"]
+[ext_resource type="Resource" path="res://upgrades/shield_walk.tres" id="2_omwv3"]
+[ext_resource type="Resource" path="res://upgrades/bulwark.tres" id="3_x2vx0"]
+[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Idle.png" id="4_f0o1a"]
+[ext_resource type="PackedScene" path="res://KnightTemplar.tscn" id="5_a45uv"]
+[ext_resource type="Script" path="res://script/character_class.gd" id="6_eoqvd"]
+[ext_resource type="Script" uid="uid://bldkvj7r805mi" path="res://script/stats.gd" id="9_stats"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlv01"]
+atlas = ExtResource("4_f0o1a")
+region = Rect2(36, 32, 32, 32)
+
+[sub_resource type="Resource" id="Stats_start"]
+script = ExtResource("9_stats")
+power = 10
+dexterity = 8
+vitality = 14
+
+[resource]
+script = ExtResource("6_eoqvd")
+display_name = "Knight Templar"
+description = "Lance and tower shield. Slow, but hits hard.
+Health: high
+Speed: slow
+Combo: 3 hits"
+portrait = SubResource("AtlasTexture_wlv01")
+starting_stats = SubResource("Stats_start")
+scene = ExtResource("5_a45uv")
+extra_upgrades = Array[ExtResource("1_dpa0d")]([ExtResource("2_omwv3"), ExtResource("3_x2vx0")])

@@ -13,7 +13,6 @@ signal died   # a run manager listens to this; without one the level just reload
 #   DEAD   - out of health
 enum State { FREE, ATTACK, BLOCK, HURT, DODGE, DEAD }
 
-const SPEED = 100.0
 const BASE_HEALTH := 100               # max health at vitality 10 (see Stats)
 const ARROW_SCENE := preload("res://aarow.tscn")
 const KNOCKBACK_DECAY := 700.0
@@ -41,6 +40,9 @@ const BLOCK_RERAISE_DELAY := 0.3
 
 # Dodge
 const DODGE_ANIM := &"dodge"          # add an animation with this name to the Knight's SpriteFrames
+const BLOCK_ANIM := &"block"          # optional: without it the character holds its idle pose, tinted
+const BLOCK_WALK_ANIM := &"block_walk"   # optional: walking with the guard up (the Shield Walk perk)
+const NO_BLOCK_ANIM_TINT := Color(0.75, 0.85, 1.3)   # the stand-in "I'm blocking" look
 const DODGE_DURATION := 0.25          # seconds the whole dash lasts
 const DODGE_IFRAMES := 0.18           # first part of the dash you can't be hit
 const DODGE_DISTANCE := 30.0          # pixels (Dexterity scales it). Was 60.
@@ -58,6 +60,16 @@ const DIRECTIONS := {
 const HITBOX_DISTANCE := 18.0   # was 20: 18 also reaches an enemy at body contact (8 px)
 const IMPACT_DISTANCE := 16.0   # how far in front of the feet an attack's impact_effect lands
 
+# Class perks (each class gets some of these through its CharacterClass).
+# Shield Walk: walk speed while blocking, as a share of the normal walk speed,
+# by number of stacks (index 0 = no perk = can't move while blocking).
+const SHIELD_WALK_SPEED := [0.0, 0.35, 0.55, 0.75]
+const BULWARK_GUARD_PER_STACK := 0.25     # max guard +25% per stack
+const FLURRY_SPEED_PER_STACK := 0.12      # combo swings play 12% faster per stack
+const DUELIST_PARRY_PER_STACK := 0.4      # parry window +40% per stack
+const ATTACK_DAMAGE_PERK_PER_STACK := 0.4 # see AttackData.damage_perk
+const ATTACK_SIZE_PERK_PER_STACK := 0.3   # see AttackData.size_perk
+
 # Charged bow (the "charged_shot" perk). Hold the bow button: the draw pauses
 # just before the release frame and charges until you let go. Every multiplier
 # below is the value at FULL charge; partial charges are in between.
@@ -73,11 +85,13 @@ const ARROW_CHARGE_FX := preload("res://arrowcharge.tscn")
 const BOW_FIRE_FX := preload("res://heavybowfire.tscn")
 const CHARGE_FX_OFFSET := Vector2(6, 0)   # the glow sits on the arrow tip, in front of the ShootingPoint
 
-# Set these in the Inspector (see Knight.tscn).
+# Set these in the Inspector (see Knight.tscn and the scenes inherited from it).
+## Walking speed in pixels per second (Dexterity scales it).
+@export var move_speed := 100.0
 @export var stats: Stats
 @export var light_combo: Array[AttackData]   # swings in order; the light button walks this chain
 @export var heavy_attack: AttackData
-@export var ranged_attack: AttackData
+@export var ranged_attack: AttackData        # empty = this character has no ranged attack
 @export var riposte_attack: AttackData      # swung automatically after a parry
 
 @onready var pivot: Node2D = $Pivot
@@ -153,6 +167,9 @@ func _ready() -> void:
 func max_health() -> int:
 	return roundi(BASE_HEALTH * stats.health_mult())
 
+func max_guard() -> float:
+	return MAX_GUARD * (1.0 + BULWARK_GUARD_PER_STACK * perk(&"bulwark"))
+
 func perk(id: StringName) -> int:
 	return int(perks.get(id, 0))
 
@@ -185,6 +202,7 @@ func _exit_state(old_state: State) -> void:
 	match old_state:
 		State.BLOCK:
 			block_raise_cooldown_left = BLOCK_RERAISE_DELAY
+			anim.self_modulate = Color.WHITE   # drop the no-block-animation tint
 		State.DODGE:
 			collision_layer = normal_collision_layer   # solid to enemies again
 			collision_mask = normal_collision_mask
@@ -197,6 +215,7 @@ func _exit_state(old_state: State) -> void:
 			is_riposte = false
 			attack_from_combo = false
 			lunge_velocity = Vector2.ZERO
+			anim.speed_scale = 1.0   # undo Flurry
 			disable_hitbox()
 			stop_charging()
 
@@ -205,7 +224,14 @@ func _enter_state(new_state: State) -> void:
 		State.BLOCK:
 			reset_combo()   # blocking breaks any combo in progress
 			block_time = 0.0
-			anim.play("block")
+			if anim.sprite_frames.has_animation(BLOCK_ANIM):
+				anim.play(BLOCK_ANIM)
+			else:
+				# No block art yet: hold still in the idle pose with a cold tint.
+				# self_modulate, so block_flash() (which tweens modulate) can't undo it.
+				anim.play("idle")
+				anim.pause()
+				anim.self_modulate = NO_BLOCK_ANIM_TINT
 		State.DODGE:
 			block_needs_repress = true
 			start_dodge_motion()
@@ -274,7 +300,7 @@ func process_free(delta: float) -> void:
 		start_combo_attack()
 	elif Input.is_action_just_pressed("attack_heavy"):
 		start_attack(heavy_attack)
-	elif Input.is_action_just_pressed("attack_bow"):
+	elif Input.is_action_just_pressed("attack_bow") and ranged_attack != null:
 		start_attack(ranged_attack)
 
 	if state == State.ATTACK:   # an attack just started this frame
@@ -283,7 +309,7 @@ func process_free(delta: float) -> void:
 
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	knockback = knockback.move_toward(Vector2.ZERO, KNOCKBACK_DECAY * delta)
-	velocity = direction * SPEED * stats.speed_mult() + knockback
+	velocity = direction * move_speed * stats.speed_mult() + knockback
 	move_and_slide()
 	update_animation(direction)
 
@@ -297,7 +323,17 @@ func process_block(delta: float) -> void:
 		process_free(delta)   # let go this frame = free to act this frame
 		return
 	block_time += delta
-	slide_with_knockback(delta)   # no attacking or walking while blocking
+	var walk_share: float = SHIELD_WALK_SPEED[mini(perk(&"shield_walk"), SHIELD_WALK_SPEED.size() - 1)]
+	if walk_share <= 0.0:
+		slide_with_knockback(delta)   # no attacking or walking while blocking
+		return
+	# Shield Walk: walk slowly with the guard up. He keeps facing the way he
+	# raised it, so backing away from an enemy keeps the shield toward it.
+	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	knockback = knockback.move_toward(Vector2.ZERO, KNOCKBACK_DECAY * delta)
+	velocity = direction * move_speed * stats.speed_mult() * walk_share + knockback
+	move_and_slide()
+	update_block_animation(direction)
 
 # ---------------------------------------------------------------------- dodge
 
@@ -417,6 +453,8 @@ func start_attack(attack: AttackData, from_combo := false) -> void:
 			set_facing(held)
 
 	anim.play(attack.anim)
+	if from_combo:
+		anim.speed_scale = 1.0 + FLURRY_SPEED_PER_STACK * perk(&"flurry")
 	if attack.lunge > 0.0:
 		lunge_velocity = DIRECTIONS[last_direction] * attack.lunge * stats.lunge_mult()
 	else:
@@ -442,7 +480,15 @@ func attack_damage() -> int:
 	var mult := stats.damage_mult()
 	if is_riposte:
 		mult *= 1.0 + 0.6 * perk(&"riposte_power")
+	if current_attack.damage_perk != &"":
+		mult *= 1.0 + ATTACK_DAMAGE_PERK_PER_STACK * perk(current_attack.damage_perk)
 	return roundi(current_attack.damage * mult)
+
+# How much bigger the current attack's hit area is (its size_perk).
+func attack_size_mult() -> float:
+	if current_attack == null or current_attack.size_perk == &"":
+		return 1.0
+	return 1.0 + ATTACK_SIZE_PERK_PER_STACK * perk(current_attack.size_perk)
 
 func attack_knockback() -> float:
 	return current_attack.knockback * stats.knockback_mult()
@@ -451,7 +497,7 @@ func attack_poise_damage() -> float:
 	return current_attack.poise_damage * stats.poise_damage_mult()
 
 func parry_window() -> float:
-	return PARRY_WINDOW * stats.parry_window_mult()
+	return PARRY_WINDOW * stats.parry_window_mult() * (1.0 + DUELIST_PARRY_PER_STACK * perk(&"duelist"))
 
 # Called on a perfect block: turn to face the attacker and counter-attack.
 func start_riposte(attacker_position: Vector2) -> void:
@@ -463,8 +509,12 @@ func start_riposte(attacker_position: Vector2) -> void:
 	start_attack(riposte_attack, true)
 
 func fire_arrow() -> void:
-	var arrow = ARROW_SCENE.instantiate()
+	# Most ranged attacks fire the arrow; the wizard's fireball brings its own scene.
+	var scene: PackedScene = current_attack.projectile_scene if current_attack.projectile_scene else ARROW_SCENE
+	var arrow = scene.instantiate()
 	arrow.direction = aim_direction
+	arrow.speed = current_attack.projectile_speed
+	arrow.max_range = current_attack.projectile_range
 	# charge_mult() is 1.0 for an uncharged shot, so this is the plain arrow
 	# unless the bow was held.
 	arrow.damage = roundi(attack_damage() * charge_mult(CHARGE_DAMAGE_MULT))
@@ -553,8 +603,18 @@ func stop_charging() -> void:
 
 func enable_hitbox() -> void:
 	var d: Vector2 = DIRECTIONS[last_direction]
-	hitbox.position = Vector2(absf(d.x), d.y) * HITBOX_DISTANCE
+	hitbox.position = Vector2(absf(d.x), d.y) * (HITBOX_DISTANCE + current_attack.hitbox_reach)
+	# Scaling the Area2D scales its circle with it (the default scale is 1).
+	hitbox.scale = Vector2.ONE * current_attack.hitbox_scale * attack_size_mult()
 	hitbox_shape.set_deferred("disabled", false)
+
+# A second (or third) slash of the same swing: everyone in reach can be hit
+# again. The hitbox is already on, so area_entered won't fire for enemies that
+# are still inside it. Ask the Area2D who's overlapping instead.
+func rehit() -> void:
+	hit_bodies.clear()
+	for area in hitbox.get_overlapping_areas():
+		_on_hitbox_area_entered(area)
 
 func disable_hitbox() -> void:
 	hitbox_shape.set_deferred("disabled", true)
@@ -585,22 +645,27 @@ func _on_frame_changed() -> void:
 	if can_charge() and anim.frame == current_attack.hit_frame - 1 and Input.is_action_pressed("attack_bow"):
 		start_charging()
 		return
-	if anim.frame != current_attack.hit_frame:
+	var first_hit := anim.frame == current_attack.hit_frame
+	if not first_hit and not anim.frame in current_attack.extra_hit_frames:
 		return
 
 	match current_attack.type:
 		AttackData.Type.MELEE:
-			enable_hitbox()
+			if first_hit:
+				enable_hitbox()
+			else:
+				rehit()
 		AttackData.Type.RANGED:
 			fire_arrow()
-	if current_attack.impact_effect != null:
+	if first_hit and current_attack.impact_effect != null:
 		spawn_impact_effect()
 
 # The attack's ground effect (the heavy's crater), in front of his feet.
 func spawn_impact_effect() -> void:
 	var fx: Node2D = current_attack.impact_effect.instantiate()
 	get_parent().add_child(fx)   # in the level, so it stays put when he moves
-	fx.global_position = global_position + DIRECTIONS[last_direction] * IMPACT_DISTANCE
+	fx.global_position = global_position + DIRECTIONS[last_direction] * (IMPACT_DISTANCE + current_attack.hitbox_reach)
+	fx.scale *= attack_size_mult()   # a bigger hit area gets a bigger effect
 	fx.scale.x *= pivot.scale.x   # mirror it when he faces left
 
 # ------------------------------------------------------------------ guard / HP
@@ -609,15 +674,15 @@ func update_guard(delta: float) -> void:
 	if guard_regen_delay_left > 0.0:
 		guard_regen_delay_left -= delta
 		return
-	if state == State.BLOCK or guard >= MAX_GUARD:
+	if state == State.BLOCK or guard >= max_guard():
 		return   # no regen while holding block
-	set_guard(minf(guard + GUARD_REGEN * (1.0 + 0.5 * perk(&"iron_guard")) * delta, MAX_GUARD))
+	set_guard(minf(guard + GUARD_REGEN * (1.0 + 0.5 * perk(&"iron_guard")) * delta, max_guard()))
 	if guard_broken and guard >= GUARD_RECOVER_AT:
 		guard_broken = false
 
 func set_guard(value: float) -> void:
 	guard = value
-	guard_changed.emit(guard, MAX_GUARD)
+	guard_changed.emit(guard, max_guard())
 
 func block_flash(from_position: Vector2, heavy: bool, parry := false) -> void:
 	# Keep the sprite tint if you like it
@@ -658,8 +723,9 @@ func setup_guard_bar() -> void:
 	add_child(guard_bar)
 
 func update_guard_bar() -> void:
+	guard_bar.max_value = max_guard()
 	guard_bar.value = guard
-	guard_bar.visible = guard < MAX_GUARD and not is_dead
+	guard_bar.visible = guard < max_guard() and not is_dead
 	# Red while broken, blue otherwise
 	guard_fill.bg_color = Color(0.9, 0.25, 0.2) if guard_broken else Color(0.3, 0.7, 1.0)
 
@@ -770,6 +836,18 @@ func update_animation(direction: Vector2) -> void:
 		return
 	set_facing(direction)
 	anim.play("walk")
+
+# Shield Walk: the shield-up walk while moving, the held block while standing.
+func update_block_animation(direction: Vector2) -> void:
+	var frames := anim.sprite_frames
+	if not frames.has_animation(BLOCK_ANIM):
+		return   # the paused, tinted idle pose stays (see _enter_state)
+	if direction != Vector2.ZERO and frames.has_animation(BLOCK_WALK_ANIM):
+		anim.play(BLOCK_WALK_ANIM)
+	elif anim.animation == BLOCK_WALK_ANIM:
+		# Stopped walking: back to the raised shield, skipping the raise itself.
+		anim.play(BLOCK_ANIM)
+		anim.frame = frames.get_frame_count(BLOCK_ANIM) - 1
 
 func shake(strength: float, duration: float = 0.2) -> void:
 	# Don't let a weak shake cancel a stronger one already running

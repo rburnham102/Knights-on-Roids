@@ -14,6 +14,9 @@ var charged := false      # a charged shot from the knight: bursts when it hits
 ## adding the arrow to the scene (the archer's shots are short-ranged).
 var max_range := 1200.0
 
+## Optional burst spawned where it stops (the wizard's fireball explodes).
+@export var hit_effect: PackedScene
+
 const FADE_DISTANCE := 40.0   # fades out over its last few pixels instead of popping
 const CHARGE_HIT_FX := preload("res://arrowchargehit.tscn")
 
@@ -67,6 +70,10 @@ func _on_area_entered(area: Area2D) -> void:
 
 # The arrow stops here. A charged one bursts first.
 func hit() -> void:
+	if hit_effect != null:
+		var burst: Node2D = hit_effect.instantiate()
+		burst.position = position
+		get_parent().add_child(burst)
 	if charged:
 		var fx: Node2D = CHARGE_HIT_FX.instantiate()
 		fx.position = position   # same parent as the arrow, so same coordinates

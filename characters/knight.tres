@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="CharacterClass" format=3]
+
+[ext_resource type="Script" path="res://script/upgrade.gd" id="1_srqwj"]
+[ext_resource type="Resource" path="res://upgrades/charged_shot.tres" id="2_xpol6"]
+[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Idle.png" id="3_hgt8k"]
+[ext_resource type="PackedScene" path="res://Knight.tscn" id="4_mks58"]
+[ext_resource type="Script" path="res://script/character_class.gd" id="5_1uio8"]
+[ext_resource type="Script" uid="uid://bldkvj7r805mi" path="res://script/stats.gd" id="9_stats"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gy4fy"]
+atlas = ExtResource("3_hgt8k")
+region = Rect2(36, 32, 32, 32)
+
+[sub_resource type="Resource" id="Stats_start"]
+script = ExtResource("9_stats")
+power = 10
+dexterity = 10
+vitality = 10
+
+[resource]
+script = ExtResource("5_1uio8")
+display_name = "Knight"
+description = "Sword, shield and bow.
+Health: normal
+Speed: normal
+Combo: 3 hits"
+portrait = SubResource("AtlasTexture_gy4fy")
+starting_stats = SubResource("Stats_start")
+scene = ExtResource("4_mks58")
+extra_upgrades = Array[ExtResource("1_srqwj")]([ExtResource("2_xpol6")])

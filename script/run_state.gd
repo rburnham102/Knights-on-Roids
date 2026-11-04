@@ -6,6 +6,7 @@ extends RefCounted
 
 const RUN_LENGTH := 10   # clear this many rooms to complete a run
 
+var character: CharacterClass   # who is playing this run (see set_character)
 var stats: Stats = Stats.new()
 var perks := {}          # perk id -> how many times it was taken
 var depth := 0           # the room the knight is in (1 = first room)
@@ -27,6 +28,13 @@ func _init(start_seed := 0) -> void:
 		rng.seed = start_seed
 	run_seed = rng.seed
 	loot_rng.seed = run_seed + 1
+
+## Sets who is playing and starts the stats from that character's.
+func set_character(new_character: CharacterClass) -> void:
+	character = new_character
+	if character and character.starting_stats:
+		# duplicate(): upgrades change the run's copy, never the class's .tres.
+		stats = character.starting_stats.duplicate()
 
 ## Picks `count` different upgrades from the pool.
 func roll_upgrades(pool: Array[Upgrade], count := 3) -> Array[Upgrade]:

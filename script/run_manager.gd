@@ -3,7 +3,9 @@ extends Node
 ## chunks), fills it with enemies, locks the door
 ## until they're dead, offers an upgrade, and handles death and victory.
 ## It also spawns the loot that enemies and barrels drop, and applies it.
-## The knight, HUD and screens live in run.tscn and are assigned below.
+## The HUD and screens live in run.tscn and are assigned below. The player is
+## spawned at the start of the run from the CharacterClass picked on the
+## character select screen.
 
 const LEVEL := preload("res://rooms/level.tscn")
 const PICKUP := preload("res://pickup.tscn")
@@ -17,6 +19,8 @@ const CHUNKS: Array[PackedScene] = [
 	preload("res://rooms/chunks/chunk_template5.tscn"),
 	preload("res://rooms/chunks/chunk_template6.tscn"),
 ]
+## The upgrades every character can be offered. Class-only upgrades (and ones
+## a class can't take) are set on each CharacterClass in res://characters/.
 const UPGRADES := [
 	preload("res://upgrades/power_up.tres"),
 	preload("res://upgrades/dexterity_up.tres"),
@@ -27,7 +31,6 @@ const UPGRADES := [
 	preload("res://upgrades/ghost_step.tres"),
 	preload("res://upgrades/light_footed.tres"),
 	preload("res://upgrades/iron_guard.tres"),
-	preload("res://upgrades/charged_shot.tres"),
 	HEALER_UPGRADE,
 ]
 const SPAWN_IN_TIME := 0.5     # enemies fade in and stay idle this long
@@ -37,7 +40,12 @@ const PEEL_CHANCE := 0.2
 
 @export var start_seed := 0    # 0 = a random run
 @export var heal_after_room := 0.25   # share of max health restored when a room is cleared
-@export var knight: CharacterBody2D
+## The playable characters, in the order the select screen shows them.
+## The first one is used when the select screen is turned off.
+@export var classes: Array[CharacterClass] = []
+@export var character_select: CanvasLayer
+## Show the character select screen before the run. Tests turn it off.
+@export var character_select_enabled := true
 @export var actors: Node2D
 @export var room_holder: Node2D
 @export var hud: CanvasLayer
@@ -49,6 +57,7 @@ const PEEL_CHANCE := 0.2
 ## builds (running from the editor), never in an exported release game.
 @export var dev_screen_enabled := true
 
+var knight: CharacterBody2D   # the player character, spawned in _spawn_player()
 var run: RunState
 var room: Level   # the current level (still called "room" so the dev tools keep working)
 var pool: Array[Upgrade] = []
@@ -60,23 +69,44 @@ var healer: Healer   # null until hired (and again after she dies)
 
 func _ready() -> void:
 	_new_run_state(start_seed)
-	for upgrade in UPGRADES:
-		pool.append(upgrade)
-	knight.died.connect(_on_knight_died)
 	upgrade_screen.chosen.connect(_on_upgrade_chosen)
 	end_screen.new_run_requested.connect(_on_new_run_requested)
 	fade_rect.color.a = 1.0
+	if character_select and character_select_enabled and classes.size() > 1:
+		character_select.chosen.connect(_on_character_chosen)
+		character_select.open(classes)
+	else:
+		_on_character_chosen(classes[0])
+
+# Spawns the chosen character, then shows the dev screen (debug builds) or starts.
+func _on_character_chosen(character: CharacterClass) -> void:
+	_spawn_player(character)
 	if dev_screen and dev_screen_enabled and OS.is_debug_build():
 		dev_screen.started.connect(_on_dev_start)
-		dev_screen.open(UPGRADES, RunState.RUN_LENGTH, [HEALER_UPGRADE])
+		dev_screen.open(pool, RunState.RUN_LENGTH, [HEALER_UPGRADE])
 	else:
-		_begin.call_deferred()
+		_begin.call_deferred()   # build the first room once everything is ready
 
-func _new_run_state(run_seed: int) -> void:
-	run = RunState.new(run_seed)
-	# The knight plays with the run's stats and perks, so upgrades apply to him.
+func _spawn_player(character: CharacterClass) -> void:
+	run.set_character(character)
+	pool = character.upgrade_pool(UPGRADES)
+	knight = character.scene.instantiate()
+	# Before add_child(): the player's _ready() works out its health from these.
+	# The player uses the run's stats and perks, so upgrades apply to them.
 	knight.stats = run.stats
 	knight.perks = run.perks
+	actors.add_child(knight)
+	knight.died.connect(_on_knight_died)
+	hud.bind_to(knight)
+
+func _new_run_state(run_seed: int) -> void:
+	var character := run.character if run else null
+	run = RunState.new(run_seed)
+	run.set_character(character)
+	# The player uses the run's stats and perks, so upgrades apply to them.
+	if knight:
+		knight.stats = run.stats
+		knight.perks = run.perks
 
 # The dev screen's Start button: set up the run the way it asked, then begin.
 func _on_dev_start(picks: Dictionary, start_room: int, run_seed: int) -> void:
@@ -88,6 +118,7 @@ func _on_dev_start(picks: Dictionary, start_room: int, run_seed: int) -> void:
 			# The same call as picking it between rooms, so stats, perks,
 			# healing and the end screen's upgrade list all just work.
 			run.apply(upgrade, knight)
+		_remove_if_maxed(upgrade)
 		if upgrade == HEALER_UPGRADE:
 			_hire_healer()
 	_begin()
@@ -198,6 +229,7 @@ func _room_cleared() -> void:
 func _on_upgrade_chosen(upgrade: Upgrade) -> void:
 	awaiting_upgrade = false
 	run.apply(upgrade, knight)
+	_remove_if_maxed(upgrade)
 	if upgrade == HEALER_UPGRADE:
 		_hire_healer()
 	room.exit_door.open()
@@ -208,6 +240,11 @@ func _on_exit_entered() -> void:
 	changing_room = true
 	await _fade_to(1.0)
 	await _enter_room()
+
+# An upgrade with a max_stacks limit stops being offered once it's reached.
+func _remove_if_maxed(upgrade: Upgrade) -> void:
+	if upgrade.max_stacks > 0 and run.upgrades_taken.count(upgrade) >= upgrade.max_stacks:
+		pool.erase(upgrade)
 
 # ----------------------------------------------------------------- healer
 

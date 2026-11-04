@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AttackData" format=3]
+
+[ext_resource type="Script" path="res://script/attack_data.gd" id="1_3f7eh"]
+
+[resource]
+script = ExtResource("1_3f7eh")
+anim = &"attack1"
+damage = 9
+hit_frame = 3
+knockback = 110.0
+shake = 0.4
+lunge = 90.0
+poise_damage = 8.0
+hit_stop = 0.02

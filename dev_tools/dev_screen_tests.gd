@@ -25,12 +25,18 @@ func frames(n: int) -> void:
 # Boots run.tscn the way the game does: as the current scene.
 func boot(setup := Callable()) -> Node:
 	var scene: Node = load(RUN).instantiate()
+	scene.get_node("RunManager").character_select_enabled = false   # plays the first class, the Knight
 	if setup.is_valid():
 		setup.call(scene.get_node("RunManager"))
 	root.add_child(scene)
 	current_scene = scene
 	await frames(3)
 	return scene
+
+# A fresh run (New Run) opens the character select: pick the Knight.
+func pick_knight(scene: Node) -> void:
+	scene.get_node("CharacterSelect").choose(0)
+	await frames(2)
 
 func shutdown(scene: Node) -> void:
 	paused = false
@@ -60,8 +66,8 @@ func run() -> void:
 	check("it's above the black fade (layer 20 > 10)", screen.layer > scene.get_node("FadeLayer").layer)
 	await frames(30)
 	check("the run waits: no room built yet", mgr.room == null and mgr.run.depth == 0)
-	check("one row per upgrade in the pool", screen.spin_boxes.size() == mgr.UPGRADES.size(),
-		"%d rows, %d upgrades" % [screen.spin_boxes.size(), mgr.UPGRADES.size()])
+	check("one row per upgrade in the pool", screen.spin_boxes.size() == mgr.pool.size(),
+		"%d rows, %d upgrades" % [screen.spin_boxes.size(), mgr.pool.size()])
 	check("healer capped at 1, others at 5",
 		spin_for(screen, HEALER).max_value == 1 and spin_for(screen, POWER).max_value == 5)
 	check("start room goes 1 to RUN_LENGTH", screen.room_box.min_value == 1 and screen.room_box.max_value == RunState.RUN_LENGTH)
@@ -101,6 +107,10 @@ func run() -> void:
 	scene = current_scene
 	mgr = scene.get_node("RunManager")
 	screen = scene.get_node("DevScreen")
+	# A fresh run asks for a character first; the dev screen comes after.
+	var select: CanvasLayer = scene.get_node("CharacterSelect")
+	check("fresh run opens the character select first", select.visible and not screen.visible)
+	await pick_knight(scene)   # the Knight, so the Siege Shot row exists
 	check("fresh run, dev screen open again", screen.visible and paused and mgr.room == null)
 	check("remembers the counts", spin_for(screen, POWER).value == 2 and spin_for(screen, SIEGE).value == 2 and spin_for(screen, HEALER).value == 1)
 	check("remembers room and seed", screen.room_box.value == 5 and screen.seed_edit.text == "12345")
@@ -116,6 +126,7 @@ func run() -> void:
 	scene = current_scene
 	mgr = scene.get_node("RunManager")
 	screen = scene.get_node("DevScreen")
+	await pick_knight(scene)
 	screen.clear_button.pressed.emit()
 	check("Clear zeroes every count, room 1, blank seed",
 		screen.spin_boxes.values().all(func(s): return s.value == 0) and screen.room_box.value == 1 and screen.seed_edit.text == "")
@@ -138,6 +149,7 @@ func run() -> void:
 	scene = await boot(func(m): m.start_seed = 999)
 	mgr = scene.get_node("RunManager")
 	screen = scene.get_node("DevScreen")
+	await pick_knight(scene)
 	screen.clear_button.pressed.emit()
 	screen.start_button.pressed.emit()
 	await frames(30)

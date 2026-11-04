@@ -252,5 +252,4 @@ func run() -> void:
 	print("[Upgrade]")
 	var up: Upgrade = load("res://upgrades/charged_shot.tres")
 	check("charged_shot.tres grants the perk", up.perk == &"charged_shot")
-	var rm_src: String = load("res://script/run_manager.gd").source_code
-	check("it's in the run manager's upgrade pool", rm_src.contains("res://upgrades/charged_shot.tres"))
+	check("it's in the Knight's upgrade pool", up in (load("res://characters/knight.tres") as CharacterClass).extra_upgrades)

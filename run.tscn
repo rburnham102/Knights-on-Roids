@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://cgjrql3g1kpen"]
 
-[ext_resource type="PackedScene" uid="uid://20jsqtt6c87o" path="res://Knight.tscn" id="2_85c57"]
-[ext_resource type="Script" uid="uid://bldkvj7r805mi" path="res://script/stats.gd" id="4_yv4ql"]
 [ext_resource type="PackedScene" uid="uid://bpv5g1t55xj7" path="res://hud.tscn" id="10_bcohd"]
 [ext_resource type="PackedScene" path="res://upgrade_screen.tscn" id="12_pllgl"]
 [ext_resource type="PackedScene" path="res://run_over_screen.tscn" id="14_in13e"]
 [ext_resource type="Script" uid="uid://bijqbfyq4jclv" path="res://script/run_manager.gd" id="16_uaer5"]
 [ext_resource type="PackedScene" path="res://dev_screen.tscn" id="17_dev"]
-
-[sub_resource type="Resource" id="Resource_stats"]
-script = ExtResource("4_yv4ql")
+[ext_resource type="PackedScene" path="res://character_select.tscn" id="18_select"]
+[ext_resource type="Script" path="res://script/character_class.gd" id="19_class"]
+[ext_resource type="Resource" path="res://characters/knight.tres" id="20_knight"]
+[ext_resource type="Resource" path="res://characters/knight_templar.tres" id="21_templar"]
+[ext_resource type="Resource" path="res://characters/swordsman.tres" id="22_swordsman"]
+[ext_resource type="Resource" path="res://characters/wizard.tres" id="23_wizard"]
 
 [node name="Run" type="Node2D" unique_id=985809285]
 y_sort_enabled = true
@@ -20,9 +21,6 @@ y_sort_enabled = true
 [node name="Actors" type="Node2D" parent="." unique_id=1955185764]
 y_sort_enabled = true
 
-[node name="Knight" parent="Actors" unique_id=524925401 instance=ExtResource("2_85c57")]
-stats = SubResource("Resource_stats")
-
 [node name="HUD" parent="." unique_id=294508394 instance=ExtResource("10_bcohd")]
 
 [node name="UpgradeScreen" parent="." unique_id=1499110795 instance=ExtResource("12_pllgl")]
@@ -30,6 +28,8 @@ stats = SubResource("Resource_stats")
 [node name="RunOverScreen" parent="." unique_id=367023939 instance=ExtResource("14_in13e")]
 
 [node name="DevScreen" parent="." instance=ExtResource("17_dev")]
+
+[node name="CharacterSelect" parent="." instance=ExtResource("18_select")]
 
 [node name="FadeLayer" type="CanvasLayer" parent="." unique_id=676377866]
 layer = 10
@@ -41,9 +41,10 @@ anchor_bottom = 1.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="RunManager" type="Node" parent="." unique_id=1338843670 node_paths=PackedStringArray("knight", "actors", "room_holder", "hud", "upgrade_screen", "end_screen", "fade_rect", "dev_screen")]
+[node name="RunManager" type="Node" parent="." unique_id=1338843670 node_paths=PackedStringArray("character_select", "actors", "room_holder", "hud", "upgrade_screen", "end_screen", "fade_rect", "dev_screen")]
 script = ExtResource("16_uaer5")
-knight = NodePath("../Actors/Knight")
+classes = Array[ExtResource("19_class")]([ExtResource("20_knight"), ExtResource("21_templar"), ExtResource("22_swordsman"), ExtResource("23_wizard")])
+character_select = NodePath("../CharacterSelect")
 actors = NodePath("../Actors")
 room_holder = NodePath("../RoomHolder")
 hud = NodePath("../HUD")

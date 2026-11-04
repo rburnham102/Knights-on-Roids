@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3]
+
+[ext_resource type="Script" path="res://script/upgrade.gd" id="1_vdgn6"]
+
+[resource]
+script = ExtResource("1_vdgn6")
+title = "Shield Walk"
+description = "Walk while blocking.
+Level 1: 35% speed, level 2: 55%, level 3: 75%."
+perk = &"shield_walk"
+max_stacks = 3

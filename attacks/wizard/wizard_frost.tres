@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AttackData" format=3]
+
+[ext_resource type="PackedScene" path="res://Effects/ice_burst.tscn" id="1_sqmsk"]
+[ext_resource type="Script" path="res://script/attack_data.gd" id="2_xx46f"]
+
+[resource]
+script = ExtResource("2_xx46f")
+anim = &"attack1"
+damage = 14
+hit_frame = 4
+knockback = 160.0
+shake = 0.8
+poise_damage = 14.0
+hit_stop = 0.03
+impact_effect = ExtResource("1_sqmsk")
+hitbox_scale = 1.3
+hitbox_reach = 14.0
+size_perk = &"wide_frost"

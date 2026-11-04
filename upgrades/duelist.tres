@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Upgrade" format=3]
+
+[ext_resource type="Script" path="res://script/upgrade.gd" id="1_msenh"]
+
+[resource]
+script = ExtResource("1_msenh")
+title = "Duelist"
+description = "Your parry window is 40% wider."
+perk = &"duelist"

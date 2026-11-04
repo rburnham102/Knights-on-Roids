@@ -122,6 +122,7 @@ func play_run(bot_kind: String, bot_jitter: float, run_seed: int) -> Dictionary:
 	var scene: Node2D = load("res://run.tscn").instantiate()
 	scene.get_node("RunManager").start_seed = run_seed
 	scene.get_node("RunManager").dev_screen_enabled = false   # no dev screen: start right away
+	scene.get_node("RunManager").character_select_enabled = false   # plays the first class, the Knight
 	if ov.has("heal"): scene.get_node("RunManager").heal_after_room = ov["heal"]
 	root.add_child(scene)
 	current_scene = scene

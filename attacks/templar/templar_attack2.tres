@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AttackData" format=3]
+
+[ext_resource type="PackedScene" path="res://heavy_attack.tscn" id="1_qehil"]
+[ext_resource type="Script" path="res://script/attack_data.gd" id="2_plhhs"]
+
+[resource]
+script = ExtResource("2_plhhs")
+anim = &"attack2"
+damage = 28
+hit_frame = 5
+knockback = 260.0
+shake = 3.0
+lunge = 120.0
+poise_damage = 32.0
+hit_stop = 0.07
+guard_break = true
+impact_effect = ExtResource("1_qehil")

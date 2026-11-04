@@ -14,3 +14,6 @@ extends Resource
 @export var heal := 0
 ## A perk id the knight's code looks for (taking it twice stacks). Empty = none.
 @export var perk: StringName = &""
+## How many times it can be taken in one run. 0 = no limit. Once it's maxed
+## it stops being offered.
+@export var max_stacks := 0

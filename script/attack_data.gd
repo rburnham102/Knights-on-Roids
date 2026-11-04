@@ -48,3 +48,19 @@ enum Type { MELEE, RANGED }
 ## The scene should remove itself when its animation ends (one_shot_effect.gd).
 ## Only the knight uses this for now.
 @export var impact_effect: PackedScene
+
+## --- Player attacks ---------------------------------------------------------
+## More frames where the swing hits again (a double or triple slash). Each one
+## can hit the same enemy again. Leave empty for a single hit.
+@export var extra_hit_frames: Array[int] = []
+## Ranged attacks: the scene that's fired. Empty = the knight's arrow.
+@export var projectile_scene: PackedScene
+## Player melee: size of the hitbox circle (1.0 = the scene's circle as drawn)...
+@export var hitbox_scale := 1.0
+## ...and how many extra pixels in front of the usual spot it sits.
+@export var hitbox_reach := 0.0
+## Perk ids that boost this one attack (empty = none). Each stack of
+## damage_perk adds 40% damage; each stack of size_perk makes the hit area
+## (and its impact effect) 30% bigger. The numbers live in knight.gd.
+@export var damage_perk: StringName = &""
+@export var size_perk: StringName = &""

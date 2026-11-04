@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AttackData" format=3]
+
+[ext_resource type="PackedScene" path="res://fireball.tscn" id="1_5pdri"]
+[ext_resource type="Script" path="res://script/attack_data.gd" id="2_yqcry"]
+
+[resource]
+script = ExtResource("2_yqcry")
+anim = &"attack2"
+type = 1
+damage = 18
+hit_frame = 6
+knockback = 180.0
+poise_damage = 18.0
+projectile_speed = 260.0
+projectile_range = 400.0
+projectile_scene = ExtResource("1_5pdri")
+damage_perk = &"searing_bolt"

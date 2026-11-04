@@ -1,0 +1,88 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Magic(projectile)/Wizard_Attack01_Effect.png" id="1_tcwdg"]
+[ext_resource type="Script" path="res://Effects/one_shot_effect.gd" id="2_slh4a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rnn8"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwiou"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxgdc"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vw81x"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdt7w"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7ugi"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipvb6"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbykg"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u18i"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aq2l0"]
+atlas = ExtResource("1_tcwdg")
+region = Rect2(900, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i1c1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rnn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwiou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxgdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vw81x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdt7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7ugi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipvb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbykg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u18i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aq2l0")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="IceBurst" type="AnimatedSprite2D" unique_id=2058405879]
+z_index = 5
+sprite_frames = SubResource("SpriteFrames_i1c1l")
+offset = Vector2(4, -7)
+script = ExtResource("2_slh4a")

@@ -1,6 +1,9 @@
 extends SceneTree
 # Balance simulation: bots with different skill levels fight scenarios.
 #   godot --headless --fixed-fps 60 --path <project> -s res://sim.gd -- trials=12
+# character=templar|swordsman|wizard plays one of the other characters
+# (default: the Knight). Bots that need a bow are skipped for characters
+# without one; the "caster" bot is the bow bot for the Wizard's fireball.
 # Bots only use what a player has: the Input actions, and what's visible on
 # screen (enemy state, how long until a swing lands, ...).
 
@@ -32,7 +35,24 @@ const BOTS := [
 	["charge", 0.0],     # keeps its distance and fires full Siege Shots
 	["charge50", 0.0],   # same, but lets go at half charge
 	["hybrid", 0.04],    # the parry bot, but opens with a Siege Shot while they're far off
+	["caster", 0.0],     # keeps its distance and throws the heavy (the Wizard's fireball)
 ]
+const CHARACTERS := {
+	"knight": "res://Knight.tscn",
+	"templar": "res://KnightTemplar.tscn",
+	"swordsman": "res://Swordsman.tscn",
+	"wizard": "res://Wizard.tscn",
+}
+# Each character's class file: its starting stats are used, like in a real run.
+const CLASSES := {
+	"knight": "res://characters/knight.tres",
+	"templar": "res://characters/knight_templar.tres",
+	"swordsman": "res://characters/swordsman.tres",
+	"wizard": "res://characters/wizard.tres",
+}
+# Bots that need the bow, and the one that needs a ranged heavy.
+const BOW_BOTS := ["bow", "charge", "charge50", "hybrid"]
+const RANGED_HEAVY_BOTS := ["caster"]
 # Only these bots use the Siege Shot perk.
 const CHARGE_BOTS := ["charge", "charge50", "hybrid"]
 const KITE_RANGE := 70.0     # bow bots back off when anything is closer than this
@@ -54,6 +74,7 @@ var ov := {}                 # tuning overrides from the command line (key=value
 var knight_poise_base := {}  # original poise_damage of the knight's attacks
 var only_bots: Array = []    # bots=a,b on the command line runs just those
 var only_scenarios: Array = []   # scenarios=a,b (use _ for spaces: far_3_orcs)
+var character := "knight"
 
 func _initialize() -> void:
 	var trials := 12
@@ -64,6 +85,8 @@ func _initialize() -> void:
 			only_bots = Array(arg.get_slice("=", 1).split(","))
 		elif k == "scenarios":
 			only_scenarios = Array(arg.get_slice("=", 1).replace("_", " ").split(","))
+		elif k == "character":
+			character = arg.get_slice("=", 1)
 		elif k == "trials":
 			trials = int(v)
 		else:
@@ -75,10 +98,17 @@ func _initialize() -> void:
 
 func run(trials: int) -> void:
 	await process_frame
+	print("character: ", character)
+	var sample: Node = load(CHARACTERS[character]).instantiate()
+	var has_bow: bool = sample.ranged_attack != null
+	var ranged_heavy: bool = sample.heavy_attack.type == AttackData.Type.RANGED
+	sample.free()
 	print("%-12s %-12s %6s %8s %8s %8s" % ["bot", "scenario", "wins", "avg hp", "avg sec", "parries"])
 	for b in BOTS:
 		if not only_bots.is_empty() and not b[0] in only_bots:
 			continue
+		if (b[0] in BOW_BOTS and not has_bow) or (b[0] in RANGED_HEAVY_BOTS and not ranged_heavy):
+			continue   # this character can't play that way
 		for sc in SCENARIOS:
 			if not only_scenarios.is_empty() and not sc in only_scenarios:
 				continue
@@ -108,11 +138,14 @@ func fight(bot_kind: String, bot_jitter: float, scenario: String, trial_seed: in
 	block_until = 0.0
 	var arena := Node2D.new()
 	root.add_child(arena)
-	knight = load("res://Knight.tscn").instantiate()
+	knight = load(CHARACTERS[character]).instantiate()
+	var character_class: CharacterClass = load(CLASSES[character])
+	if character_class.starting_stats:
+		knight.stats = character_class.starting_stats.duplicate()
 	apply_knight_overrides()
 	if bot_kind in CHARGE_BOTS:
 		knight.perks = {&"charged_shot": 1}
-	if bot_kind in ["bow", "hybrid"] or bot_kind in CHARGE_BOTS:
+	if bot_kind in ["bow", "hybrid", "caster"] or bot_kind in CHARGE_BOTS or character != "knight":
 		# Headless Godot's mouse is stuck at screen (0, 0). With the camera
 		# off we move the view instead, so (0, 0) is wherever the bot "points".
 		knight.get_node("Camera2D").enabled = false
@@ -208,6 +241,8 @@ func think() -> void:
 			kite(0.5)
 		"hybrid":
 			hybrid()
+		"caster":
+			kite(0.0, "attack_heavy")
 
 # Point the "mouse" at a world position (see fight()).
 func point_at(world: Vector2) -> void:
@@ -215,7 +250,7 @@ func point_at(world: Vector2) -> void:
 
 # Bow bot: back away from anything close, otherwise shoot the nearest enemy.
 # `charge` = how charged to let the arrow go (0 = just tap).
-func kite(charge: float) -> void:
+func kite(charge: float, button := "attack_bow") -> void:
 	var t := nearest()
 	if t == null:
 		return
@@ -235,9 +270,9 @@ func kite(charge: float) -> void:
 		steer(-d)
 		return
 	if charge > 0.0:
-		press("attack_bow")
+		press(button)
 	else:
-		tap("attack_bow")
+		tap(button)
 
 # The skilled parry bot, but while every enemy is still far away it stands
 # and charges a Siege Shot at the nearest one.
@@ -263,6 +298,8 @@ func attack_nearest(cadence: int, adaptive := false) -> void:
 	if t == null:
 		return
 	var d := t.global_position - knight.global_position
+	if character != "knight":
+		point_at(t.global_position)   # a ranged heavy (the fireball) aims at the mouse
 	var facing_axis_x: bool = abs(d.x) >= abs(d.y)
 	var want_dir: String = ("right" if d.x > 0 else "left") if facing_axis_x else ("down" if d.y > 0 else "up")
 	var in_reach: bool = abs(d.y) <= 8.0 and abs(d.x) <= 30.0 if facing_axis_x else abs(d.x) <= 8.0 and abs(d.y) <= 30.0
@@ -393,7 +430,7 @@ func apply_knight_overrides() -> void:
 		knight.stats.dexterity = int(ov.get("dex", 10))
 		knight.stats.power = int(ov.get("pow", 10))
 		knight.stats.vitality = int(ov.get("vit", 10))
-	var atk: Array = [knight.light_combo[0], knight.light_combo[1], knight.heavy_attack]
+	var atk: Array = [knight.light_combo[0], knight.light_combo[-1], knight.heavy_attack]
 	if knight_poise_base.is_empty():
 		for a in atk:
 			knight_poise_base[a] = a.poise_damage

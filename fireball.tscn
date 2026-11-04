@@ -1,0 +1,58 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://script/aarow.gd" id="1_wdani"]
+[ext_resource type="PackedScene" path="res://Effects/fireball_explosion.tscn" id="2_nix7o"]
+[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Magic(projectile)/Wizard_Attack02_Effect.png" id="3_m4vqi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lk87q"]
+atlas = ExtResource("3_m4vqi")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gveuj"]
+atlas = ExtResource("3_m4vqi")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smijy"]
+atlas = ExtResource("3_m4vqi")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1q1f"]
+atlas = ExtResource("3_m4vqi")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2cr5o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lk87q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gveuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smijy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1q1f")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nymw6"]
+radius = 4.0
+
+[node name="Fireball" type="Area2D" unique_id=2136238018]
+collision_layer = 0
+collision_mask = 17
+script = ExtResource("1_wdani")
+hit_effect = ExtResource("2_nix7o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1146587566]
+position = Vector2(-2, 0)
+sprite_frames = SubResource("SpriteFrames_2cr5o")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=944472399]
+shape = SubResource("CircleShape2D_nymw6")

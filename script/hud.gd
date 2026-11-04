@@ -24,13 +24,19 @@ func set_version(text: String) -> void:
 
 func _bind_to_player() -> void:
 	var player := get_tree().get_first_node_in_group("player")
-	if player == null:
-		return
+	if player != null:
+		bind_to(player)
+
+## Listen to this player's health and guard. The run manager calls it after it
+## spawns the chosen character (which happens after this HUD is ready).
+func bind_to(player: Node) -> void:
+	if player.health_changed.is_connected(_on_health_changed):
+		return   # already bound
 	player.health_changed.connect(_on_health_changed)
 	player.guard_changed.connect(_on_guard_changed)
 	# Signals only report *changes*, so read the starting values once.
 	_on_health_changed(player.health, player.max_health())
-	_on_guard_changed(player.guard, player.MAX_GUARD)
+	_on_guard_changed(player.guard, player.max_guard())
 
 func _on_health_changed(current: int, maximum: int) -> void:
 	health_bar.max_value = maximum

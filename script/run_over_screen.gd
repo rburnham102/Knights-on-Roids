@@ -17,8 +17,9 @@ func show_result(won: bool, run: RunState) -> void:
 	var names: PackedStringArray = []
 	for upgrade in run.upgrades_taken:
 		names.append(upgrade.title)
-	body_label.text = "Rooms cleared: %d / %d\nUpgrades: %s\nSeed: %d" % [
-		run.rooms_cleared, RunState.RUN_LENGTH,
+	var hero := run.character.display_name if run.character else "Knight"
+	body_label.text = "%s\nRooms cleared: %d / %d\nUpgrades: %s\nSeed: %d" % [
+		hero, run.rooms_cleared, RunState.RUN_LENGTH,
 		", ".join(names) if not names.is_empty() else "none", run.run_seed]
 	show()
 	get_tree().paused = true
