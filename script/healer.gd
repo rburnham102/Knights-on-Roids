@@ -18,8 +18,8 @@ signal died
 #   DEAD   - out of health
 enum State { FOLLOW, HEAL, ATTACK, HURT, DEAD }
 
-const HOLY_BURST := preload("res://Effects/holy_burst.tscn")
-const HEAL_EFFECT := preload("res://Effects/heal_effect.tscn")
+const HOLY_BURST := preload("res://effects/holy_burst.tscn")
+const HEAL_EFFECT := preload("res://effects/heal_effect.tscn")
 
 @export var max_health := 40
 @export var speed := 90.0                 # a little slower than the knight (100)

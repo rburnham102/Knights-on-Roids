@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor]
+
+script/search_in_file_extensions=PackedStringArray("gd", "gdshader", "tscn", "tres")
+
 [input]
 
 move_left={

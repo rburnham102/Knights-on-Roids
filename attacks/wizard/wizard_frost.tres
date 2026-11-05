@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AttackData" format=3]
 
-[ext_resource type="PackedScene" path="res://Effects/ice_burst.tscn" id="1_sqmsk"]
+[ext_resource type="PackedScene" path="res://effects/ice_burst.tscn" id="1_sqmsk"]
 [ext_resource type="Script" path="res://script/attack_data.gd" id="2_xx46f"]
 
 [resource]
