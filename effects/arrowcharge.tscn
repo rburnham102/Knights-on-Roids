@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://0vnyst2nogkd"]
+
+[ext_resource type="Texture2D" uid="uid://ccp73x7y31yht" path="res://effects/Retro Impact Effect Pack 5 A.png" id="1_dtcuj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtcuj"]
+atlas = ExtResource("1_dtcuj")
+region = Rect2(0, 1728, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxpl8"]
+atlas = ExtResource("1_dtcuj")
+region = Rect2(64, 1728, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f04co"]
+atlas = ExtResource("1_dtcuj")
+region = Rect2(128, 1728, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhxxj"]
+atlas = ExtResource("1_dtcuj")
+region = Rect2(192, 1728, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hbo8"]
+atlas = ExtResource("1_dtcuj")
+region = Rect2(256, 1728, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5go2"]
+atlas = ExtResource("1_dtcuj")
+region = Rect2(320, 1728, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t5tj"]
+atlas = ExtResource("1_dtcuj")
+region = Rect2(384, 1728, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u535"]
+atlas = ExtResource("1_dtcuj")
+region = Rect2(448, 1728, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08snl"]
+atlas = ExtResource("1_dtcuj")
+region = Rect2(512, 1728, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmicn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtcuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxpl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f04co")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhxxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hbo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5go2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t5tj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u535")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08snl")
+}],
+"loop": 0,
+"name": &"heavyattack",
+"speed": 9.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1567907125]
+z_index = 10
+texture_filter = 1
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_dmicn")
+animation = &"heavyattack"
