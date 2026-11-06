@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://ct1m70m82dv8p"]
+
+[ext_resource type="Script" uid="uid://c2e8bq5v81kpa" path="res://Effects/holy_burst.gd" id="1_3wj7v"]
+[ext_resource type="Texture2D" uid="uid://6pnxkffy2whc" path="res://Asset/Characters(100x100 split)/Priest/Magic(projectile)/Priest_Attack_effect.png" id="2_sheet"]
+[ext_resource type="AudioStream" uid="uid://lmsenxbebmd1" path="res://Sounds effect/Environment/air_burst.wav" id="3_sound"]
+
+[sub_resource type="AtlasTexture" id="Atlas_0"]
+atlas = ExtResource("2_sheet")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="Atlas_1"]
+atlas = ExtResource("2_sheet")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="Atlas_2"]
+atlas = ExtResource("2_sheet")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="Atlas_3"]
+atlas = ExtResource("2_sheet")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="Atlas_4"]
+atlas = ExtResource("2_sheet")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Atlas_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_4")
+}],
+"loop": 0,
+"name": &"burst",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_burst"]
+radius = 30.0
+
+[node name="HolyBurst" type="Area2D" unique_id=1173160236]
+collision_layer = 0
+collision_mask = 16
+monitorable = false
+script = ExtResource("1_3wj7v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1523503404]
+texture_filter = 1
+position = Vector2(0, -10)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_fx")
+animation = &"burst"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1938937748]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_burst")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1975917800]
+stream = ExtResource("3_sound")
