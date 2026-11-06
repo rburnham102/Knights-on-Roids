@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CharacterClass" format=3]
+[gd_resource type="Resource" script_class="CharacterClass" format=3 uid="uid://k4p6nx2ni5d6"]
 
-[ext_resource type="Script" path="res://script/upgrade.gd" id="1_srqwj"]
+[ext_resource type="Script" uid="uid://1tvvrbb8fn3d" path="res://script/upgrade.gd" id="1_srqwj"]
 [ext_resource type="Resource" path="res://upgrades/charged_shot.tres" id="2_xpol6"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Idle.png" id="3_hgt8k"]
-[ext_resource type="PackedScene" path="res://Knight.tscn" id="4_mks58"]
-[ext_resource type="Script" path="res://script/character_class.gd" id="5_1uio8"]
+[ext_resource type="Texture2D" uid="uid://butui3xd6vwhi" path="res://asset/Characters(100x100 split)/Soldier/Soldier with shadows/Soldier_Idle.png" id="3_hgt8k"]
+[ext_resource type="PackedScene" uid="uid://20jsqtt6c87o" path="res://Knight.tscn" id="4_mks58"]
+[ext_resource type="Script" uid="uid://ccwob4kk0xr3l" path="res://script/character_class.gd" id="5_1uio8"]
 [ext_resource type="Script" uid="uid://bldkvj7r805mi" path="res://script/stats.gd" id="9_stats"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gy4fy"]
@@ -13,9 +13,6 @@ region = Rect2(36, 32, 32, 32)
 
 [sub_resource type="Resource" id="Stats_start"]
 script = ExtResource("9_stats")
-power = 10
-dexterity = 10
-vitality = 10
 
 [resource]
 script = ExtResource("5_1uio8")
@@ -25,6 +22,6 @@ Health: normal
 Speed: normal
 Combo: 3 hits"
 portrait = SubResource("AtlasTexture_gy4fy")
-starting_stats = SubResource("Stats_start")
 scene = ExtResource("4_mks58")
+starting_stats = SubResource("Stats_start")
 extra_upgrades = Array[ExtResource("1_srqwj")]([ExtResource("2_xpol6")])

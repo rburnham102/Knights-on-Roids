@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="CharacterClass" format=3]
+[gd_resource type="Resource" script_class="CharacterClass" format=3 uid="uid://d2mxtarc4g72y"]
 
-[ext_resource type="Script" path="res://script/upgrade.gd" id="1_msen0"]
+[ext_resource type="Script" uid="uid://1tvvrbb8fn3d" path="res://script/upgrade.gd" id="1_msen0"]
 [ext_resource type="Resource" path="res://upgrades/flurry.tres" id="2_a7qti"]
 [ext_resource type="Resource" path="res://upgrades/duelist.tres" id="3_1mjjo"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Swordsman/Swordsman with shadows/Swordsman_Idle.png" id="4_guske"]
-[ext_resource type="PackedScene" path="res://Swordsman.tscn" id="5_n5uu6"]
-[ext_resource type="Script" path="res://script/character_class.gd" id="6_l6hqj"]
+[ext_resource type="Texture2D" uid="uid://donl6ow0vdub6" path="res://asset/Characters(100x100 split)/Swordsman/Swordsman with shadows/Swordsman_Idle.png" id="4_guske"]
+[ext_resource type="PackedScene" uid="uid://cn60uhn7tb6co" path="res://Swordsman.tscn" id="5_n5uu6"]
+[ext_resource type="Script" uid="uid://ccwob4kk0xr3l" path="res://script/character_class.gd" id="6_l6hqj"]
 [ext_resource type="Script" uid="uid://bldkvj7r805mi" path="res://script/stats.gd" id="9_stats"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5af7w"]
@@ -14,7 +14,6 @@ region = Rect2(36, 32, 32, 32)
 
 [sub_resource type="Resource" id="Stats_start"]
 script = ExtResource("9_stats")
-power = 10
 dexterity = 13
 vitality = 8
 
@@ -26,6 +25,6 @@ Health: low
 Speed: fast
 Combo: 3 hits"
 portrait = SubResource("AtlasTexture_5af7w")
-starting_stats = SubResource("Stats_start")
 scene = ExtResource("5_n5uu6")
+starting_stats = SubResource("Stats_start")
 extra_upgrades = Array[ExtResource("1_msen0")]([ExtResource("2_a7qti"), ExtResource("3_1mjjo")])

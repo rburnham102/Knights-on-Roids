@@ -1,37 +1,37 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://fj007wqmux4s"]
 
-[ext_resource type="PackedScene" path="res://Knight.tscn" id="0_base"]
-[ext_resource type="Script" path="res://script/attack_data.gd" id="3_62qgh"]
+[ext_resource type="PackedScene" uid="uid://20jsqtt6c87o" path="res://Knight.tscn" id="0_base"]
+[ext_resource type="Script" uid="uid://cvjetm7d5h76u" path="res://script/attack_data.gd" id="3_62qgh"]
 [ext_resource type="Resource" path="res://attacks/wizard/wizard_frost.tres" id="4_nbl3v"]
 [ext_resource type="Resource" path="res://attacks/wizard/wizard_fireball.tres" id="5_vktvt"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Attack01.png" id="6_qfpiu"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Attack02.png" id="7_j2ncx"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Death.png" id="8_y3ifk"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Hurt.png" id="9_rryhg"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Idle.png" id="10_jscq5"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Walk.png" id="11_2p3cd"]
+[ext_resource type="Texture2D" uid="uid://gdvf8sk01mkn" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Attack01.png" id="6_qfpiu"]
+[ext_resource type="Texture2D" uid="uid://cqc6snq7xhsm6" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Attack02.png" id="7_j2ncx"]
+[ext_resource type="Texture2D" uid="uid://cgermveok1v5r" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Death.png" id="8_y3ifk"]
+[ext_resource type="Texture2D" uid="uid://cyl4fuoimf5s8" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Hurt.png" id="9_rryhg"]
+[ext_resource type="Texture2D" uid="uid://bg1ifrxd840ja" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Idle.png" id="10_jscq5"]
+[ext_resource type="Texture2D" uid="uid://cbip7dg1n561y" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Walk.png" id="11_2p3cd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yxqdd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui1cx"]
 atlas = ExtResource("6_qfpiu")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lqiog"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcqeo"]
 atlas = ExtResource("6_qfpiu")
 region = Rect2(100, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mlscs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6h8u"]
 atlas = ExtResource("6_qfpiu")
 region = Rect2(200, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4pawb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_62qgh"]
 atlas = ExtResource("6_qfpiu")
 region = Rect2(300, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_thndn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbl3v"]
 atlas = ExtResource("6_qfpiu")
 region = Rect2(400, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6gjme"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vktvt"]
 atlas = ExtResource("6_qfpiu")
 region = Rect2(500, 0, 100, 100)
 
@@ -163,22 +163,22 @@ region = Rect2(700, 0, 100, 100)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yxqdd")
+"texture": SubResource("AtlasTexture_ui1cx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lqiog")
+"texture": SubResource("AtlasTexture_vcqeo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mlscs")
+"texture": SubResource("AtlasTexture_j6h8u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4pawb")
+"texture": SubResource("AtlasTexture_62qgh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_thndn")
+"texture": SubResource("AtlasTexture_nbl3v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6gjme")
+"texture": SubResource("AtlasTexture_vktvt")
 }],
 "loop": 0,
 "name": &"attack1",
@@ -303,12 +303,14 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Wizard" instance=ExtResource("0_base")]
+[node name="Wizard" unique_id=1568719503 instance=ExtResource("0_base")]
 light_combo = Array[ExtResource("3_62qgh")]([ExtResource("4_nbl3v")])
 heavy_attack = ExtResource("5_vktvt")
-riposte_attack = ExtResource("4_nbl3v")
 ranged_attack = null
+riposte_attack = ExtResource("4_nbl3v")
 
-[node name="AnimatedSprite2D" parent="Pivot" index="0" unique_id=1727151330]
+[node name="AnimatedSprite2D" parent="Pivot" parent_id_path=PackedInt32Array(259231334) index="0" unique_id=1727151330]
 sprite_frames = SubResource("SpriteFrames_3d2bo")
-animation = &"idle"
+animation = &"attack1"
+frame = 0
+frame_progress = 0.0

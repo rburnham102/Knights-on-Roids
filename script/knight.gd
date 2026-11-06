@@ -30,6 +30,7 @@ const COMBO_WINDOW := 0.35   # seconds after a swing ends to still continue the 
 const RIPOSTE_FOLLOWUP_WINDOW := 0.5
 const BLOCK_EFFECT := preload("res://block_effect.tscn")
 
+
 # Parry: a block raised this shortly before impact is a perfect block.
 # (Dexterity widens it, see Stats.parry_window_mult.)
 const PARRY_WINDOW := 0.15

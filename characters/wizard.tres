@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="CharacterClass" format=3]
+[gd_resource type="Resource" script_class="CharacterClass" format=3 uid="uid://4ifk7a5e6lc0"]
 
-[ext_resource type="Script" path="res://script/upgrade.gd" id="1_lsayg"]
+[ext_resource type="Script" uid="uid://1tvvrbb8fn3d" path="res://script/upgrade.gd" id="1_lsayg"]
 [ext_resource type="Resource" path="res://upgrades/searing_bolt.tres" id="2_wgv7j"]
 [ext_resource type="Resource" path="res://upgrades/wide_frost.tres" id="3_nw11w"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Idle.png" id="4_rj8lj"]
-[ext_resource type="PackedScene" path="res://Wizard.tscn" id="5_gsaey"]
-[ext_resource type="Script" path="res://script/character_class.gd" id="6_o2vad"]
+[ext_resource type="Texture2D" uid="uid://bg1ifrxd840ja" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Idle.png" id="4_rj8lj"]
+[ext_resource type="PackedScene" uid="uid://fj007wqmux4s" path="res://Wizard.tscn" id="5_gsaey"]
+[ext_resource type="Script" uid="uid://ccwob4kk0xr3l" path="res://script/character_class.gd" id="6_o2vad"]
 [ext_resource type="Script" uid="uid://bldkvj7r805mi" path="res://script/stats.gd" id="9_stats"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ynvo"]
@@ -14,8 +14,6 @@ region = Rect2(36, 32, 32, 32)
 
 [sub_resource type="Resource" id="Stats_start"]
 script = ExtResource("9_stats")
-power = 10
-dexterity = 10
 vitality = 6
 
 [resource]
@@ -26,6 +24,6 @@ Health: very low
 Speed: normal
 No combo"
 portrait = SubResource("AtlasTexture_4ynvo")
-starting_stats = SubResource("Stats_start")
 scene = ExtResource("5_gsaey")
+starting_stats = SubResource("Stats_start")
 extra_upgrades = Array[ExtResource("1_lsayg")]([ExtResource("2_wgv7j"), ExtResource("3_nw11w")])

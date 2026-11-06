@@ -1,19 +1,19 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://vk26imm7y7ma"]
 
-[ext_resource type="PackedScene" path="res://Knight.tscn" id="0_base"]
-[ext_resource type="Script" path="res://script/attack_data.gd" id="3_4lebq"]
+[ext_resource type="PackedScene" uid="uid://20jsqtt6c87o" path="res://Knight.tscn" id="0_base"]
+[ext_resource type="Script" uid="uid://cvjetm7d5h76u" path="res://script/attack_data.gd" id="3_4lebq"]
 [ext_resource type="Resource" path="res://attacks/templar/templar_attack1.tres" id="4_mgsnx"]
 [ext_resource type="Resource" path="res://attacks/templar/templar_attack3.tres" id="5_sj3wk"]
 [ext_resource type="Resource" path="res://attacks/templar/templar_attack2.tres" id="6_1rk16"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Attack01.png" id="7_4uh4v"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Attack02.png" id="8_o45jj"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Attack03.png" id="9_0jpuq"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Block.png" id="10_6ct6e"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Walk02.png" id="11_sgms5"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Death.png" id="12_21bpe"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Hurt.png" id="13_phmji"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Idle.png" id="14_npplr"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Walk01.png" id="15_geyyj"]
+[ext_resource type="Texture2D" uid="uid://tcefdjro3gbx" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Attack01.png" id="7_4uh4v"]
+[ext_resource type="Texture2D" uid="uid://buied6ceuikgr" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Attack02.png" id="8_o45jj"]
+[ext_resource type="Texture2D" uid="uid://b10ix6jgpnrp3" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Attack03.png" id="9_0jpuq"]
+[ext_resource type="Texture2D" uid="uid://d2w4m1bbgoxux" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Block.png" id="10_6ct6e"]
+[ext_resource type="Texture2D" uid="uid://c4djme7bbvl5x" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Walk02.png" id="11_sgms5"]
+[ext_resource type="Texture2D" uid="uid://3ycxuwik7mqn" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Death.png" id="12_21bpe"]
+[ext_resource type="Texture2D" uid="uid://ctwb2yoq2x25b" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Hurt.png" id="13_phmji"]
+[ext_resource type="Texture2D" uid="uid://ihw00m3q7bbv" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Idle.png" id="14_npplr"]
+[ext_resource type="Texture2D" uid="uid://cij756nyd48j5" path="res://Asset/Characters(100x100 split)/Knight Templar/Knight Templar with shadows/Knight Templar_Walk01.png" id="15_geyyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_unox0"]
 atlas = ExtResource("7_4uh4v")
@@ -483,13 +483,15 @@ animations = [{
 "speed": 9.0
 }]
 
-[node name="KnightTemplar" instance=ExtResource("0_base")]
+[node name="KnightTemplar" unique_id=482135785 instance=ExtResource("0_base")]
 move_speed = 85.0
 light_combo = Array[ExtResource("3_4lebq")]([ExtResource("4_mgsnx"), ExtResource("5_sj3wk"), ExtResource("6_1rk16")])
 heavy_attack = ExtResource("5_sj3wk")
-riposte_attack = ExtResource("5_sj3wk")
 ranged_attack = null
+riposte_attack = ExtResource("5_sj3wk")
 
-[node name="AnimatedSprite2D" parent="Pivot" index="0" unique_id=1727151330]
+[node name="AnimatedSprite2D" parent="Pivot" parent_id_path=PackedInt32Array(259231334) index="0" unique_id=1727151330]
 sprite_frames = SubResource("SpriteFrames_guxdu")
 animation = &"idle"
+frame = 0
+frame_progress = 0.0
