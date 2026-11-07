@@ -6,6 +6,7 @@
 [ext_resource type="Resource" path="res://attacks/wizard/wizard_fireball.tres" id="5_vktvt"]
 [ext_resource type="Texture2D" uid="uid://gdvf8sk01mkn" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Attack01.png" id="6_qfpiu"]
 [ext_resource type="Texture2D" uid="uid://cqc6snq7xhsm6" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Attack02.png" id="7_j2ncx"]
+[ext_resource type="Texture2D" uid="uid://bs1k8eajnu5hi" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard-block.png" id="7_vcqeo"]
 [ext_resource type="Texture2D" uid="uid://cgermveok1v5r" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Death.png" id="8_y3ifk"]
 [ext_resource type="Texture2D" uid="uid://cyl4fuoimf5s8" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Hurt.png" id="9_rryhg"]
 [ext_resource type="Texture2D" uid="uid://bg1ifrxd840ja" path="res://asset/Characters(100x100 split)/Wizard/Wizard with shadows/Wizard_Idle.png" id="10_jscq5"]
@@ -70,6 +71,14 @@ region = Rect2(700, 0, 100, 100)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ni2ik"]
 atlas = ExtResource("7_j2ncx")
 region = Rect2(800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfpiu"]
+atlas = ExtResource("7_vcqeo")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2ncx"]
+atlas = ExtResource("7_vcqeo")
+region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65noq"]
 atlas = ExtResource("8_y3ifk")
@@ -218,6 +227,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qfpiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2ncx")
+}],
+"loop": 0,
+"name": &"block",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_65noq")
 }, {
 "duration": 1.0,
@@ -311,6 +331,6 @@ riposte_attack = ExtResource("4_nbl3v")
 
 [node name="AnimatedSprite2D" parent="Pivot" parent_id_path=PackedInt32Array(259231334) index="0" unique_id=1727151330]
 sprite_frames = SubResource("SpriteFrames_3d2bo")
-animation = &"attack1"
+animation = &"attack2"
 frame = 0
 frame_progress = 0.0

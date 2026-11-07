@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://script/aarow.gd" id="1_wdani"]
 [ext_resource type="PackedScene" path="res://effects/fireball_explosion.tscn" id="2_nix7o"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Magic(projectile)/Wizard_Attack02_Effect.png" id="3_m4vqi"]
+[ext_resource type="Texture2D" path="res://asset/Characters(100x100 split)/Wizard/Magic(projectile)/Wizard_Attack02_Effect.png" id="3_m4vqi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lk87q"]
 atlas = ExtResource("3_m4vqi")

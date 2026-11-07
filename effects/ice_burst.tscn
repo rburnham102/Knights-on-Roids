@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Wizard/Magic(projectile)/Wizard_Attack01_Effect.png" id="1_tcwdg"]
+[ext_resource type="Texture2D" path="res://asset/Characters(100x100 split)/Wizard/Magic(projectile)/Wizard_Attack01_Effect.png" id="1_tcwdg"]
 [ext_resource type="Script" path="res://effects/one_shot_effect.gd" id="2_slh4a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0rnn8"]
