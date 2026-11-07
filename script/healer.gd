@@ -50,6 +50,7 @@ var heal_cooldown_left := 0.0
 var burst_cooldown_left := 0.0
 var side := -1.0                   # -1 = left of the knight, 1 = right
 var cast_done := false             # this cast already landed
+var damage_number: DamageNumber     # red number over her head when she's hurt
 
 # Enemies check these on whoever they're chasing (the knight has them too).
 var is_dead: bool:
@@ -215,6 +216,7 @@ func take_damage(amount: int, _from_position := Vector2.ZERO, _force := 0.0, _po
 	health = maxi(health - amount, 0)
 	health_bar.value = health
 	_flash()
+	damage_number = DamageNumber.add_hit(damage_number, self, amount, false, DamageNumber.Style.ALLY)
 	if health <= 0:
 		change_state(State.DEAD)
 	elif state != State.ATTACK:   # don't interrupt the burst she's casting

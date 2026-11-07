@@ -143,6 +143,7 @@ var shot_charge := 0.0      # 0..1: charge of the arrow about to fire
 var charge_fx: AnimatedSprite2D   # the glow on the arrow while charging
 var normal_collision_layer := 0
 var normal_collision_mask := 0
+var damage_number: DamageNumber   # red number over his head when he's hurt
 # True while a dodge's invulnerable frames are running.
 var is_invulnerable: bool:
 	get:
@@ -783,6 +784,7 @@ func take_damage(amount: int, from_position: Vector2 = Vector2.ZERO, force: floa
 
 	health -= amount
 	health_changed.emit(maxi(health, 0), max_health())
+	damage_number = DamageNumber.add_hit(damage_number, self, amount, false, DamageNumber.Style.ALLY)
 	print("Knight health: ", health)
 	shake(2.0 if amount < 15 else 4.0)
 

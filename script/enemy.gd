@@ -101,6 +101,7 @@ var hit_bodies: Array = []
 var player: Node2D
 var knockback := Vector2.ZERO
 var tint_tween: Tween
+var damage_number: DamageNumber   # the number over its head; hits close together add to it
 
 func _ready() -> void:
 	health = max_health
@@ -414,6 +415,7 @@ func take_damage(amount: int, from_position: Vector2 = Vector2.ZERO, force: floa
 
 	health -= amount
 	poise_delay_left = poise_regen_delay
+	damage_number = DamageNumber.add_hit(damage_number, self, amount, guarded)
 
 	if health <= 0:
 		if force > 0.0:

@@ -1,7 +1,7 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://dlonv7kasqlbn"]
 
-[ext_resource type="Script" path="res://effects/one_shot_effect.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://Asset/Characters(100x100 split)/Priest/Magic(projectile)/Priest_Heal_effect.png" id="2_sheet"]
+[ext_resource type="Script" uid="uid://csa42mphnjttu" path="res://effects/one_shot_effect.gd" id="2_aco8e"]
+[ext_resource type="Texture2D" uid="uid://7w40akm0ewfq" path="res://asset/Characters(100x100 split)/Priest/Magic(projectile)/Priest_Heal_effect.png" id="2_sheet"]
 
 [sub_resource type="AtlasTexture" id="Atlas_0"]
 atlas = ExtResource("2_sheet")
@@ -34,14 +34,14 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("Atlas_3")
 }],
-"loop": false,
+"loop": 0,
 "name": &"heal",
 "speed": 8.0
 }]
 
-[node name="HealEffect" type="AnimatedSprite2D"]
+[node name="HealEffect" type="AnimatedSprite2D" unique_id=1087742087]
 texture_filter = 1
 position = Vector2(-1, -7)
 sprite_frames = SubResource("SpriteFrames_fx")
 animation = &"heal"
-script = ExtResource("1_script")
+script = ExtResource("2_aco8e")
